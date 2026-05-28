@@ -9383,10 +9383,33 @@ function sbStart(){
 
 function sbLessonMenu(){
   var items = LESSONS.map(function(l){ return {label:l.heading, value:l.heading}; });
-  addBtns('👇 ଏହି ପାଠ୍ୟରେ ନିମ୍ନଲିଖିତ ନୋଟ୍ ଗୁଡିକ ରହିଛି । ଆପଣ ଯେଉଁ ନୋଟ୍ ପଢିବା ପାଇଁ ଚାହୁଁଛନ୍ତି ତାହା ଉପରେ କ୍ଲିକ୍ କରନ୍ତୁ । ', items, '', function(idx){
-    addUser(LESSONS[idx].heading);
-    sbTeachLesson(idx);
+  
+  // Add hint label
+  var lbl = document.createElement('div');
+  lbl.className = 'sb-hint-label sb-pop';
+  lbl.textContent = '👇 ଏହି ପାଠ୍ୟରେ ନିମ୍ନଲିଖିତ ନୋଟ୍ ଗୁଡିକ ରହିଛି । ଆପଣ ଯେଉଁ ନୋଟ୍ ପଢିବା ପାଇଁ ଚାହୁଁଛନ୍ତି ତାହା ଉପରେ କ୍ଲିକ୍ କରନ୍ତୁ ।';
+  sbChat.appendChild(lbl);
+  
+  // 2-grid group
+  var grp = document.createElement('div');
+  grp.className = 'sb-pop';
+  grp.style.cssText = 'display:grid; grid-template-columns:1fr 1fr; gap:7px; margin-left:36px;';
+  
+  items.forEach(function(item, idx){
+    var b = document.createElement('button');
+    b.className = 'sb-btn sb-pop';
+    b.textContent = item.label;
+    b.style.cssText = 'font-size:11px; padding:10px 8px; line-height:1.4; text-align:center;';
+    b.onclick = function(){
+      Array.from(grp.querySelectorAll('button')).forEach(function(x){ x.disabled = true; });
+      addUser(LESSONS[idx].heading);
+      sbTeachLesson(idx);
+    };
+    grp.appendChild(b);
   });
+  
+  sbChat.appendChild(grp);
+  scrollBot();
 }
 
 function sbTeachLesson(idx){
