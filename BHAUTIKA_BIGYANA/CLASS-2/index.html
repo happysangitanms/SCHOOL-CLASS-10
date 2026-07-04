@@ -5708,7 +5708,6 @@ function createQuestionTest() {
 }
 
 function updateProgress() {
-    if (!progressFill) return; // avoid crash if this element doesn't exist in this file
     const progress = ((currentSentence + 1) / courseData.sentences.length) * 100;
     progressFill.style.width = progress + '%';
 }
@@ -5827,16 +5826,20 @@ function closeAssistant(containerId) {
 // ============================================
 // WHATSAPP HELP FUNCTION
 // ============================================
+
 function openWhatsAppHelp() {
     const phone = '916372296357';
+
     const studentName = sessionData.studentName || 'ଛାତ୍ର';
     const rollNumber  = sessionData.rollNumber || 'N/A';
+
     let topicContext = '';
     if (typeof window.getSbCurrentLesson === 'function') {
         const heading = window.getSbCurrentLesson();
         if (heading) topicContext = heading.replace(/:-$/, '');
     }
-    const message =
+
+ const message =
         `🙏 ନମସ୍କାର ଆଜ୍ଞା,\n\n` +
         `ମୁଁ ଇ-ବିଦ୍ୟା ଏକାଡେମି ର ଜଣେ ବିଦ୍ୟାର୍ଥୀ । ମୋର ସାହାଯ୍ୟ ଦରକାର ।\n\n` +
         `👤 ନାମ: ${studentName}\n` +
@@ -5846,30 +5849,21 @@ function openWhatsAppHelp() {
         (topicContext ? `📖 ବର୍ତ୍ତମାନ ପଢୁଥିବା ନୋଟ୍: ${topicContext}\n` : '') +
         `\nଦୟାକରି ମୋତେ ସାହାଯ୍ୟ କରନ୍ତୁ ।`;
 
+    function proceedToWhatsApp() {
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // ✅ CONSENT CONFIRMATION BEFORE OPENING WHATSAPP
     const confirmMsg =
         "ଶିକ୍ଷକଙ୍କ ସହିତ ଯୋଗାଯୋଗ କରିବା ପାଇଁ ମୁଁ ଏବେ ଆପଣଙ୍କୁ ଆପଣଙ୍କ ହ୍ଵାଟ୍ସ-ଆପ୍ ସ୍କ୍ରୀନ୍ କୁ ନେଇଯିବି ।\n\nଆପଣ ଆଗକୁ ବଢିବାକୁ ଚାହୁଁଛନ୍ତି କି ?";
     const userConfirmed = window.confirm(confirmMsg);
+
     if (!userConfirmed) {
-        return;
+        return; // student declined — nothing happens
     }
 
-    // ✅ Open the tab IMMEDIATELY (still counts as user-triggered — confirm() is synchronous)
-    const waWindow = window.open('about:blank', '_blank');
-
-    function proceedToWhatsApp() {
-        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-        if (waWindow && !waWindow.closed) {
-            waWindow.location.href = url;
-        } else {
-            // Popup was blocked or closed — fall back to same-tab navigation
-            window.location.href = url;
-        }
-    }
-
-    function proceedToWhatsAppWithDelay() {
-        if (typeof window.sbShowMessage === 'function') {
-            window.sbShowMessage("⏳ ଅପେକ୍ଷା କରନ୍ତୁ... WhatsApp ଖୋଲୁଛି...");
-        }
+  function proceedToWhatsAppWithDelay() {
+        addBot("⏳ ଅପେକ୍ଷା କରନ୍ତୁ... WhatsApp ଖୋଲୁଛି...");
         setTimeout(proceedToWhatsApp, 3000);
     }
 
@@ -5882,8 +5876,9 @@ function openWhatsAppHelp() {
         proceedToWhatsAppWithDelay();
     }
 }
-window.openWhatsAppHelp = openWhatsAppHelp;
 
+window.openWhatsAppHelp = openWhatsAppHelp;
+    
 
 // Handle assistant selection from dropdown
 document.querySelectorAll('.dropdown-item').forEach(item => {
@@ -8455,10 +8450,6 @@ window.closeSB = function(){
   ];
   var msg = msgs[Math.floor(Math.random()*msgs.length)];
   addBot(msg, callback);
-};
-
-    window.sbShowMessage = function(text, callback){
-  addBot(text, callback);
 };
 
 window.sbReset = function(){
