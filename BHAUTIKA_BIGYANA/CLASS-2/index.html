@@ -2118,7 +2118,7 @@ body > div:first-child {
         
         <div class="consent-box">
             <input type="checkbox" id="consentCheck">
-           <label for="consentCheck">I agree to device tracking, usage monitoring, audio playback, internet access, data storage, use of WhatsApp to contact my teacher for academic help (which will share my name, roll number, class and subject), and all <a href="https://e-vidya-legal-policies.pages.dev/" target="_blank">terms & conditions</a> of E-Vidya Academy.</label>
+            <label for="consentCheck">I agree to device tracking, usage monitoring, audio playback, internet access, data storage, and all <a href="https://e-vidya-legal-policies.pages.dev/" target="_blank">terms & conditions</a> of E-Vidya Academy.</label>
         </div>
        <button id="loginBtn" class="login-btn">ଉପରୋକ୍ତ ଛୋଟ ବାକ୍ସରେ କ୍ଲିକ୍ କରିସାରିବା ପରେ ଏଠାରେ କ୍ଲିକ୍ କରି କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରନ୍ତୁ ।</button>
         <div id="loginError" class="login-error"></div>
@@ -5853,32 +5853,18 @@ function openWhatsAppHelp() {
         window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
     }
 
-    // ✅ CONSENT CONFIRMATION BEFORE OPENING WHATSAPP
-    const confirmMsg =
-        "ଶିକ୍ଷକଙ୍କ ସହିତ ଯୋଗାଯୋଗ କରିବା ପାଇଁ ମୁଁ ଏବେ ଆପଣଙ୍କୁ ଆପଣଙ୍କ ହ୍ଵାଟ୍ସ-ଆପ୍ ସ୍କ୍ରୀନ୍ କୁ ନେଇଯିବି ।\n\nଆପଣ ଆଗକୁ ବଢିବାକୁ ଚାହୁଁଛନ୍ତି କି ?";
-    const userConfirmed = window.confirm(confirmMsg);
-
-    if (!userConfirmed) {
-        return; // student declined — nothing happens
-    }
-
-  function proceedToWhatsAppWithDelay() {
-        addBot("⏳ ଅପେକ୍ଷା କରନ୍ତୁ... WhatsApp ଖୋଲୁଛି...");
-        setTimeout(proceedToWhatsApp, 3000);
-    }
-
     const botModal = document.getElementById('studyBotModal');
     const botIsOpen = botModal && botModal.style.display !== 'none';
 
     if (botIsOpen && typeof window.sbEncourage === 'function') {
-        window.sbEncourage(studentName, proceedToWhatsAppWithDelay);
+        window.sbEncourage(studentName, proceedToWhatsApp);
     } else {
-        proceedToWhatsAppWithDelay();
+        proceedToWhatsApp();
     }
 }
 
 window.openWhatsAppHelp = openWhatsAppHelp;
-    
+
 
 // Handle assistant selection from dropdown
 document.querySelectorAll('.dropdown-item').forEach(item => {
@@ -8445,8 +8431,8 @@ window.closeSB = function(){
 
     window.sbEncourage = function(studentName, callback){
   var msgs = [
-    studentName + ' ଆଜ୍ଞା, ଚିନ୍ତା କରନ୍ତୁ ନାହିଁ 🌹 ମୋତେ ମାତ୍ର କିଛି ସେକେଣ୍ଡ ସମୟ ଦିଅନ୍ତୁ । ମୁଁ ଆପଣଙ୍କୁ ଶିକ୍ଷକଙ୍କ ପାଖକୁ ନେଇଯାଉଛି । ସେ ବ୍ୟସ୍ତ ଥାଇପାରନ୍ତି । ଯେତେବେଳେ ଉପଲବ୍ଧ ହେବେ, ନିଶ୍ଚିତ ଉତ୍ତର ଦେବେ । ସେହି ପର୍ଯ୍ୟନ୍ତ ପଢା ଜାରି ରଖନ୍ତୁ, ଆପଣ ବହୁତ ଭଲ ପଢୁଛନ୍ତି ! 💪',
-    studentName + ' ଆଜ୍ଞା, 🌹 ମୋତେ ମାତ୍ର କିଛି ସେକେଣ୍ଡ ସମୟ ଦିଅନ୍ତୁ । ମୁଁ ଆପଣଙ୍କୁ ଶିକ୍ଷକଙ୍କ ପାଖକୁ ନେଇଯାଉଛି । ସେ ବ୍ୟସ୍ତ ଥାଇପାରନ୍ତି । ଯେତେବେଳେ ଉପଲବ୍ଧ ହେବେ, ନିଶ୍ଚିତ ଉତ୍ତର ଦେବେ । 🌟'
+    studentName + ' ଆଜ୍ଞା, ଚିନ୍ତା କରନ୍ତୁ ନାହିଁ 🌹 ମୁଁ ଆପଣଙ୍କ ପ୍ରଶ୍ନ ଶିକ୍ଷକଙ୍କ ପାଖକୁ ପଠାଇଦେଉଛି । ସେ ଯେତେବେଳେ ଉପଲବ୍ଧ ହେବେ, ନିଶ୍ଚିତ ଉତ୍ତର ଦେବେ । ସେହି ପର୍ଯ୍ୟନ୍ତ ପଢା ଜାରି ରଖନ୍ତୁ, ଆପଣ ବହୁତ ଭଲ କରୁଛନ୍ତି ! 💪',
+    studentName + ' ଆଜ୍ଞା, ଆପଣଙ୍କ ପ୍ରଶ୍ନ ଶିକ୍ଷକଙ୍କ ପାଖରେ ପହଞ୍ଚିଗଲା 📩 ଅଳ୍ପ ସମୟ ମଧ୍ୟରେ ଉତ୍ତର ମିଳିବ । ଏହି ପର୍ଯ୍ୟନ୍ତ ମୋ ସହିତ ପଢା ଜାରି ରଖନ୍ତୁ, ଆପଣ ଠିକ୍ ପଥରେ ଅଛନ୍ତି ! 🌟'
   ];
   var msg = msgs[Math.floor(Math.random()*msgs.length)];
   addBot(msg, callback);
