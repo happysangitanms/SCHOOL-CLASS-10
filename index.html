@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Classes - Index</title>
+    <title>E-Vidya Academy</title>
 
     <!-- PWA -->
     <link rel="manifest" href="./manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Odisha e-Guru">
+    <meta name="apple-mobile-web-app-title" content="E-Vidya Academy">
     <meta name="theme-color" content="#667eea">
     <link rel="apple-touch-icon" href="./icon-192.png">
 
@@ -384,7 +384,7 @@
 
         .button-container { text-align: center; margin-bottom: 8px; }
 
-        /* ── PWA Modal ── */
+        /* ── PWA Modal (Android/Chrome) ── */
         .pwa-overlay {
             display: none; position: fixed; inset: 0;
             background: rgba(0,0,0,0.75); z-index: 9000;
@@ -422,8 +422,45 @@
             font-size: 0.85em; cursor: pointer; padding: 8px; text-decoration: underline;
         }
 
+        /* ── iOS Install Instructions Modal ── */
+        .ios-steps {
+            text-align: left;
+            margin-bottom: 18px;
+        }
+        .ios-step {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #333;
+        }
+        .ios-step-num {
+            flex-shrink: 0;
+            width: 26px; height: 26px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85em; font-weight: 800;
+        }
+        .ios-step-icon { font-size: 1.2em; }
+
         /* ── PWA Floating Button ── */
         #pwaBtn {
+            display: none; position: fixed; bottom: 20px;
+            left: 50%; transform: translateX(-50%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; border: none; padding: 14px 28px;
+            border-radius: 25px; font-size: 15px; font-weight: 700; cursor: pointer;
+            box-shadow: 0 6px 20px rgba(102,126,234,0.5); z-index: 9999; white-space: nowrap;
+        }
+
+        #iosInstallBtn {
             display: none; position: fixed; bottom: 20px;
             left: 50%; transform: translateX(-50%);
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -452,7 +489,7 @@
 </head>
 <body>
 
-<!-- ── PWA Install Modal ── -->
+<!-- ── PWA Install Modal (Android/Chrome) ── -->
 <div class="pwa-overlay" id="pwaModal">
     <div class="pwa-box">
         <div class="pwa-icon">📲</div>
@@ -463,8 +500,25 @@
     </div>
 </div>
 
+<!-- ── iOS Install Instructions Modal ── -->
+<div class="pwa-overlay" id="iosModal">
+    <div class="pwa-box">
+        <div class="pwa-icon">📱</div>
+        <h2 class="pwa-title">Install App</h2>
+        <p class="pwa-sub">Add E-Vidya Academy to your Home Screen for quick access — just like a real app!</p>
+        <div class="ios-steps">
+            <div class="ios-step"><span class="ios-step-num">1</span><span>Tap the <b>Share</b> button <span class="ios-step-icon">⬆️</span> below</span></div>
+            <div class="ios-step"><span class="ios-step-num">2</span><span>Scroll down the menu</span></div>
+            <div class="ios-step"><span class="ios-step-num">3</span><span>Tap <b>"Add to Home Screen"</b></span></div>
+            <div class="ios-step"><span class="ios-step-num">4</span><span>Tap <b>"Add"</b> — Done! 🎉</span></div>
+        </div>
+        <button class="pwa-dismiss" onclick="dismissIos()">Got it</button>
+    </div>
+</div>
+
 <!-- ── PWA Floating Button ── -->
 <button id="pwaBtn" onclick="doInstall()">⬇️ Install App</button>
+<button id="iosInstallBtn" onclick="showIosModal()">📱 Install App</button>
 
 <div class="container">
 
@@ -851,7 +905,7 @@ const classSchedule = {
     }, 60000);
 
     /* ════════════════════════════════════════════
-       PWA
+       PWA — ANDROID / CHROME
     ════════════════════════════════════════════ */
     let deferredPrompt;
 
@@ -873,7 +927,6 @@ const classSchedule = {
         }
     }
 
- 
     function dismissPwa() {
         document.getElementById('pwaModal').classList.remove('active');
     }
@@ -883,6 +936,37 @@ const classSchedule = {
         dismissPwa();
         deferredPrompt = null;
     });
+
+    /* ════════════════════════════════════════════
+       PWA — iOS / iPhone / iPad (manual instructions)
+    ════════════════════════════════════════════ */
+    function isIos() {
+        return /iphone|ipad|ipod/i.test(window.navigator.userAgent);
+    }
+
+    function isInStandaloneMode() {
+        return ('standalone' in window.navigator) && (window.navigator.standalone);
+    }
+
+    function showIosModal() {
+        document.getElementById('iosModal').classList.add('active');
+    }
+
+    function dismissIos() {
+        document.getElementById('iosModal').classList.remove('active');
+        try { localStorage.setItem('iosInstallDismissed', '1'); } catch (e) {}
+    }
+
+    if (isIos() && !isInStandaloneMode()) {
+        let alreadyDismissed = false;
+        try { alreadyDismissed = localStorage.getItem('iosInstallDismissed') === '1'; } catch (e) {}
+
+        document.getElementById('iosInstallBtn').style.display = 'block';
+
+        if (!alreadyDismissed) {
+            setTimeout(showIosModal, 2500);
+        }
+    }
 
     /* ════════════════════════════════════════════
        SERVICE WORKER
