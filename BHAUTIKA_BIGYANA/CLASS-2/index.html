@@ -6904,7 +6904,7 @@ function generateCertificate() {
     </div>
 </div>
         
-     <div class="download-buttons">
+    <div class="download-buttons">
             <button class="download-btn download-pdf" onclick="downloadCertificateAsPDF()">
                 📄 PDF ଡାଉନଲୋଡ୍
             </button>
@@ -6912,6 +6912,22 @@ function generateCertificate() {
                 📤 WhatsApp ରେ ସେୟାର୍
             </button>
         </div>
+
+        <button onclick="closeCertificateModal()" style="
+            width: 100%;
+            margin-top: 10px;
+            padding: 14px;
+            background: linear-gradient(135deg, #6b7280 0%, #374151 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        ">
+            ✕ ବନ୍ଦ କରନ୍ତୁ
+        </button>
     `;
     
     // Display certificate
