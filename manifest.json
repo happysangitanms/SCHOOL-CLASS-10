@@ -1,6 +1,6 @@
 {
-  "name": "E-Vidya Academy",
-  "short_name": "E-Vidya Academy",
+  "name": "Class-IX",
+  "short_name": "Class-IX",
   "description": "Supplementary Digital Classes for Class-9 Students",
   "start_url": "./index.html",
   "scope": "./",
