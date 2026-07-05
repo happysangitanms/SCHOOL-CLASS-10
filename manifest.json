@@ -1,6 +1,6 @@
 {
-  "name": "Odisha e-Guru - E-Vidya Academy",
-  "short_name": "E-Vidya",
+  "name": "E-Vidya Academy",
+  "short_name": "E-Vidya Academy",
   "description": "Supplementary Digital Classes for Class-9 Students",
   "start_url": "./index.html",
   "scope": "./",
