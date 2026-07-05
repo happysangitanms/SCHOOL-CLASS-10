@@ -2776,11 +2776,9 @@ body > div:first-child {
         <div class="certificate-body">
             
             
-        <!-- Student Details Form (hidden - fields removed, only name kept internally) -->
+       <!-- Student Details Form (hidden - only name kept internally) -->
             <div class="certificate-form" style="display:none;">
                 <input type="hidden" id="studentName">
-                <input type="hidden" id="fatherName">
-                <input type="hidden" id="studentAddress">
                 <button class="generate-btn" onclick="generateCertificate()">
                     ସାର୍ଟିଫିକେଟ୍ ତିଆରି କରନ୍ତୁ (Generate Certificate)
                 </button>
@@ -2821,29 +2819,16 @@ window.addEventListener('load', () => {
 
 function openCertificateFromExam() {
     calculateCertificateScores();
-    loadStudentDetails(); // fills form fields from localStorage if previously saved
 
-    // Auto-fill student name from login session if the field is still empty
-    const nameField = document.getElementById('studentName');
-    const fatherField = document.getElementById('fatherName');
-    const addressField = document.getElementById('studentAddress');
+    // Auto-fill student name from login session
+    document.getElementById('studentName').value = sessionData.studentName || sessionData.rollNumber || 'ଛାତ୍ର/ଛାତ୍ରୀ';
 
-    if (!nameField.value) {
-        nameField.value = sessionData.studentName || sessionData.rollNumber || 'ଛାତ୍ର/ଛାତ୍ରୀ';
-    }
-    if (!fatherField.value) {
-        fatherField.value = 'N/A';
-    }
-    if (!addressField.value) {
-        addressField.value = 'N/A';
-    }
-
-    // Hide the form so the student never sees input fields
-    document.querySelector('.certificate-form').style.display = 'none';
+    // Store roll number directly since there's no form field for it
+    certificateData.rollNumber = sessionData.rollNumber || 'N/A';
 
     document.getElementById('certificateModal').classList.add('active');
 
-    // Directly generate the certificate — no button click needed
+    // Directly generate the certificate — no form, no button click needed
     generateCertificate();
 }
 
@@ -6682,8 +6667,7 @@ function playWordAudio(url, callback) {
     // Certificate Generation System
 let certificateData = {
     studentName: '',
-    fatherName: '',
-    studentAddress: '',
+    rollNumber: '',
     examDate: '',
     examDay: '',
     examTime: '',
@@ -6806,37 +6790,16 @@ function calculatePercentage(scored, total) {
     return ((scored / total) * 100).toFixed(2);
 }
 
-// Load Student Details from Local Storage
-function loadStudentDetails() {
-    const saved = localStorage.getItem('studentDetails');
-    if (saved) {
-        const details = JSON.parse(saved);
-        document.getElementById('studentName').value = details.name || '';
-        document.getElementById('fatherName').value = details.fatherName || '';
-        document.getElementById('studentAddress').value = details.address || '';
-    }
-}
-
-// Save Student Details to Local Storage
-function saveStudentDetails(name, fatherName, address) {
-    localStorage.setItem('studentDetails', JSON.stringify({
-        name: name,
-        fatherName: fatherName,
-        address: address
-    }));
-}
 
 function generateCertificate() {
-    const studentName = document.getElementById('studentName').value.trim() || sessionData.studentName || 'ଛାତ୍ର/ଛାତ୍ରୀ';
-    const fatherName = document.getElementById('fatherName').value.trim() || 'N/A';
-    const studentAddress = document.getElementById('studentAddress').value.trim() || 'N/A';
-    // Save details
-    saveStudentDetails(studentName, fatherName, studentAddress);
+    const studentName = document.getElementById('studentName').value.trim() || sessionData.studentName || sessionData.rollNumber || 'ଛାତ୍ର/ଛାତ୍ରୀ';
+    const rollNumber = sessionData.rollNumber || 'N/A';
+  
     
-    // Update certificate data
+   
+   // Update certificate data
     certificateData.studentName = studentName;
-    certificateData.fatherName = fatherName;
-    certificateData.studentAddress = studentAddress;
+    certificateData.rollNumber = rollNumber;
     
     // Generate certificate HTML - ODIA ONLY, A4 OPTIMIZED
     const certificateHTML = `
@@ -6849,10 +6812,15 @@ function generateCertificate() {
         <div class="cert-title">ସାର୍ଟିଫିକେଟ୍</div>
         <div class="cert-subtitle">ସଫଳତାର ପ୍ରମାଣପତ୍ର</div>
         
-      <div class="cert-content">
+   <div class="cert-content">
             <div class="cert-row">
                 <span class="cert-label">ଛାତ୍ର/ଛାତ୍ରୀଙ୍କ ନାମ:</span>
                 <span class="cert-value">${certificateData.studentName}</span>
+            </div>
+            
+            <div class="cert-row">
+                <span class="cert-label">ରୋଲ୍ ନମ୍ବର:</span>
+                <span class="cert-value">${certificateData.rollNumber}</span>
             </div>
             
             <div class="cert-row">
