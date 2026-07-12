@@ -1,10 +1,11 @@
 const APP_CONFIG = {
-    sreni: "BNSS THEORY-1",
-    subject: "BNSS THEORY-1",
-    classCode: "BNSS THEORY: CLASS-1"
+    sreni: "ନବମ",
+    subject: "ଭୌତିକ ବିଜ୍ଞାନ",
+    classCode: "ଭୌତିକ ବିଜ୍ଞାନ: CLASS-1"
 };
 
-const CLASS_NAME = "bnss";
+
+const CLASS_NAME = "school9";
 
 const MEDIA_CONFIG = {
     audio1: "https://audio.evidya.de/S9SCP1P1-2.mp3",
