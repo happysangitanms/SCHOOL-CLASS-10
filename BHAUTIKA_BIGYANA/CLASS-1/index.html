@@ -2094,6 +2094,92 @@ body > div:first-child {
 }
 
 
+   .custom-audio-controls {
+    width: 100%;
+}
+
+.custom-audio-time-row {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.custom-audio-seek {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 26px;               /* big touch target */
+    background: transparent;
+    margin: 6px 0 10px 0;
+    cursor: pointer;
+}
+
+.custom-audio-seek::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.custom-audio-seek::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #667eea;
+    margin-top: -9px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.custom-audio-seek::-moz-range-track {
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.custom-audio-seek::-moz-range-thumb {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #667eea;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.custom-audio-btn-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.custom-audio-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    min-width: 60px;
+}
+
+.custom-audio-playpause {
+    font-size: 18px;
+    min-width: 54px;
+    padding: 8px 12px;
+    border-radius: 50%;
+}
+
+.custom-audio-btn:active {
+    transform: scale(0.95);
+}     
+
 
 /* Hides: କଳାପଟାରେ ପଢିବା (Blackboard Lesson) button */
 div:has(> #showLessonBtn) { display: none !important; }
@@ -2493,24 +2579,50 @@ div:has(> #examSectionBtn) { display: none !important; }
                  ">
         </div>
 
-  <!-- AUDIO PLAYER - Hidden by default -->
-<div id="audioDisplay" style="display: none; width: 100%; height: 180px; border-radius: 15px; border: 3px solid white; background: #1a1a2e; display: none; align-items: center; justify-content: center; flex-direction: column; padding: 15px; box-sizing: border-box;">
+  <div id="audioDisplay" style="display: none; width: 100%; min-height: 180px; border-radius: 15px; border: 3px solid white; background: #1a1a2e; align-items: center; justify-content: center; flex-direction: column; padding: 15px; box-sizing: border-box;">
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ପାଠ ବୁଝୁଛନ୍ତି ...</p>
-   <audio id="audioPlayer" controls controlsList="nodownload" oncontextmenu="return false;" style="width: 100%; border-radius: 8px;">
+
+    <audio id="audioPlayer" oncontextmenu="return false;" style="display:none;">
         <source src="https://audio.evidya.de/S9SCP1P1-2.mp3" type="audio/mpeg">
         Your browser does not support audio.
     </audio>
+
+    <div class="custom-audio-controls">
+        <div class="custom-audio-time-row">
+            <span id="audioPlayerCur">0:00</span>
+            <span id="audioPlayerDur">0:00</span>
+        </div>
+        <input type="range" id="audioPlayerSeek" class="custom-audio-seek" min="0" max="100" value="0" step="0.1">
+        <div class="custom-audio-btn-row">
+            <button type="button" class="custom-audio-btn" id="audioPlayerBack10">⏪ 10s</button>
+            <button type="button" class="custom-audio-btn custom-audio-playpause" id="audioPlayerPlayPause">▶️</button>
+            <button type="button" class="custom-audio-btn" id="audioPlayerFwd10">10s ⏩</button>
+        </div>
+    </div>
 </div>
 
-<!-- AUDIO PLAYER 3 - Hidden by default -->
-<div id="audioDisplay3" style="display: none; width: 100%; height: 180px; border-radius: 15px; border: 3px solid white; background: #1a1a2e; align-items: center; justify-content: center; flex-direction: column; padding: 15px; box-sizing: border-box;">
+<div id="audioDisplay3" style="display: none; width: 100%; min-height: 180px; border-radius: 15px; border: 3px solid white; background: #1a1a2e; align-items: center; justify-content: center; flex-direction: column; padding: 15px; box-sizing: border-box;">
     <div style="font-size: 40px; margin-bottom: 10px;">🎙️</div>
     <p style="color: white; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-align: center;">ଆପଣ ପ୍ରଶ୍ନୋତ୍ତର ବୁଝୁଛନ୍ତି ...</p>
-    <audio id="audioPlayer3" controls controlsList="nodownload" oncontextmenu="return false;" style="width: 100%; border-radius: 8px;">
+
+    <audio id="audioPlayer3" oncontextmenu="return false;" style="display:none;">
         <source src="https://audio.evidya.de/S9SCP1P1-2QA.mp3" type="audio/mpeg">
         Your browser does not support audio.
     </audio>
+
+    <div class="custom-audio-controls">
+        <div class="custom-audio-time-row">
+            <span id="audioPlayer3Cur">0:00</span>
+            <span id="audioPlayer3Dur">0:00</span>
+        </div>
+        <input type="range" id="audioPlayer3Seek" class="custom-audio-seek" min="0" max="100" value="0" step="0.1">
+        <div class="custom-audio-btn-row">
+            <button type="button" class="custom-audio-btn" id="audioPlayer3Back10">⏪ 10s</button>
+            <button type="button" class="custom-audio-btn custom-audio-playpause" id="audioPlayer3PlayPause">▶️</button>
+            <button type="button" class="custom-audio-btn" id="audioPlayer3Fwd10">10s ⏩</button>
+        </div>
+    </div>
 </div>
         
         <!-- VIDEO PLAYER - Hidden by default -->
@@ -2518,7 +2630,7 @@ div:has(> #examSectionBtn) { display: none !important; }
             <iframe
                 id="videoIframe"
                 src=""
-                data-src="https://www.youtube.com/embed/jyNYTTROtU4?playsinline=1&rel=0&modestbranding=1&autoplay=1"
+                data-src="https://www.youtube.com/embed/EvDpcm14j0E?playsinline=1&rel=0&modestbranding=1&autoplay=1"
                 style="
                     display: block;
                     width: 100%;
@@ -4498,6 +4610,7 @@ questions: [
 }  
 
 };  
+    
 let currentSentence = 0;
 let scores = { mcq: 0, tf: 0, fib: 0, matching: 0, arrange: 0 };
 
@@ -6022,7 +6135,7 @@ function createSummaryTest() {
     
     let html = `<div class="summary-content active">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-            <h2 style="color: #667eea; margin: 0;">📚 ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ - ଏହି କ୍ଲାସ୍ ର ସାରାଂଶ ବର୍ଣ୍ଣନା କର ।</h2>
+            <h2 style="color: #667eea; margin: 0;">📚 ଦୀର୍ଘ ଉତ୍ତରମୂଳକ ପ୍ରଶ୍ନ - ଏହି କ୍ଲାସ୍ ର ସାରାଂଶ ବର୍ଣ୍ଣନା କର । </h2>
             ${summaryAudioButton}
         </div>
         
@@ -7564,6 +7677,75 @@ document.head.appendChild(printStyles);
         videoBtn.style.background = 'linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%)';
     }
 }
+
+
+
+function formatAudioTime(sec) {
+    if (!isFinite(sec) || isNaN(sec)) return '0:00';
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60).toString().padStart(2, '0');
+    return `${m}:${s}`;
+}
+
+function initCustomAudioPlayer(idSuffix) {
+    const audio = document.getElementById(`audioPlayer${idSuffix}`);
+    const seek = document.getElementById(`audioPlayer${idSuffix}Seek`);
+    const curEl = document.getElementById(`audioPlayer${idSuffix}Cur`);
+    const durEl = document.getElementById(`audioPlayer${idSuffix}Dur`);
+    const playPauseBtn = document.getElementById(`audioPlayer${idSuffix}PlayPause`);
+    const back10Btn = document.getElementById(`audioPlayer${idSuffix}Back10`);
+    const fwd10Btn = document.getElementById(`audioPlayer${idSuffix}Fwd10`);
+
+    if (!audio || audio.dataset.customInit === 'true') return;
+    audio.dataset.customInit = 'true';
+
+    let isSeeking = false;
+
+    audio.addEventListener('loadedmetadata', () => {
+        seek.max = audio.duration || 0;
+        durEl.textContent = formatAudioTime(audio.duration);
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        if (isSeeking) return;
+        seek.value = audio.currentTime;
+        curEl.textContent = formatAudioTime(audio.currentTime);
+    });
+
+    audio.addEventListener('play', () => { playPauseBtn.textContent = '⏸️'; });
+    audio.addEventListener('pause', () => { playPauseBtn.textContent = '▶️'; });
+    audio.addEventListener('ended', () => { playPauseBtn.textContent = '▶️'; });
+
+    seek.addEventListener('input', () => {
+        isSeeking = true;
+        curEl.textContent = formatAudioTime(parseFloat(seek.value));
+    });
+
+    seek.addEventListener('change', () => {
+        audio.currentTime = parseFloat(seek.value);
+        isSeeking = false;
+    });
+
+    playPauseBtn.addEventListener('click', () => {
+        if (audio.paused) audio.play(); else audio.pause();
+    });
+
+    back10Btn.addEventListener('click', () => {
+        audio.currentTime = Math.max(0, audio.currentTime - 10);
+    });
+
+    fwd10Btn.addEventListener('click', () => {
+        audio.currentTime = Math.min(audio.duration || audio.currentTime + 10, audio.currentTime + 10);
+    });
+}
+
+// Initialize both players once, on page load
+window.addEventListener('DOMContentLoaded', () => {
+    initCustomAudioPlayer('');   // audioPlayer
+    initCustomAudioPlayer('3');  // audioPlayer3
+});
+
+
     
 // Initialize on page load
 window.addEventListener('DOMContentLoaded', function() {
