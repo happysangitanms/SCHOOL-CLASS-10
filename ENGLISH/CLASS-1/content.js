@@ -1,6 +1,6 @@
 const APP_CONFIG = {
     sreni: "ନବମ",
-    subject: "ଭୂଗୋଳ"
+    subject: "ଇଂରାଜୀ"
 };
 
 
