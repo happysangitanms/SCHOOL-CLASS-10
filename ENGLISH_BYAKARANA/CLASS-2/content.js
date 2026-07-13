@@ -2,8 +2,8 @@ const CLASS_MODE = "practice";
 
 const APP_CONFIG = {
     sreni: "ନବମ",
-    subject: "ଭୂଗୋଳ",
-    classCode: "ଭୂଗୋଳ: ପ୍ରଥମ ଅଧ୍ୟାୟ (ପୃଷ୍ଠା 1-2)"
+    subject: "ଇଂରାଜୀ ବ୍ଯାକରଣ",
+    classCode: "ଇଂରାଜୀ ବ୍ଯାକରଣ: ପ୍ରଥମ ଅଧ୍ୟାୟ (ପୃଷ୍ଠା 1-2)"
 };
 
 
@@ -130,283 +130,100 @@ mcq: {
     questions: [
 
         // =========================
-        // CONCEPT NO.- 1 (ଭାରତର ପରିଚୟ)
+        // NOTE-1
         // =========================
         {
-            question: "ପୃଥିବୀର ସର୍ବବୃହତ୍ ଗଣତାନ୍ତ୍ରିକ ରାଷ୍ଟ୍ର କେଉଁଟି?",
+            question: "What is a sentence made up of? (ବାକ୍ୟ କେଉଁଥିରୁ ଗଠିତ?)",
             options: [
-                "ଚୀନ୍",
-                "ଭାରତ",
-                "ରୁଷିଆ",
-                "ଆମେରିକା"
+                "Words (ଶବ୍ଦ)",
+                "Letters only (କେବଳ ଅକ୍ଷର)",
+                "Numbers (ସଂଖ୍ୟା)",
+                "Symbols (ଚିହ୍ନ)"
             ],
-            correct: 1
+            correct: 0
         },
         {
-            question: "ବିକାଶଶୀଳ ରାଷ୍ଟ୍ରମାନଙ୍କ ମଧ୍ୟରେ ଅଗ୍ରଗଣ୍ୟ ଦେଶ କେଉଁଟି?",
+            question: "A sentence is a meaningful expression of what? (ବାକ୍ୟ କାହାର ଅର୍ଥପୂର୍ଣ୍ଣ ପ୍ରକାଶ?)",
             options: [
-                "ଜାପାନ",
-                "ଭାରତ",
-                "ଫ୍ରାନ୍ସ",
-                "ଅଷ୍ଟ୍ରେଲିଆ"
-            ],
-            correct: 1
-        },
-
-        // =========================
-        // CONCEPT NO.- 2 (ସ୍ୱାଧୀନତା ପରେ ବିକାଶ)
-        // =========================
-        {
-            question: "ସ୍ୱାଧୀନତା ପରେ ଭାରତ କେଉଁ କ୍ଷେତ୍ରରେ ଅଭୂତପୂର୍ବ ସଫଳତା ଲାଭ କରିଛି?",
-            options: [
-                "କେବଳ କୃଷି",
-                "କେବଳ ଶିଳ୍ପ",
-                "କୃଷି, ଶିଳ୍ପ, ବିଜ୍ଞାନ ଓ ପ୍ରଯୁକ୍ତି",
-                "କେବଳ ଯୋଗାଯୋଗ"
-            ],
-            correct: 2
-        },
-        {
-            question: "ଭାରତ ବର୍ତ୍ତମାନ କେଉଁ ପଥରେ ଆଗେଇ ଚାଲିଛି?",
-            options: [
-                "ଆର୍ଥିକ ବିକାଶପଥ",
-                "ଯୁଦ୍ଧପଥ",
-                "ମରୁଭୂମି ପଥ",
-                "ବନ୍ୟାପଥ"
+                "Our ideas, feelings, views etc. (ଆମର ଧାରଣା, ଅନୁଭବ, ମତ ଆଦି)",
+                "Only numbers (କେବଳ ସଂଖ୍ୟା)",
+                "Only pictures (କେବଳ ଚିତ୍ର)",
+                "Only colors (କେବଳ ରଙ୍ଗ)"
             ],
             correct: 0
         },
 
         // =========================
-        // CONCEPT NO.- 3 (ଜନସଂଖ୍ୟା)
+        // NOTE-2
         // =========================
         {
-            question: "ଜନସଂଖ୍ୟା ଦୃଷ୍ଟିରୁ ଭାରତର ସ୍ଥାନ ବିଶ୍ୱରେ କେତେ?",
+            question: "What are the parts in column A called? (କଲମ A ର ଅଂଶଗୁଡ଼ିକୁ କ'ଣ କୁହାଯାଏ?)",
             options: [
-                "ପ୍ରଥମ",
-                "ଦ୍ୱିତୀୟ",
-                "ତୃତୀୟ",
-                "ଚତୁର୍ଥ"
-            ],
-            correct: 1
-        },
-
-        // =========================
-        // CONCEPT NO.- 4 (ପ୍ରାକୃତିକ ବୈଚିତ୍ର୍ୟ)
-        // =========================
-        {
-            question: "ଭାରତ କେଉଁ କାରଣରୁ ପ୍ରାକୃତିକ ବୈଚିତ୍ର୍ୟରେ ପରିପୂର୍ଣ୍ଣ?",
-            options: [
-                "ସମସ୍ତ ସ୍ଥାନରେ ସମାନ ଜଳବାୟୁ",
-                "ଜଳବାୟୁ ଓ ଜନବସତି ଅଞ୍ଚଳଭେଦେ ଭିନ୍ନ",
-                "କେବଳ ପର୍ବତ ଥିବାରୁ",
-                "କେବଳ ନଦୀ ଥିବାରୁ"
+                "Predicates (ବିଧେୟ)",
+                "Subjects (କର୍ତ୍ତା)",
+                "Verbs (କ୍ରିୟା)",
+                "Objects (କର୍ମ)"
             ],
             correct: 1
         },
         {
-            question: "ନିମ୍ନଲିଖିତ ମଧ୍ୟରୁ କେଉଁଟି ଭାରତର ପ୍ରାକୃତିକ ବୈଶିଷ୍ଟ୍ୟ ନୁହେଁ?",
+            question: "What are the parts in column B called? (କଲମ B ର ଅଂଶଗୁଡ଼ିକୁ କ'ଣ କୁହାଯାଏ?)",
             options: [
-                "ଘନ ଅରଣ୍ୟ",
-                "ଉର୍ବର ସମତଳ ଭୂମି",
-                "ମରୁଭୂମି",
-                "ସକ୍ରିୟ ଅଗ୍ନେୟଗିରି"
-            ],
-            correct: 3
-        },
-
-        // =========================
-        // CONCEPT NO.- 5 (ବିଭିନ୍ନତାରେ ଏକତା)
-        // =========================
-        {
-            question: "ଭାରତର ଅନ୍ୟତମ ବୈଶିଷ୍ଟ୍ୟ କ'ଣ?",
-            options: [
-                "ଏକ ଭାଷା",
-                "ଏକ ଧର୍ମ",
-                "ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା",
-                "ଏକ ପୋଷାକ"
+                "Subjects (କର୍ତ୍ତା)",
+                "Adjectives (ବିଶେଷଣ)",
+                "Predicates (ବିଧେୟ)",
+                "Pronouns (ସର୍ବନାମ)"
             ],
             correct: 2
         },
-        {
-            question: "ଭୌଗୋଳିକ ସ୍ୱାତନ୍ତ୍ର୍ୟ ଥିବାରୁ ଭାରତକୁ କେଉଁ ଆଖ୍ୟା ଦିଆଯାଇଛି?",
-            options: [
-                "ମହାଦେଶ",
-                "ଉପମହାଦେଶ",
-                "ଦ୍ୱୀପ",
-                "ରାଜ୍ୟ"
-            ],
-            correct: 1
-        },
 
         // =========================
-        // CONCEPT NO.- 6 (ଭାରତର ଗଠନ)
+        // NOTE-3
         // =========================
         {
-            question: "ଭାରତ କେଉଁ କେଉଁ ଅଂଶକୁ ନେଇ ଗଠିତ?",
+            question: "Which sentence has the correct word order? (କେଉଁ ବାକ୍ୟଟି ସଠିକ୍ ଶବ୍ଦକ୍ରମରେ ଅଛି?)",
             options: [
-                "କେବଳ ମୂଳଭୂଖଣ୍ଡ",
-                "ମୂଳଭୂଖଣ୍ଡ ଓ ଦୁଇଟି ଦ୍ୱୀପପୁଞ୍ଜ",
-                "ତିନୋଟି ଦ୍ୱୀପପୁଞ୍ଜ",
-                "କେବଳ ଦ୍ୱୀପପୁଞ୍ଜ"
+                "Indrani is a classical singer. (ଇନ୍ଦ୍ରାଣୀ ଜଣେ ଶାସ୍ତ୍ରୀୟ ଗାୟିକା।)",
+                "Classical is Indrani a singer.",
+                "Singer classical Indrani is a.",
+                "None of these (ଏଥିମଧ୍ୟରୁ କୌଣସିଟି ନୁହେଁ)"
             ],
-            correct: 1
+            correct: 0
         },
         {
-            question: "ନିମ୍ନଲିଖିତ ମଧ୍ୟରୁ କେଉଁଟି ଭାରତର ଦ୍ୱୀପପୁଞ୍ଜ?",
+            question: "Why is 'Classical is Indrani a singer' not an acceptable sentence? (‘Classical is Indrani a singer’ କାହିଁକି ଗ୍ରହଣୀୟ ବାକ୍ୟ ନୁହେଁ?)",
             options: [
-                "ଆଣ୍ଡାମାନ ଓ ନିକୋବର",
-                "ମାଲଦ୍ୱୀପ",
-                "ଶ୍ରୀଲଙ୍କା",
-                "ଜାଭା"
+                "Because the words are not arranged in a particular order/pattern (କାରଣ ଶବ୍ଦଗୁଡ଼ିକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମ/ଢାଞ୍ଚାରେ ସଜ୍ଜିତ ନାହିଁ)",
+                "Because it uses wrong vocabulary (କାରଣ ଏଥିରେ ଭୁଲ ଶବ୍ଦ ବ୍ୟବହାର ହୋଇଛି)",
+                "Because it is too short (କାରଣ ଏହା ବହୁତ ଛୋଟ)",
+                "Because it has no verb (କାରଣ ଏଥିରେ କ୍ରିୟା ନାହିଁ)"
             ],
             correct: 0
         },
 
         // =========================
-        // CONCEPT NO.- 7 (ଅବସ୍ଥିତି)
+        // NOTE-4
         // =========================
         {
-            question: "ଭାରତ କେଉଁ ଗୋଲାର୍ଦ୍ଧରେ ଅବସ୍ଥିତ?",
+            question: "Which class is Itishree in? (ଇତିଶ୍ରୀ କେଉଁ ଶ୍ରେଣୀରେ ପଢ଼ନ୍ତି?)",
             options: [
-                "ଦକ୍ଷିଣ ଗୋଲାର୍ଦ୍ଧ",
-                "ଉତ୍ତର ଗୋଲାର୍ଦ୍ଧ",
-                "ପୂର୍ବ ଗୋଲାର୍ଦ୍ଧ",
-                "ପଶ୍ଚିମ ଗୋଲାର୍ଦ୍ଧ"
-            ],
-            correct: 1
-        },
-        {
-            question: "କେଉଁ କ୍ରାନ୍ତିରେଖା ଭାରତର ମଧ୍ୟଭାଗ ଦେଇ ଯାଇଛି?",
-            options: [
-                "ବିଷୁବରେଖା",
-                "ମକରକ୍ରାନ୍ତି",
-                "କର୍କଟକ୍ରାନ୍ତି",
-                "ଆନ୍ତର୍ଜାତୀୟ ତାରିଖ ରେଖା"
-            ],
-            correct: 2
-        },
-
-        // =========================
-        // CONCEPT NO.- 8 (ସୁଏଜ୍ କେନାଲ ଓ ରେଶମ ମାର୍ଗ)
-        // =========================
-        {
-            question: "ସୁଏଜ୍ କେନାଲ୍ ଖୋଲିବା ପରେ ଭାରତ ଓ ଇଉରୋପ ମଧ୍ୟରେ କେତେ କି.ମି. ଦୂରତ୍ୱ କମିଥିଲା?",
-            options: [
-                "5000 କି.ମି.",
-                "6000 କି.ମି.",
-                "7000 କି.ମି.",
-                "8000 କି.ମି."
+                "Class VIII (ଅଷ୍ଟମ ଶ୍ରେଣୀ)",
+                "Class IX (ନବମ ଶ୍ରେଣୀ)",
+                "Class X (ଦଶମ ଶ୍ରେଣୀ)",
+                "Class XI (ଏକାଦଶ ଶ୍ରେଣୀ)"
             ],
             correct: 2
         },
         {
-            question: "ପ୍ରାଚୀନ କେଉଁ ମାର୍ଗ ସହ ଭାରତ ସଂଯୁକ୍ତ ଥିଲା?",
+            question: "What is Itishree's father's occupation? (ଇତିଶ୍ରୀଙ୍କ ପିତା ମାନ୍ କରୁନାକରଙ୍କ ବୃତ୍ତି କ'ଣ?)",
             options: [
-                "ମସଲା ମାର୍ଗ",
-                "ରେଶମ ମାର୍ଗ",
-                "ଜଳ ମାର୍ଗ",
-                "ଲୁଣ ମାର୍ଗ"
-            ],
-            correct: 1
-        },
-
-        // =========================
-        // CONCEPT NO.- 9 (କ୍ଷେତ୍ରଫଳ)
-        // =========================
-        {
-            question: "ଭାରତର କ୍ଷେତ୍ରଫଳ କେତେ?",
-            options: [
-                "୨.୪୮ ନିୟୁତ ବର୍ଗ କି.ମି.",
-                "୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି.",
-                "୪.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି.",
-                "୫.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି."
-            ],
-            correct: 1
-        },
-        {
-            question: "ପୃଥିବୀର ସମୁଦାୟ ଭୌଗୋଳିକ କ୍ଷେତ୍ରଫଳର କେତେ ପ୍ରତିଶତ ଭାରତର କ୍ଷେତ୍ରଫଳ?",
-            options: [
-                "୧.୪%",
-                "୨.୪%",
-                "୩.୪%",
-                "୪.୪%"
-            ],
-            correct: 1
-        },
-
-        // =========================
-        // CONCEPT NO.- 10 (ସୀମା ଓ ଉପକୂଳ)
-        // =========================
-        {
-            question: "ଭାରତର ସ୍ଥଳଭାଗର ସୀମାରେଖା ପ୍ରାୟ କେତେ କି.ମି.?",
-            options: [
-                "୧୦,୨୦୦ କି.ମି.",
-                "୧୨,୨୦୦ କି.ମି.",
-                "୧୫,୨୦୦ କି.ମି.",
-                "୧୮,୨୦୦ କି.ମି."
-            ],
-            correct: 2
-        },
-        {
-            question: "ଭାରତର ଉପକୂଳରେଖାର ଦୈର୍ଘ୍ୟ କେତେ?",
-            options: [
-                "୫,୫୦୦ କି.ମି.",
-                "୬,୫୦୦ କି.ମି.",
-                "୭,୫୦୦ କି.ମି.ରୁ ଅଧିକ",
-                "୮,୫୦୦ କି.ମି."
-            ],
-            correct: 2
-        },
-
-        // =========================
-        // CONCEPT NO.- 11 (ବିଶ୍ୱରେ ସ୍ଥାନ)
-        // =========================
-        {
-            question: "କ୍ଷେତ୍ରଫଳ ଅନୁସାରେ ଭାରତର ସ୍ଥାନ ବିଶ୍ୱରେ କେତେ?",
-            options: [
-                "ପଞ୍ଚମ",
-                "ଷଷ୍ଠ",
-                "ସପ୍ତମ",
-                "ଅଷ୍ଟମ"
-            ],
-            correct: 2
-        },
-        {
-            question: "ବିଶ୍ୱର ସବୁଠାରୁ ବଡ଼ ଦେଶ କେଉଁଟି?",
-            options: [
-                "କାନାଡା",
-                "ଚୀନ୍",
-                "ରୁଷିଆ",
-                "ଭାରତ"
-            ],
-            correct: 2
-        },
-
-        // =========================
-        // CONCEPT NO.- 12 (ଚରମ ସ୍ଥାନ)
-        // =========================
-        {
-            question: "ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନର ନାମ କ'ଣ?",
-            options: [
-                "କନ୍ୟାକୁମାରୀ",
-                "ଇନ୍ଦିରା ପଏଣ୍ଟ",
-                "କଚ୍ଛ",
-                "କାରାକୋରମ"
-            ],
-            correct: 1
-        },
-        {
-            question: "ମୂଳଭୂଖଣ୍ଡର ଦକ୍ଷିଣତମ ସ୍ଥାନ କେଉଁଠାରେ ଅବସ୍ଥିତ?",
-            options: [
-                "ଅରୁଣାଚଳ ପ୍ରଦେଶ",
-                "ଗୁଜରାଟ",
-                "ତାମିଲନାଡୁର କନ୍ୟାକୁମାରୀ",
-                "ଆଣ୍ଡାମାନ"
+                "Doctor (ଡାକ୍ତର)",
+                "Teacher (ଶିକ୍ଷକ)",
+                "Engineer (ଇଞ୍ଜିନିୟର)",
+                "Lawyer (ଓକିଲ)"
             ],
             correct: 2
         }
-
     ]
 },
     
@@ -417,160 +234,64 @@ trueFalse: {
         // CONCEPT NO.- 1
         // =========================
         {
-            question: "ଭାରତ ପୃଥିବୀର ସର୍ବବୃହତ୍ ଗଣତାନ୍ତ୍ରିକ ରାଷ୍ଟ୍ର ଅଟେ ।",
+            question: "We express our ideas, feelings and views in sentences. (ଆମେ ଆମର ଚିନ୍ତାଧାରା, ଅନୁଭବ ଓ ମତାମତ ବାକ୍ୟରେ ପ୍ରକାଶ କରୁ ।)",
             correct: true
         },
-
         // =========================
         // CONCEPT NO.- 2
         // =========================
         {
-            question: "ସ୍ୱାଧୀନତା ପରେ ଭାରତ କୃଷି, ଶିଳ୍ପ ଓ ବିଜ୍ଞାନ କ୍ଷେତ୍ରରେ ଅଭୂତପୂର୍ବ ସାଫଲ୍ୟ ଲାଭ କରିଛି ।",
+            question: "A sentence is made up of words and is a meaningful expression. (ଏକ ବାକ୍ୟ ଶବ୍ଦ ଦ୍ୱାରା ଗଠିତ ଏବଂ ଏହା ଏକ ଅର୍ଥପୂର୍ଣ୍ଣ ଅଭିବ୍ୟକ୍ତି ।)",
             correct: true
         },
-
         // =========================
         // CONCEPT NO.- 3
         // =========================
         {
-            question: "ଭାରତର ଜନସଂଖ୍ୟା ବିଶ୍ୱରେ ଦ୍ୱିତୀୟ ସ୍ଥାନରେ ଅଛି ।",
-            correct: true
+            question: "The parts in column A are called PREDICATES. (ସ୍ତମ୍ଭ A ର ଅଂଶଗୁଡ଼ିକୁ PREDICATE କୁହାଯାଏ ।)",
+            correct: false
         },
-
         // =========================
         // CONCEPT NO.- 4
         // =========================
         {
-            question: "ଭାରତରେ ଜଳବାୟୁ ଓ ଜନବସତି ସବୁ ଅଞ୍ଚଳରେ ସମାନ ଅଟେ ।",
-            correct: false
+            question: "The parts in column B are called PREDICATES. (ସ୍ତମ୍ଭ B ର ଅଂଶଗୁଡ଼ିକୁ PREDICATE କୁହାଯାଏ ।)",
+            correct: true
         },
-
         // =========================
         // CONCEPT NO.- 5
         // =========================
         {
-            question: "ବିଭିନ୍ନତା ଥାଇ ମଧ୍ୟ ଭାରତ ଏକ ସୁସଂଗଠିତ ଭୂଖଣ୍ଡ ଅଟେ ।",
-            correct: true
+            question: "Words in a sentence can be arranged in any random order to make a meaningful sentence. (ଏକ ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ ତିଆରି କରିବାକୁ ଶବ୍ଦଗୁଡ଼ିକୁ ଯେକୌଣସି କ୍ରମରେ ସଜାଯାଇପାରେ ।)",
+            correct: false
         },
-
         // =========================
         // CONCEPT NO.- 6
         // =========================
         {
-            question: "ଭାରତକୁ ଏକ ଉପମହାଦେଶ ବୋଲି କୁହାଯାଏ ।",
+            question: "'Indrani is a classical singer' is an acceptable sentence pattern. ('Indrani is a classical singer' ଏକ ଗ୍ରହଣୀୟ ବାକ୍ୟ ପାଟର୍ନ ଅଟେ ।)",
             correct: true
         },
-
         // =========================
         // CONCEPT NO.- 7
         // =========================
         {
-            question: "‘ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା’ ଭାରତର ଅନ୍ୟତମ ବୈଶିଷ୍ଟ୍ୟ ଅଟେ ।",
-            correct: true
+            question: "'Classical is Indrani a singer' is an acceptable sentence pattern. ('Classical is Indrani a singer' ଏକ ଗ୍ରହଣୀୟ ବାକ୍ୟ ପାଟର୍ନ ଅଟେ ।)",
+            correct: false
         },
-
         // =========================
         // CONCEPT NO.- 8
         // =========================
         {
-            question: "ଭାରତ ମୂଳଭୂଖଣ୍ଡ ଓ ଦୁଇଟି ଦ୍ୱୀପପୁଞ୍ଜକୁ ନେଇ ଗଠିତ ।",
+            question: "Itishree is in class X. (ଇତିଶ୍ରୀ ଦଶମ ଶ୍ରେଣୀରେ ପଢ଼ୁଛନ୍ତି ।)",
             correct: true
         },
-
         // =========================
         // CONCEPT NO.- 9
         // =========================
         {
-            question: "ଲାକ୍ଷାଦ୍ୱୀପ ବଙ୍ଗୋପସାଗରରେ ଅବସ୍ଥିତ ।",
+            question: "Mr Karunakar, Itishree's father, is a doctor. (ଶ୍ରୀ କରୁଣାକର, ଇତିଶ୍ରୀଙ୍କ ପିତା, ଜଣେ ଡାକ୍ତର ଅଟନ୍ତି ।)",
             correct: false
-        },
-
-        // =========================
-        // CONCEPT NO.- 10
-        // =========================
-        {
-            question: "ଭାରତ ଉତ୍ତରଗୋଲାର୍ଦ୍ଧରେ ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣାଂଶରେ ଅବସ୍ଥିତ ।",
-            correct: true
-        },
-
-        // =========================
-        // CONCEPT NO.- 11
-        // =========================
-        {
-            question: "କର୍କଟକ୍ରାନ୍ତି ଭାରତକୁ ପ୍ରାୟ ଦୁଇ ସମାନ ଭାଗରେ ବିଭକ୍ତ କରେ ।",
-            correct: true
-        },
-
-        // =========================
-        // CONCEPT NO.- 12
-        // =========================
-        {
-            question: "ଭାରତ ସମ୍ପୂର୍ଣ୍ଣ ଭାବେ ଦକ୍ଷିଣ ଗୋଲାର୍ଦ୍ଧରେ ଅବସ୍ଥିତ ।",
-            correct: false
-        },
-
-        // =========================
-        // CONCEPT NO.- 13
-        // =========================
-        {
-            question: "ସୁଏଜ୍ କେନାଲ୍ ଖୋଲିବା ପରେ ଭାରତ ଓ ଇଉରୋପ ମଧ୍ୟରେ ଦୂରତ୍ୱ କମିଥିଲା ।",
-            correct: true
-        },
-
-        // =========================
-        // CONCEPT NO.- 14
-        // =========================
-        {
-            question: "ପ୍ରାଚୀନ କାଳରେ ଭାରତ ସ୍ଥଳପଥ ଦ୍ୱାରା ରେଶମ ମାର୍ଗ ସହ ସଂଯୁକ୍ତ ଥିଲା ।",
-            correct: true
-        },
-
-        // =========================
-        // CONCEPT NO.- 15
-        // =========================
-        {
-            question: "ଭାରତର କ୍ଷେତ୍ରଫଳ ୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି. ଅଟେ ।",
-            correct: true
-        },
-
-        // =========================
-        // CONCEPT NO.- 16
-        // =========================
-        {
-            question: "ପୃଥିବୀର କ୍ଷେତ୍ରଫଳ ଅନୁସାରେ ଭାରତ ସପ୍ତମ ବୃହତ୍ତମ ଦେଶ ଅଟେ ।",
-            correct: true
-        },
-
-        // =========================
-        // CONCEPT NO.- 17
-        // =========================
-        {
-            question: "ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନ ଇନ୍ଦିରା ପଏଣ୍ଟ ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଦ୍ୱୀପପୁଞ୍ଜରେ ଅବସ୍ଥିତ ।",
-            correct: true
-        },
-
-        // =========================
-        // CONCEPT NO.- 18
-        // =========================
-        {
-            question: "ମୂଳଭୂଖଣ୍ଡର ଦକ୍ଷିଣତମ ସ୍ଥାନ କନ୍ୟାକୁମାରୀ ତାମିଲନାଡୁରେ ଅବସ୍ଥିତ ।",
-            correct: true
-        },
-
-        // =========================
-        // CONCEPT NO.- 19
-        // =========================
-        {
-            question: "ଭାରତର ପୂର୍ବତମ ସ୍ଥାନ ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ଅବସ୍ଥିତ ।",
-            correct: true
-        },
-
-        // =========================
-        // CONCEPT NO.- 20
-        // =========================
-        {
-            question: "ଭାରତର ପଶ୍ଚିମତମ ସ୍ଥାନ କଚ୍ଛରେ ଅବସ୍ଥିତ ।",
-            correct: true
         }
     ]
 },
@@ -579,190 +300,95 @@ fillBlanks: {
     questions: [
 
         // =========================
-        // CONCEPT NO.- 1
+        //  CONCEPT NO.- 1
         // =========================
         {
-            question: "ଭାରତ ପୃଥିବୀର ସର୍ବବୃହତ୍ ___ ରାଷ୍ଟ୍ର ଅଟେ । (ଗଣତାନ୍ତ୍ରିକ / ରାଜତାନ୍ତ୍ରିକ)",
-            answer: "ଗଣତାନ୍ତ୍ରିକ"
+            question: "We express our ideas, feelings and views in ___ . (sentences / paragraphs) (ଆମେ ଆମର ଚିନ୍ତାଧାରା, ଅନୁଭବ ଓ ମତାମତ ___ ରେ ପ୍ରକାଶ କରୁ ।)",
+            answer: "sentences"
         },
 
         // =========================
         // CONCEPT NO.- 2
         // =========================
         {
-            question: "ସ୍ୱାଧୀନତା ପରେ ଭାରତ ___ କ୍ଷେତ୍ରରେ ଅଭୂତପୂର୍ବ ସାଫଲ୍ୟ ଲାଭ କରିଛି । (କୃଷି / ଖେଳ)",
-            answer: "କୃଷି"
+            question: "The parts in column A are called ___ . (SUBJECTS / PREDICATES) (ସ୍ତମ୍ଭ A ର ଅଂଶଗୁଡ଼ିକୁ ___ କୁହାଯାଏ ।)",
+            answer: "SUBJECTS"
         },
 
         // =========================
         // CONCEPT NO.- 3
         // =========================
         {
-            question: "ଜନସଂଖ୍ୟା ଅନୁସାରେ ଭାରତ ବିଶ୍ୱରେ ___ ସ୍ଥାନରେ ଅଛି । (ଦ୍ୱିତୀୟ / ପଞ୍ଚମ)",
-            answer: "ଦ୍ୱିତୀୟ"
+            question: "The parts in column B are called ___ . (SUBJECTS / PREDICATES) (ସ୍ତମ୍ଭ B ର ଅଂଶଗୁଡ଼ିକୁ ___ କୁହାଯାଏ ।)",
+            answer: "PREDICATES"
         },
 
         // =========================
         // CONCEPT NO.- 4
         // =========================
         {
-            question: "ଭାରତର ___ ବିଭିନ୍ନ ଅଞ୍ଚଳରେ ଭିନ୍ନ ଭିନ୍ନ । (ଜଳବାୟୁ / ଭାଷା ମାତ୍ର)",
-            answer: "ଜଳବାୟୁ"
+            question: "Words are arranged in a particular ___ to make a sentence. (order / colour) (ଏକ ବାକ୍ୟ ତିଆରି କରିବାକୁ ଶବ୍ଦଗୁଡ଼ିକୁ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ___ ରେ ସଜାଯାଏ ।)",
+            answer: "order"
         },
 
         // =========================
         // CONCEPT NO.- 5
         // =========================
         {
-            question: "ଭାରତକୁ ଏକ ___ ବୋଲି କୁହାଯାଏ । (ଉପମହାଦେଶ / ଦ୍ୱୀପ)",
-            answer: "ଉପମହାଦେଶ"
+            question: "Trees provide us with ___ . (oxygen / carbon dioxide) (ଗଛଗୁଡ଼ିକ ଆମକୁ ___ ଯୋଗାନ୍ତି ।)",
+            answer: "oxygen"
         },
 
         // =========================
         // CONCEPT NO.- 6
         // =========================
         {
-            question: "‘ବିଭିନ୍ନତା ମଧ୍ୟରେ ___’ ଭାରତର ବୈଶିଷ୍ଟ୍ୟ । (ଏକତା / ବିଭାଜନ)",
-            answer: "ଏକତା"
-        },
-
-        // =========================
-        // CONCEPT NO.- 7
-        // =========================
-        {
-            question: "ଭାରତ ମୂଳଭୂଖଣ୍ଡ ଓ ___ ଦ୍ୱୀପପୁଞ୍ଜକୁ ନେଇ ଗଠିତ । (ଦୁଇଟି / ତିନୋଟି)",
-            answer: "ଦୁଇଟି"
-        },
-
-        // =========================
-        // CONCEPT NO.- 8
-        // =========================
-        {
-            question: "ଲାକ୍ଷାଦ୍ୱୀପ ___ ସାଗରରେ ଅବସ୍ଥିତ । (ଆରବ / ବଙ୍ଗୋପସାଗର)",
-            answer: "ଆରବ"
-        },
-
-        // =========================
-        // CONCEPT NO.- 9
-        // =========================
-        {
-            question: "ଭାରତ ___ ଗୋଲାର୍ଦ୍ଧରେ ଅବସ୍ଥିତ । (ଉତ୍ତର / ଦକ୍ଷିଣ)",
-            answer: "ଉତ୍ତର"
-        },
-
-        // =========================
-        // CONCEPT NO.- 10
-        // =========================
-        {
-            question: "___ ଭାରତକୁ ପ୍ରାୟ ଦୁଇ ସମାନ ଭାଗରେ ବିଭକ୍ତ କରେ । (କର୍କଟକ୍ରାନ୍ତି / ବିଷୁବରେଖା)",
-            answer: "କର୍କଟକ୍ରାନ୍ତି"
-        },
-
-        // =========================
-        // CONCEPT NO.- 11
-        // =========================
-        {
-            question: "୧୮୬୯ ମସିହାରେ ___ କେନାଲ୍ ଖୋଲାଯାଇଥିଲା । (ସୁଏଜ୍ / ପାନାମା)",
-            answer: "ସୁଏଜ୍"
-        },
-
-        // =========================
-        // CONCEPT NO.- 12
-        // =========================
-        {
-            question: "ପ୍ରାଚୀନ କାଳରେ ଭାରତ ___ ମାର୍ଗ ସହ ସଂଯୁକ୍ତ ଥିଲା । (ରେଶମ / ଲୁଣ)",
-            answer: "ରେଶମ"
-        },
-
-        // =========================
-        // CONCEPT NO.- 13
-        // =========================
-        {
-            question: "ଭାରତର କ୍ଷେତ୍ରଫଳ ___ ନିୟୁତ ବର୍ଗ କି.ମି. । (୩.୨୮ / ୭.୨୮)",
-            answer: "୩.୨୮"
-        },
-
-        // =========================
-        // CONCEPT NO.- 14
-        // =========================
-        {
-            question: "କ୍ଷେତ୍ରଫଳ ଅନୁସାରେ ଭାରତ ପୃଥିବୀର ___ ବୃହତ୍ତମ ଦେଶ । (ସପ୍ତମ / ପଞ୍ଚମ)",
-            answer: "ସପ୍ତମ"
-        },
-
-        // =========================
-        // CONCEPT NO.- 15
-        // =========================
-        {
-            question: "ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନର ନାମ ___ । (ଇନ୍ଦିରା ପଏଣ୍ଟ / କନ୍ୟାକୁମାରୀ)",
-            answer: "ଇନ୍ଦିରା ପଏଣ୍ଟ"
-        },
-
-        // =========================
-        // CONCEPT NO.- 16
-        // =========================
-        {
-            question: "ମୂଳଭୂଖଣ୍ଡର ଦକ୍ଷିଣତମ ସ୍ଥାନ ___ । (କନ୍ୟାକୁମାରୀ / କଚ୍ଛ)",
-            answer: "କନ୍ୟାକୁମାରୀ"
-        },
-
-        // =========================
-        // CONCEPT NO.- 17
-        // =========================
-        {
-            question: "ଭାରତର ପୂର୍ବତମ ସ୍ଥାନ ___ ରାଜ୍ୟରେ ଅବସ୍ଥିତ । (ଅରୁଣାଚଳ ପ୍ରଦେଶ / ଆସାମ)",
-            answer: "ଅରୁଣାଚଳ ପ୍ରଦେଶ"
-        },
-
-        // =========================
-        // CONCEPT NO.- 18
-        // =========================
-        {
-            question: "ଭାରତର ପଶ୍ଚିମତମ ସ୍ଥାନ ___ ରେ ଅବସ୍ଥିତ । (କଚ୍ଛ / ଜୟପୁର)",
-            answer: "କଚ୍ଛ"
+            question: "Itishree's father, Mr Karunakar, is an ___ . (engineer / teacher) (ଇତିଶ୍ରୀଙ୍କ ପିତା, ଶ୍ରୀ କରୁଣାକର, ଜଣେ ___ ଅଟନ୍ତି ।)",
+            answer: "engineer"
         }
     ]
 },
     
 matching: {
     pairs: [
-        { left: "ଭାରତ", right: "🌍 ସର୍ବବୃହତ୍ ଗଣତାନ୍ତ୍ରିକ ରାଷ୍ଟ୍ର ।" },
-        { left: "ଭାରତର ଜନସଂଖ୍ୟା", right: "👥 ବିଶ୍ୱରେ ଦ୍ୱିତୀୟ ସ୍ଥାନ ।" },
-        { left: "ଭାରତର ବୈଶିଷ୍ଟ୍ୟ", right: "🤝 ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା ।" },
-        { left: "ଆଣ୍ଡାମାନ ଓ ନିକୋବର", right: "🏝️ ବଙ୍ଗୋପସାଗରରେ ଅବସ୍ଥିତ ।" },
-        { left: "ଲାକ୍ଷାଦ୍ୱୀପ", right: "🌊 ଆରବ ସାଗରରେ ଅବସ୍ଥିତ ।" },
-        { left: "ଭାରତ", right: "🌏 ଉତ୍ତରଗୋଲାର୍ଦ୍ଧରେ ଅବସ୍ଥିତ ।" },
-        { left: "କର୍କଟକ୍ରାନ୍ତି", right: "➗ ଭାରତକୁ ଦୁଇ ଭାଗରେ ବିଭକ୍ତ କରେ ।" },
-        { left: "ଭାରତର କ୍ଷେତ୍ରଫଳ", right: "📏 ୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି. ।" },
-        { left: "ଭାରତ", right: "🥇 ପୃଥିବୀର ସପ୍ତମ ବୃହତ୍ତମ ଦେଶ ।" },
-        { left: "ଇନ୍ଦିରା ପଏଣ୍ଟ", right: "📍 ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନ ।" }
+        { left: "That boy", right: "🧠 is intelligent." },
+        { left: "The Chinese", right: "💪 are very industrious." },
+        { left: "Dilip Tirkey", right: "🏑 is a popular hockey player." },
+        { left: "Trees", right: "🌳 provide us with oxygen." },
+        { left: "The cows", right: "🌿 feed on grass." },
+        { left: "Sentence", right: "📝 A meaningful expression made up of words." },
+        { left: "Column A", right: "🔤 Subjects." },
+        { left: "Column B", right: "📖 Predicates." },
+        { left: "Correct word order", right: "✅ Indrani is a classical singer." },
+        { left: "Itishree", right: "👧 A student of Class X." }
     ]
 },
 
 arrange: {
     questions: [
         {
-            words: ["ଭାରତ", "ବିଶାଳ", "ଦେଶ", "ଅଟେ"],
-            correct: "ଭାରତ ବିଶାଳ ଦେଶ ଅଟେ ।"
+            words: ["a", "he", "tall", "boy", "is"],
+            correct: "He is a tall boy."
         },
         {
-            words: ["ଭାରତ", "ଉତ୍ତରଗୋଲାର୍ଦ୍ଧରେ", "ଅବସ୍ଥିତ", "ଅଟେ"],
-            correct: "ଭାରତ ଉତ୍ତରଗୋଲାର୍ଦ୍ଧରେ ଅବସ୍ଥିତ ଅଟେ ।"
+            words: ["do", "when", "you", "get", "up"],
+            correct: "When do you get up?"
         },
         {
-            words: ["କର୍କଟକ୍ରାନ୍ତି", "ଭାରତକୁ", "ବିଭକ୍ତ", "କରେ"],
-            correct: "କର୍କଟକ୍ରାନ୍ତି ଭାରତକୁ ବିଭକ୍ତ କରେ ।"
+            words: ["glitters", "not", "all", "is", "gold", "that"],
+            correct: "All that glitters is not gold."
         },
         {
-            words: ["ଭାରତ", "ସପ୍ତମ", "ବୃହତ୍ତମ", "ଦେଶ"],
-            correct: "ଭାରତ ସପ୍ତମ ବୃହତ୍ତମ ଦେଶ ।"
+            words: ["Anima", "is", "singing", "sweetly"],
+            correct: "Anima is singing sweetly."
         },
         {
-            words: ["ଇନ୍ଦିରା", "ପଏଣ୍ଟ", "ଦକ୍ଷିଣତମ", "ସ୍ଥାନ"],
-            correct: "ଇନ୍ଦିରା ପଏଣ୍ଟ ଦକ୍ଷିଣତମ ସ୍ଥାନ ।"
+            words: ["look", "at", "the", "sun"],
+            correct: "Look at the sun."
         }
     ]
 },
+    
 stq: {
     questions: [
 
@@ -770,122 +396,39 @@ stq: {
         // CONCEPT NO.- 1
         // =========================
         {
-            question: "ଭାରତ କେଉଁ ପ୍ରକାରର ରାଷ୍ଟ୍ର ?",
-            answer: "ଭାରତ ପୃଥିବୀର ସର୍ବବୃହତ୍ ଗଣତାନ୍ତ୍ରିକ ରାଷ୍ଟ୍ର । ଏହା ଏକ ଅଗ୍ରଣୀ ବିକାଶଶୀଳ ରାଷ୍ଟ୍ର ।"
+            question: "What are Subjects and Predicates in a sentence? (ବାକ୍ୟରେ Subject ଓ Predicate କ’ଣ ?)",
+            answer: "The part of a sentence that names who or what we are talking about is called the Subject, like 'That boy' or 'Trees'. The part that tells something about the subject is called the Predicate, like 'is intelligent' or 'provide us with oxygen'. Together, a Subject and a Predicate joined suitably make a complete, meaningful sentence. (ବାକ୍ୟରେ ଆମେ କାହା ବିଷୟରେ କହୁଛୁ ତାହା ଦର୍ଶାଉଥିବା ଅଂଶକୁ Subject କୁହାଯାଏ, ଯେପରି 'That boy' କିମ୍ବା 'Trees'। Subject ବିଷୟରେ କିଛି କହୁଥିବା ଅଂଶକୁ Predicate କୁହାଯାଏ, ଯେପରି 'is intelligent' କିମ୍ବା 'provide us with oxygen'। ଏକ Subject ଓ Predicate ଉପଯୁକ୍ତ ଭାବେ ମିଶିଲେ ଏକ ସମ୍ପୂର୍ଣ୍ଣ, ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ ତିଆରି ହୁଏ ।)"
         },
-        {
-            question: "ସ୍ୱାଧୀନତା ପରେ ଭାରତ କେଉଁ କ୍ଷେତ୍ରରେ ସଫଳତା ପାଇଛି ?",
-            answer: "ଭାରତ କୃଷି, ଶିଳ୍ପ, ଯୋଗାଯୋଗ, ବିଜ୍ଞାନ ଓ ପ୍ରଯୁକ୍ତି ବିଦ୍ୟା କ୍ଷେତ୍ରରେ ଅଭୂତପୂର୍ବ ସଫଳତା ପାଇଛି ।"
-        },
-
         // =========================
         // CONCEPT NO.- 2
         // =========================
         {
-            question: "ଭାରତର ଜନସଂଖ୍ୟାର ସ୍ଥାନ ବିଶ୍ୱରେ କେତେ ?",
-            answer: "୧୨୧ କୋଟିରୁ ଅଧିକ ଜନସଂଖ୍ୟା ସହ ଭାରତର ସ୍ଥାନ ବିଶ୍ୱରେ ଦ୍ୱିତୀୟ ।"
-        },
-        {
-            question: "ଭାରତ ପ୍ରାକୃତିକ ବୈଚିତ୍ର୍ୟରେ କାହିଁକି ପରିପୂର୍ଣ୍ଣ ?",
-            answer: "ଭାରତର ବିଭିନ୍ନ ଅଞ୍ଚଳରେ ଜଳବାୟୁ ଓ ଜନବସତି ଭିନ୍ନ ଭିନ୍ନ ଥିବାରୁ ଏହା ପ୍ରାକୃତିକ ବୈଚିତ୍ର୍ୟରେ ପରିପୂର୍ଣ୍ଣ ।"
+            question: "How should the Subject and Predicate be matched to form a meaningful sentence? Give one example. (ଏକ ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ ତିଆରି କରିବାକୁ Subject ଓ Predicate କୁ କିପରି ମେଳାଇବା ଉଚିତ ? ଗୋଟିଏ ଉଦାହରଣ ଦିଅ ।)",
+            answer: "The Subject must be joined with the Predicate that suitably describes it, so that the sentence makes proper sense. For example, 'The cows' (Subject) is correctly joined with 'feed on grass' (Predicate) to form the meaningful sentence 'The cows feed on grass'. (Subject କୁ ତାହାର ଉପଯୁକ୍ତ ବର୍ଣ୍ଣନା ଦେଉଥିବା Predicate ସହିତ ଯୋଡ଼ିବା ଉଚିତ, ଯାହାଫଳରେ ବାକ୍ୟଟି ସଠିକ୍ ଅର୍ଥ ପ୍ରକାଶ କରେ । ଉଦାହରଣ ସ୍ୱରୂପ, 'The cows' (Subject) କୁ 'feed on grass' (Predicate) ସହିତ ସଠିକ୍ ଭାବେ ଯୋଡ଼ି 'The cows feed on grass' ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ ତିଆରି ହୋଇଛି ।)"
         },
 
         // =========================
         // CONCEPT NO.- 3
         // =========================
         {
-            question: "ଭାରତରେ କେଉଁ କେଉଁ ପ୍ରାକୃତିକ ବୈଶିଷ୍ଟ୍ୟ ଦେଖାଯାଏ ?",
-            answer: "ଭାରତରେ ପର୍ବତ, ମାଳଭୂମି, ଅରଣ୍ୟ, ନଦୀ, ସମତଳ ଭୂମି, ମରୁଭୂମି ଓ ବିଭିନ୍ନ ଜୀବଜନ୍ତୁ ଦେଖାଯାଏ ।"
+            question: "Why is word order important while framing a sentence? Give an example of an acceptable and an unacceptable pattern. (ବାକ୍ୟ ଗଠନ ସମୟରେ ଶବ୍ଦକ୍ରମ କାହିଁକି ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ? ଏକ ଗ୍ରହଣୀୟ ଓ ଏକ ଅଗ୍ରହଣୀୟ ପାଟର୍ନର ଉଦାହରଣ ଦିଅ ।)",
+            answer: "Word order is important because words must be arranged in a particular order or pattern to make a meaningful sentence; otherwise the sentence does not make sense. 'Indrani is a classical singer' is an acceptable pattern, but 'Classical is Indrani a singer' is not acceptable. (ଶବ୍ଦକ୍ରମ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ କାରଣ ଏକ ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ ତିଆରି କରିବାକୁ ଶବ୍ଦଗୁଡ଼ିକୁ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମ କିମ୍ବା ପାଟର୍ନରେ ସଜାଇବାକୁ ପଡ଼େ; ନଚେତ ବାକ୍ୟଟି ଅର୍ଥହୀନ ହୋଇଯାଏ । 'Indrani is a classical singer' ଏକ ଗ୍ରହଣୀୟ ପାଟର୍ନ, କିନ୍ତୁ 'Classical is Indrani a singer' ଗ୍ରହଣୀୟ ନୁହେଁ ।)"
         },
-        {
-            question: "ଭାରତରେ କେଉଁ ପ୍ରକାରର ବିଭିନ୍ନତା ଦେଖାଯାଏ ?",
-            answer: "ଭାରତରେ ଭାଷା, ଧର୍ମ, ଖାଦ୍ୟପେୟ, ବେଶପୋଷାକ ଓ ସଂସ୍କୃତିର ବିଭିନ୍ନତା ଦେଖାଯାଏ ।"
-        },
-
         // =========================
         // CONCEPT NO.- 4
         // =========================
         {
-            question: "ଭାରତକୁ ଉପମହାଦେଶ କାହିଁକି କୁହାଯାଏ ?",
-            answer: "ଭାରତ ଏକ ସୁସଂଗଠିତ ଭୂଖଣ୍ଡ ଏବଂ ଏହାର ସ୍ୱତନ୍ତ୍ର ଭୌଗୋଳିକ ପରିଚୟ ଥିବାରୁ ଏହାକୁ ଉପମହାଦେଶ କୁହାଯାଏ ।"
-        },
-        {
-            question: "ଭାରତର ଅନ୍ୟତମ ବୈଶିଷ୍ଟ୍ୟ କ'ଣ ?",
-            answer: "ଭାରତର ଅନ୍ୟତମ ବୈଶିଷ୍ଟ୍ୟ ହେଉଛି 'ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା' ।"
+            question: "How does the word order differ between a statement and a question? Give an example from the text. (ଏକ ବିବୃତି ଓ ଏକ ପ୍ରଶ୍ନ ମଧ୍ୟରେ ଶବ୍ଦକ୍ରମ କିପରି ଭିନ୍ନ ହୁଏ ? ପାଠ୍ୟରୁ ଏକ ଉଦାହରଣ ଦିଅ ।)",
+            answer: "In a statement, the subject comes before the verb, as in 'Indrani is a classical singer'. In a question, the verb comes before the subject, as in 'Is Indrani a classical singer?'. This shows that the same words can form either a statement or a question depending on their order. (ଏକ ବିବୃତିରେ, subject verb ପୂର୍ବରୁ ଆସେ, ଯେପରି 'Indrani is a classical singer'। ଏକ ପ୍ରଶ୍ନରେ, verb subject ପୂର୍ବରୁ ଆସେ, ଯେପରି 'Is Indrani a classical singer?'। ଏହା ଦର୍ଶାଏ ଯେ ସେହି ସମାନ ଶବ୍ଦଗୁଡ଼ିକ ସେମାନଙ୍କର କ୍ରମ ଅନୁଯାୟୀ ଏକ ବିବୃତି କିମ୍ବା ପ୍ରଶ୍ନ ତିଆରି କରିପାରନ୍ତି ।)"
         },
 
         // =========================
         // CONCEPT NO.- 5
         // =========================
         {
-            question: "ଭାରତ କେଉଁ କେଉଁ ଅଂଶକୁ ନେଇ ଗଠିତ ?",
-            answer: "ଭାରତ ମୂଳଭୂଖଣ୍ଡ ଓ ଦୁଇଟି ଦ୍ୱୀପପୁଞ୍ଜକୁ ନେଇ ଗଠିତ ।"
-        },
-        {
-            question: "ଭାରତର ଦୁଇଟି ଦ୍ୱୀପପୁଞ୍ଜର ନାମ କ'ଣ ?",
-            answer: "ଭାରତର ଦୁଇଟି ଦ୍ୱୀପପୁଞ୍ଜ ହେଲା ଆଣ୍ଡାମାନ-ନିକୋବର ଓ ଲାକ୍ଷାଦ୍ୱୀପ ।"
-        },
-
-        // =========================
-        // CONCEPT NO.- 6
-        // =========================
-        {
-            question: "ଭାରତ କେଉଁଠାରେ ଅବସ୍ଥିତ ?",
-            answer: "ଭାରତ ଉତ୍ତରଗୋଲାର୍ଦ୍ଧରେ ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣ ଭାଗରେ ଅବସ୍ଥିତ ।"
-        },
-        {
-            question: "କର୍କଟକ୍ରାନ୍ତି ରେଖା ଭାରତକୁ କିପରି ବିଭକ୍ତ କରିଛି ?",
-            answer: "କର୍କଟକ୍ରାନ୍ତି ରେଖା ଭାରତକୁ ପ୍ରାୟ ଦୁଇ ସମାନ ଭାଗରେ ବିଭକ୍ତ କରିଛି ।"
-        },
-
-        // =========================
-        // CONCEPT NO.- 7
-        // =========================
-        {
-            question: "ସୁଏଜ କେନାଲ୍ ଖୋଲିବା ପରେ କ'ଣ ଲାଭ ହୋଇଥିଲା ?",
-            answer: "ସୁଏଜ କେନାଲ୍ ଖୋଲିବା ପରେ ଭାରତ ଓ ଇଉରୋପ ମଧ୍ୟରେ ପ୍ରାୟ ୭୦୦୦ କି.ମି. ଦୂରତା କମିଥିଲା ।"
-        },
-        {
-            question: "ଭାରତ କେଉଁ ପ୍ରାଚୀନ ମାର୍ଗ ସହ ସଂଯୁକ୍ତ ଥିଲା ?",
-            answer: "ଭାରତ ସ୍ଥଳପଥ ଦ୍ୱାରା ପ୍ରାଚୀନ ରେଶମ ମାର୍ଗ (Silk Route) ସହ ସଂଯୁକ୍ତ ଥିଲା ।"
-        },
-
-        // =========================
-        // CONCEPT NO.- 8
-        // =========================
-        {
-            question: "ଭାରତର କ୍ଷେତ୍ରଫଳ କେତେ ?",
-            answer: "ଭାରତର କ୍ଷେତ୍ରଫଳ ୩.୨୮ ନିୟୁତ ବର୍ଗ କିଲୋମିଟର ।"
-        },
-        {
-            question: "କ୍ଷେତ୍ରଫଳ ଅନୁସାରେ ଭାରତର ସ୍ଥାନ କେତେ ?",
-            answer: "କ୍ଷେତ୍ରଫଳ ଅନୁସାରେ ଭାରତ ପୃଥିବୀର ସପ୍ତମ ବୃହତ୍ତମ ଦେଶ ।"
-        },
-
-        // =========================
-        // CONCEPT NO.- 9
-        // =========================
-        {
-            question: "ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନର ନାମ କ'ଣ ?",
-            answer: "ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନର ନାମ ଇନ୍ଦିରା ପଏଣ୍ଟ ।"
-        },
-        {
-            question: "ଇନ୍ଦିରା ପଏଣ୍ଟ କେଉଁଠାରେ ଅବସ୍ଥିତ ?",
-            answer: "ଇନ୍ଦିରା ପଏଣ୍ଟ ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଦ୍ୱୀପପୁଞ୍ଜରେ ଅବସ୍ଥିତ ।"
-        },
-
-        // =========================
-        // CONCEPT NO.- 10
-        // =========================
-        {
-            question: "ମୂଳଭୂଖଣ୍ଡର ଦକ୍ଷିଣତମ ସ୍ଥାନ କ'ଣ ?",
-            answer: "ମୂଳଭୂଖଣ୍ଡର ଦକ୍ଷିଣତମ ସ୍ଥାନ କନ୍ୟାକୁମାରୀ ।"
-        },
-        {
-            question: "ଭାରତର ଉତ୍ତରତମ, ପୂର୍ବତମ ଓ ପଶ୍ଚିମତମ ସ୍ଥାନ କେଉଁଠାରେ ଅଛି ?",
-            answer: "ଉତ୍ତରତମ ସ୍ଥାନ କାରାକୋରମ ପର୍ବତଶ୍ରେଣୀରେ, ପୂର୍ବତମ ସ୍ଥାନ ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ଓ ପଶ୍ଚିମତମ ସ୍ଥାନ କଚ୍ଛରେ ଅବସ୍ଥିତ ।"
+            question: "Write a short note on Itishree based on the information given in the text. (ପାଠ୍ୟରେ ଦିଆଯାଇଥିବା ସୂଚନା ଆଧାରରେ ଇତିଶ୍ରୀଙ୍କ ବିଷୟରେ ଏକ ସଂକ୍ଷିପ୍ତ ବର୍ଣ୍ଣନା ଲେଖ ।)",
+            answer: "Itishree is a girl who studies in class X and is fourteen years old. Her father, Mr Karunakar, is an engineer. This information about her is given as an example of simple sentences describing a person. (ଇତିଶ୍ରୀ ଜଣେ ବାଳିକା ଯିଏ ଦଶମ ଶ୍ରେଣୀରେ ପଢ଼ୁଛନ୍ତି ଏବଂ ତାଙ୍କ ବୟସ ଚଉଦ ବର୍ଷ । ତାଙ୍କ ପିତା, ଶ୍ରୀ କରୁଣାକର, ଜଣେ ଇଞ୍ଜିନିୟର ଅଟନ୍ତି । ଏକ ବ୍ୟକ୍ତିଙ୍କ ବିଷୟରେ ବର୍ଣ୍ଣନା କରୁଥିବା ସରଳ ବାକ୍ୟର ଉଦାହରଣ ସ୍ୱରୂପ ଏହି ସୂଚନା ଦିଆଯାଇଛି ।)"
         }
-
     ]
 }
 },
@@ -895,112 +438,92 @@ summary: {
     audio: "",
 
     content: {
-        introduction: "ଏହି ପାଠରେ ଭାରତର ଆକାର, ଅବସ୍ଥିତି, ପ୍ରାକୃତିକ ବୈଶିଷ୍ଟ୍ୟ, ଦ୍ୱୀପପୁଞ୍ଜ ଏବଂ ଭୌଗୋଳିକ ସୀମା ବିଷୟରେ ବୁଝାଯାଇଛି । ଏଥିରେ ଭାରତର ବିଭିନ୍ନତା, ଏକତା ଓ ବିଶ୍ୱରେ ତାହାର ସ୍ଥାନ ସମ୍ପର୍କରେ ସ୍ପଷ୍ଟ ଧାରଣା ମିଳେ । ଆସନ୍ତୁ ଏ ବିଷୟରେ ଜାଣିବା ।",
+        introduction: "This chapter introduces students to the basic parts of a sentence. It explains how we express our ideas, feelings and views through sentences, and how a sentence is made up of words joined in a meaningful way. The chapter also teaches the importance of word order in framing correct sentences. (ଏହି ଅଧ୍ୟାୟଟି ଛାତ୍ରମାନଙ୍କୁ ବାକ୍ୟର ମୌଳିକ ଅଂଶଗୁଡ଼ିକ ସହିତ ପରିଚିତ କରାଏ । ଏହା ବୁଝାଏ ଯେ ଆମେ କିପରି ଆମର ଚିନ୍ତାଧାରା, ଅନୁଭବ ଓ ମତାମତ ବାକ୍ୟ ମାଧ୍ୟମରେ ପ୍ରକାଶ କରୁ, ଏବଂ ଏକ ବାକ୍ୟ କିପରି ଶବ୍ଦଗୁଡ଼ିକ ଅର୍ଥପୂର୍ଣ୍ଣ ଭାବେ ମିଶି ଗଠିତ ହୁଏ । ଏହି ଅଧ୍ୟାୟ ମଧ୍ୟ ସଠିକ୍ ବାକ୍ୟ ଗଠନରେ ଶବ୍ଦକ୍ରମର ଗୁରୁତ୍ୱ ଶିଖାଏ ।)",
 
         sentences: [
-            {
-                heading: "ଭାରତର ବୈଶିଷ୍ଟ୍ୟ ଓ ବିଭିନ୍ନତା",
-                text: "ଭାରତ ପୃଥିବୀର ପ୍ରାଚୀନ ସଭ୍ୟତାମାନଙ୍କ ମଧ୍ୟରୁ ଅନ୍ୟତମ ଏବଂ ସର୍ବବୃହତ୍ ଗଣତାନ୍ତ୍ରିକ ରାଷ୍ଟ୍ର । ସ୍ୱାଧୀନତା ପରେ କୃଷି, ଶିଳ୍ପ, ଯୋଗାଯୋଗ, ବିଜ୍ଞାନ ଓ ପ୍ରଯୁକ୍ତିରେ ଦେଶ ଉଲ୍ଲେଖନୀୟ ଉନ୍ନତି କରିଛି । ଭାରତରେ ବିଭିନ୍ନ ଜଳବାୟୁ, ଭୂପ୍ରକୃତି, ଭାଷା, ଧର୍ମ, ଖାଦ୍ୟପେୟ ଓ ବେଶପୋଷାକ ଥିଲେ ମଧ୍ୟ “ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା” ଏହାର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ ।"
-            },
+            { heading: "Meaning of a Sentence (ବାକ୍ୟର ଅର୍ଥ)", text: "We express our ideas, feelings and views in sentences. A sentence is made up of words and is a meaningful expression. Without proper words joined together correctly, an expression does not become a sentence. (ଆମେ ଆମର ଚିନ୍ତାଧାରା, ଅନୁଭବ ଓ ମତାମତ ବାକ୍ୟରେ ପ୍ରକାଶ କରୁ । ଏକ ବାକ୍ୟ ଶବ୍ଦ ଦ୍ୱାରା ଗଠିତ ଏବଂ ଏହା ଏକ ଅର୍ଥପୂର୍ଣ୍ଣ ଅଭିବ୍ୟକ୍ତି ଅଟେ । ଉପଯୁକ୍ତ ଶବ୍ଦଗୁଡ଼ିକ ସଠିକ୍ ଭାବେ ନ ମିଶିଲେ, ଏକ ଅଭିବ୍ୟକ୍ତି ବାକ୍ୟ ହୋଇପାରେ ନାହିଁ ।)" },
 
-            {
-                heading: "ଭାରତର ଗଠନ ଓ ଅବସ୍ଥିତି",
-                text: "ଭାରତ ମୂଳଭୂଖଣ୍ଡ ସହ ଆଣ୍ଡାମାନ-ନିକୋବର ଓ ଲାକ୍ଷାଦ୍ୱୀପ ଦ୍ୱୀପପୁଞ୍ଜକୁ ନେଇ ଗଠିତ । ଭାରତ ଉତ୍ତରଗୋଲାର୍ଦ୍ଧରେ ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣ ଭାଗରେ ଅବସ୍ଥିତ । କର୍କଟକ୍ରାନ୍ତି ରେଖା ଭାରତର ମଧ୍ୟଭାଗ ଦେଇ ଯାଇ ଦେଶକୁ ପ୍ରାୟ ଦୁଇ ସମାନ ଭାଗରେ ବିଭକ୍ତ କରିଛି ।"
-            },
+            { heading: "Joining Words to Form Sentences (ବାକ୍ୟ ଗଠନ ପାଇଁ ଶବ୍ଦ ଯୋଡ଼ିବା)", text: "In Activity 1, words from Table A and Table B are joined suitably to make meaningful sentences. For example, 'That boy' is joined with 'is intelligent' to form the sentence 'That boy is intelligent'. Similarly, other words like 'Trees', 'The cows', 'The Chinese' and 'Dilip Tirkey' need to be matched with their correct predicates. (Activity 1 ରେ, Table A ଓ Table B ର ଶବ୍ଦଗୁଡ଼ିକୁ ଉପଯୁକ୍ତ ଭାବେ ଯୋଡ଼ି ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ ତିଆରି କରାଯାଏ । ଉଦାହରଣ ସ୍ୱରୂପ, 'That boy' କୁ 'is intelligent' ସହିତ ଯୋଡ଼ି 'That boy is intelligent' ବାକ୍ୟ ତିଆରି ହୋଇଛି । ସେହିପରି, 'Trees', 'The cows', 'The Chinese' ଓ 'Dilip Tirkey' ଭଳି ଅନ୍ୟ ଶବ୍ଦଗୁଡ଼ିକୁ ମଧ୍ୟ ସେମାନଙ୍କର ସଠିକ୍ predicate ସହିତ ମେଳାଇବାକୁ ପଡ଼ିବ ।)" },
 
-            {
-                heading: "ଅକ୍ଷାଂଶ, ଦ୍ରାଘିମା ଓ ଗୁରୁତ୍ୱ",
-                text: "ଭାରତର ମୂଳଭୂଖଣ୍ଡ ୮°୪′ ଉତ୍ତରରୁ ୩୭°୬′ ଉତ୍ତର ଅକ୍ଷାଂଶ ଓ ୬୮°୭′ ପୂର୍ବରୁ ୯୭°୨୫′ ପୂର୍ବ ଦ୍ରାଘିମା ମଧ୍ୟରେ ରହିଛି । ଭାରତ ସମ୍ପୂର୍ଣ୍ଣ ଭାବେ ଉତ୍ତରଗୋଲାର୍ଦ୍ଧର ଉପକ୍ରାନ୍ତୀୟ ଓ କ୍ରାନ୍ତୀୟ ମଣ୍ଡଳରେ ଅବସ୍ଥିତ । ସୁଏଜ କେନାଲ୍ ଖୋଲିବା ପରେ ଭାରତ ଓ ଇଉରୋପ ମଧ୍ୟରେ ଦୂରତା ପ୍ରାୟ ୭୦୦୦ କି.ମି. କମିଥିଲା ଏବଂ ପ୍ରାଚୀନ କାଳରେ ଭାରତ ରେଶମ ମାର୍ଗ ସହ ସଂଯୁକ୍ତ ଥିଲା ।"
-            },
+            { heading: "Subject and Predicate (Subject ଓ Predicate)", text: "The parts in column A are called Subjects, and the parts in column B are called Predicates. The Subject tells us who or what the sentence is about, while the Predicate tells us something about the Subject. Every complete sentence must have both a Subject and a Predicate. (ସ୍ତମ୍ଭ A ର ଅଂଶଗୁଡ଼ିକୁ Subject କୁହାଯାଏ, ଏବଂ ସ୍ତମ୍ଭ B ର ଅଂଶଗୁଡ଼ିକୁ Predicate କୁହାଯାଏ । Subject ଆମକୁ କୁହେ ଯେ ବାକ୍ୟଟି କାହା ବିଷୟରେ, ଅନ୍ୟପଟେ Predicate ଆମକୁ Subject ବିଷୟରେ କିଛି କୁହେ । ପ୍ରତ୍ୟେକ ସମ୍ପୂର୍ଣ୍ଣ ବାକ୍ୟରେ Subject ଓ Predicate ଉଭୟ ରହିବା ଆବଶ୍ୟକ ।)" },
 
-            {
-                heading: "ଭାରତର ଆକାର ଓ ବିଶ୍ୱରେ ସ୍ଥାନ",
-                text: "ଭାରତର କ୍ଷେତ୍ରଫଳ ୩.୨୮ ନିୟୁତ ବର୍ଗ କିଲୋମିଟର ଏବଂ ଏହା ପୃଥିବୀର ସମୁଦାୟ କ୍ଷେତ୍ରଫଳର ପ୍ରାୟ ୨.୪ ପ୍ରତିଶତ । ଭାରତର ସ୍ଥଳ ସୀମା ପ୍ରାୟ ୧୫,୨୦୦ କି.ମି. ଓ ଉପକୂଳରେଖା ୭,୫୦୦ କି.ମି.ରୁ ଅଧିକ । କ୍ଷେତ୍ରଫଳ ଅନୁସାରେ ଭାରତ ପୃଥିବୀର ସପ୍ତମ ବୃହତ୍ତମ ଦେଶ ।"
-            },
+            { heading: "Importance of Word Order (ଶବ୍ଦକ୍ରମର ଗୁରୁତ୍ୱ)", text: "Words must be arranged in a particular order or pattern to make a sentence meaningful. 'Indrani is a classical singer' is an acceptable pattern, while 'Classical is Indrani a singer' or 'Singer classical Indrani is a' are not acceptable. This shows that simply having the right words is not enough; their order also matters greatly. (ଏକ ବାକ୍ୟକୁ ଅର୍ଥପୂର୍ଣ୍ଣ କରିବାକୁ ଶବ୍ଦଗୁଡ଼ିକୁ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମ କିମ୍ବା ପାଟର୍ନରେ ସଜାଇବାକୁ ପଡ଼େ । 'Indrani is a classical singer' ଏକ ଗ୍ରହଣୀୟ ପାଟର୍ନ, ଅନ୍ୟପଟେ 'Classical is Indrani a singer' କିମ୍ବା 'Singer classical Indrani is a' ଗ୍ରହଣୀୟ ନୁହେଁ । ଏହା ଦର୍ଶାଏ ଯେ କେବଳ ସଠିକ୍ ଶବ୍ଦ ଥିଲେ ହିଁ ଚଳେ ନାହିଁ; ସେମାନଙ୍କର କ୍ରମ ମଧ୍ୟ ବହୁତ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ।)" },
 
-            {
-                heading: "ଭାରତର ସୀମାନ୍ତ ସ୍ଥାନ",
-                text: "ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନ ଇନ୍ଦିରା ପଏଣ୍ଟ ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଦ୍ୱୀପପୁଞ୍ଜରେ ଅବସ୍ଥିତ । ୨୦୦୪ ମସିହାର ସୁନାମିରେ ଇନ୍ଦିରା ପଏଣ୍ଟ ସମୁଦ୍ର ଗର୍ଭରେ ଲୀନ ହୋଇଯାଇଥିଲା ଏବଂ ମୂଳଭୂଖଣ୍ଡର ଦକ୍ଷିଣତମ ସ୍ଥାନ କନ୍ୟାକୁମାରୀ ଅଟେ । ଭାରତର ଉତ୍ତରତମ ସ୍ଥାନ କାରାକୋରମ ପର୍ବତଶ୍ରେଣୀରେ, ପୂର୍ବତମ ସ୍ଥାନ ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ଏବଂ ପଶ୍ଚିମତମ ସ୍ଥାନ କଚ୍ଛରେ ଅବସ୍ଥିତ ।"
-            },
+            { heading: "Practicing Word Order (Activity 2 - ଶବ୍ଦକ୍ରମ ଅଭ୍ୟାସ)", text: "In Activity 2, students practice putting jumbled words in the correct order to form meaningful sentences and questions. The first example, 'her / you / waiting / for / are?', is correctly arranged as 'Are you waiting for her?'. This activity helps students understand how changing word order can turn a group of words into a proper statement or question. (Activity 2 ରେ, ଛାତ୍ରମାନେ ଅବ୍ୟବସ୍ଥିତ ଶବ୍ଦଗୁଡ଼ିକୁ ସଠିକ୍ କ୍ରମରେ ସଜାଇ ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ ଓ ପ୍ରଶ୍ନ ତିଆରି କରିବା ଅଭ୍ୟାସ କରନ୍ତି । ପ୍ରଥମ ଉଦାହରଣ, 'her / you / waiting / for / are?', କୁ ସଠିକ୍ ଭାବେ ସଜାଇ 'Are you waiting for her?' ତିଆରି କରାଯାଇଛି । ଏହି କାର୍ଯ୍ୟକଳାପ ଛାତ୍ରମାନଙ୍କୁ ବୁଝାଏ ଯେ ଶବ୍ଦକ୍ରମ ପରିବର୍ତ୍ତନ କରି କିପରି ଏକ ଶବ୍ଦ ଗୋଷ୍ଠୀକୁ ଏକ ସଠିକ୍ ବିବୃତି କିମ୍ବା ପ୍ରଶ୍ନରେ ପରିଣତ କରାଯାଇପାରେ ।)" },
 
-            {
-                heading: "ଭାରତର ଭୌଗୋଳିକ ମହତ୍ତ୍ୱ",
-                text: "ଭାରତରେ ପର୍ବତ, ମାଳଭୂମି, ସମତଳ ଭୂମି, ମରୁଭୂମି, ନଦୀ ଓ ଘନ ଅରଣ୍ୟ ପରି ବିଭିନ୍ନ ଭୂପ୍ରକୃତି ଦେଖାଯାଏ । ଏହି ସମସ୍ତ ପ୍ରାକୃତିକ ଓ ସାଂସ୍କୃତିକ ବୈଚିତ୍ର୍ୟ ଭାରତକୁ ଏକ ସୁସଂଗଠିତ ଭୂଖଣ୍ଡ ଓ ଉପମହାଦେଶର ମାନ୍ୟତା ଦେଇଛି । ଜନସଂଖ୍ୟା, ଭୌଗୋଳିକ ସ୍ଥିତି ଓ ପ୍ରାକୃତିକ ସମ୍ପଦ ଯୋଗୁଁ ଭାରତ ବିଶ୍ୱର ଏକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଦେଶ ଭାବେ ପରିଚିତ ।"
-            }
+            { heading: "Describing a Person Using Simple Sentences (ସରଳ ବାକ୍ୟ ଦ୍ୱାରା ଜଣେ ବ୍ୟକ୍ତିଙ୍କ ବର୍ଣ୍ଣନା)", text: "The chapter gives an example of simple sentences describing a girl named Itishree. It states that she is in class X, she is fourteen years old, and Mr Karunakar, her father, is an engineer. This example shows how a series of simple Subject-Predicate sentences can together give complete information about a person. (ଅଧ୍ୟାୟଟି ଇତିଶ୍ରୀ ନାମକ ଏକ ବାଳିକାଙ୍କ ବର୍ଣ୍ଣନା କରୁଥିବା ସରଳ ବାକ୍ୟର ଏକ ଉଦାହରଣ ଦିଏ । ଏଥିରେ କୁହାଯାଇଛି ଯେ ସେ ଦଶମ ଶ୍ରେଣୀରେ ପଢ଼ୁଛନ୍ତି, ତାଙ୍କ ବୟସ ଚଉଦ ବର୍ଷ, ଏବଂ ତାଙ୍କ ପିତା ଶ୍ରୀ କରୁଣାକର ଜଣେ ଇଞ୍ଜିନିୟର ଅଟନ୍ତି । ଏହି ଉଦାହରଣ ଦର୍ଶାଏ ଯେ କିପରି ଏକ ପରେ ଏକ ସରଳ Subject-Predicate ବାକ୍ୟଗୁଡ଼ିକ ମିଶି ଜଣେ ବ୍ୟକ୍ତିଙ୍କ ବିଷୟରେ ସମ୍ପୂର୍ଣ୍ଣ ସୂଚନା ଦେଇପାରନ୍ତି ।)" }
         ],
 
-        conclusion: "ଏହି ପାଠରୁ ଜଣାପଡ଼େ ଯେ ଭାରତ ଏକ ବିଶାଳ ଓ ବିବିଧତାପୂର୍ଣ୍ଣ ଦେଶ । ଏହାର ଆକାର, ଅବସ୍ଥିତି, ପ୍ରାକୃତିକ ବୈଶିଷ୍ଟ୍ୟ, ଦ୍ୱୀପପୁଞ୍ଜ ଓ ସୀମାନ୍ତ ସ୍ଥାନ ଭାରତର ଭୌଗୋଳିକ ଗୁରୁତ୍ୱକୁ ପ୍ରକାଶ କରେ । “ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା” ହେଉଛି ଭାରତର ସବୁଠାରୁ ବଡ଼ ପରିଚୟ ଏବଂ ଏହା ଭାରତକୁ ବିଶ୍ୱରେ ଏକ ସ୍ୱତନ୍ତ୍ର ସ୍ଥାନ ପ୍ରଦାନ କରିଛି ।"
+        conclusion: "This chapter helps students understand that a meaningful sentence is formed by correctly joining a Subject with its matching Predicate. It also teaches that the order of words in a sentence is crucial, since the same words arranged differently can make a sentence meaningless or change a statement into a question. Through activities and examples, students learn to build, arrange and use simple sentences correctly. (ଏହି ଅଧ୍ୟାୟ ଛାତ୍ରମାନଙ୍କୁ ବୁଝାଏ ଯେ ଏକ ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ Subject କୁ ତାହାର ମେଳଖାଉଥିବା Predicate ସହିତ ସଠିକ୍ ଭାବେ ଯୋଡ଼ି ତିଆରି ହୁଏ । ଏହା ମଧ୍ୟ ଶିଖାଏ ଯେ ବାକ୍ୟରେ ଶବ୍ଦକ୍ରମ ଅତ୍ୟନ୍ତ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ, କାରଣ ସମାନ ଶବ୍ଦଗୁଡ଼ିକ ଭିନ୍ନ ଭାବେ ସଜାଗଲେ ବାକ୍ୟଟି ଅର୍ଥହୀନ ହୋଇପାରେ କିମ୍ବା ଏକ ବିବୃତିକୁ ପ୍ରଶ୍ନରେ ପରିଣତ କରିପାରେ । କାର୍ଯ୍ୟକଳାପ ଓ ଉଦାହରଣ ମାଧ୍ୟମରେ, ଛାତ୍ରମାନେ ସରଳ ବାକ୍ୟ ସଠିକ୍ ଭାବେ ଗଠନ, ସଜାଇବା ଓ ବ୍ୟବହାର କରିବା ଶିଖନ୍ତି ।)"
     },
-
 
 questions: [
 {
 audio: "",
-question: "ଭାରତକୁ ଉପମହାଦେଶ କାହିଁକି କୁହାଯାଏ ?",
-introduction: "ଭାରତର ପ୍ରାକୃତିକ ବୈଚିତ୍ର୍ୟ, ସାଂସ୍କୃତିକ ବିବିଧତା ଓ ଭୌଗୋଳିକ ସ୍ୱାତନ୍ତ୍ର୍ୟ ଯୋଗୁଁ ଏହାକୁ ଉପମହାଦେଶ କୁହାଯାଏ । ଏହାର କାରଣଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+question: "What is the Subject of a sentence? (ବାକ୍ୟର Subject କ'ଣ ?)",
+introduction: "In a sentence, the part that names who or what we are talking about is called the Subject. This is explained through the examples given below. (ଏକ ବାକ୍ୟରେ, ଆମେ କାହା ବିଷୟରେ କହୁଛୁ ତାହା ଦର୍ଶାଉଥିବା ଅଂଶକୁ Subject କୁହାଯାଏ । ଏହାକୁ ନିମ୍ନରେ ଦିଆଯାଇଥିବା ଉଦାହରଣ ମାଧ୍ୟମରେ ବୁଝାଯାଇଛି ।)",
 points: [
-"ଭାରତରେ ବିଭିନ୍ନ ପ୍ରକାରର ଭୂପୃଷ୍ଠ ଦେଖାଯାଏ ।",
-"ଦେଶର ଜଳବାୟୁ ଓ ଜନବସତି ଅଞ୍ଚଳଭେଦରେ ଭିନ୍ନ ।",
-"ବିଭିନ୍ନ ଭାଷା ଓ ଧର୍ମର ଲୋକ ବାସ କରନ୍ତି ।",
-"ଏତେ ବିଭିନ୍ନତା ଥିଲେ ମଧ୍ୟ ଭାରତ ଏକ ସୁସଂଗଠିତ ଭୂଖଣ୍ଡ ।",
-"ଭାରତର ନିଜସ୍ୱ ଭୌଗୋଳିକ ସ୍ୱାତନ୍ତ୍ର୍ୟ ରହିଛି ।"
+"A sentence has two parts, a Subject and a Predicate. (ଏକ ବାକ୍ୟର ଦୁଇଟି ଅଂଶ ଥାଏ, ଏକ Subject ଓ ଏକ Predicate ।)",
+"The Subject is the part in column A of Activity 1. (Subject ହେଉଛି Activity 1 ର ସ୍ତମ୍ଭ A ର ଅଂଶ ।)",
+"For example, 'That boy' and 'Trees' are Subjects. (ଉଦାହରଣ ସ୍ୱରୂପ, 'That boy' ଓ 'Trees' ହେଉଛନ୍ତି Subject ।)",
+"The Subject tells us who or what the sentence is about. (Subject ଆମକୁ କୁହେ ଯେ ବାକ୍ୟଟି କାହା ବିଷୟରେ ।)",
+"It must be joined with a suitable Predicate to make a complete sentence. (ଏକ ସମ୍ପୂର୍ଣ୍ଣ ବାକ୍ୟ ତିଆରି କରିବାକୁ ଏହାକୁ ଏକ ଉପଯୁକ୍ତ Predicate ସହିତ ଯୋଡ଼ିବାକୁ ପଡ଼େ ।)"
 ],
-conclusion: "ପ୍ରାକୃତିକ ଓ ସାଂସ୍କୃତିକ ବିବିଧତା ସହ ଭୌଗୋଳିକ ସ୍ୱାତନ୍ତ୍ର୍ୟ ଥିବାରୁ ଭାରତକୁ ଉପମହାଦେଶ କୁହାଯାଏ । ଏହା 'ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା'ର ଉତ୍କୃଷ୍ଟ ଉଦାହରଣ ଅଟେ ।"
+conclusion: "The Subject is the part of a sentence that names the person or thing being talked about. It is found in column A of Activity 1, such as 'That boy' or 'Trees'. (Subject ହେଉଛି ବାକ୍ୟର ସେହି ଅଂଶ ଯାହା କୁହାଯାଉଥିବା ବ୍ୟକ୍ତି କିମ୍ବା ବସ୍ତୁକୁ ନାମିତ କରେ । ଏହା Activity 1 ର ସ୍ତମ୍ଭ A ରେ ମିଳେ, ଯେପରି 'That boy' କିମ୍ବା 'Trees' ।)"
 },
 {
 audio: "",
-question: "ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି ବର୍ଣ୍ଣନା କର ।",
-introduction: "ଭାରତର ଅବସ୍ଥିତି, ଅକ୍ଷାଂଶ-ଦ୍ରାଘିମା ବିସ୍ତାର ଓ କର୍କଟକ୍ରାନ୍ତି ରେଖାର ସ୍ଥିତି ଏହାର ଭୌଗୋଳିକ ପରିଚୟ ଦେଇଥାଏ । ଏହାର ମୁଖ୍ୟ ବିଷୟଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+question: "What is the Predicate of a sentence? (ବାକ୍ୟର Predicate କ'ଣ ?)",
+introduction: "The part of a sentence that tells something about the Subject is called the Predicate. This is explained through the points given below. (ବାକ୍ୟର ସେହି ଅଂଶ ଯାହା Subject ବିଷୟରେ କିଛି କୁହେ, ତାହାକୁ Predicate କୁହାଯାଏ । ଏହାକୁ ନିମ୍ନରେ ଦିଆଯାଇଥିବା ବିଷୟଗୁଡ଼ିକ ମାଧ୍ୟମରେ ବୁଝାଯାଇଛି ।)",
 points: [
-"ଭାରତ ଉତ୍ତର ଗୋଲାର୍ଦ୍ଧରେ ଅବସ୍ଥିତ ।",
-"ଏହା ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣ ଭାଗରେ ରହିଛି ।",
-"ଭାରତ ୮°୪′ ଉ. ରୁ ୩୭°୬′ ଉ. ଅକ୍ଷାଂଶ ମଧ୍ୟରେ ଅବସ୍ଥିତ ।",
-"ଭାରତ ୬୮°୭′ ପୂ. ରୁ ୯୭°୨୫′ ପୂ. ଦ୍ରାଘିମା ମଧ୍ୟରେ ରହିଛି ।",
-"କର୍କଟକ୍ରାନ୍ତି ରେଖା ଭାରତକୁ ପ୍ରାୟ ଦୁଇ ସମାନ ଭାଗରେ ବିଭକ୍ତ କରିଛି ।"
+"The Predicate is the part in column B of Activity 1. (Predicate ହେଉଛି Activity 1 ର ସ୍ତମ୍ଭ B ର ଅଂଶ ।)",
+"For example, 'is intelligent' and 'feed on grass' are Predicates. (ଉଦାହରଣ ସ୍ୱରୂପ, 'is intelligent' ଓ 'feed on grass' ହେଉଛନ୍ତି Predicate ।)",
+"The Predicate tells us something about the Subject. (Predicate ଆମକୁ Subject ବିଷୟରେ କିଛି କୁହେ ।)",
+"It must be joined suitably with a Subject to make sense. (ଅର୍ଥପୂର୍ଣ୍ଣ ହେବାକୁ ଏହାକୁ ଏକ Subject ସହିତ ଉପଯୁକ୍ତ ଭାବେ ଯୋଡ଼ିବାକୁ ପଡ଼େ ।)",
+"For instance, 'The cows' is joined with 'feed on grass'. (ଉଦାହରଣ ସ୍ୱରୂପ, 'The cows' କୁ 'feed on grass' ସହିତ ଯୋଡ଼ାଯାଇଛି ।)"
 ],
-conclusion: "ଭାରତ ଉତ୍ତର ଗୋଲାର୍ଦ୍ଧରେ ଓ ଏସିଆର ଦକ୍ଷିଣ ଭାଗରେ ଅବସ୍ଥିତ । କର୍କଟକ୍ରାନ୍ତି ରେଖା ଏହାର ମଧ୍ୟଭାଗ ଦେଇ ଯାଇଥିବାରୁ ଏହା ଉପକ୍ରାନ୍ତୀୟ ଓ କ୍ରାନ୍ତୀୟ ମଣ୍ଡଳରେ ରହିଛି ।"
+conclusion: "The Predicate is the part of a sentence that tells us something about the Subject. It is found in column B of Activity 1, such as 'is intelligent' or 'feed on grass'. (Predicate ହେଉଛି ବାକ୍ୟର ସେହି ଅଂଶ ଯାହା ଆମକୁ Subject ବିଷୟରେ କିଛି କୁହେ । ଏହା Activity 1 ର ସ୍ତମ୍ଭ B ରେ ମିଳେ, ଯେପରି 'is intelligent' କିମ୍ବା 'feed on grass' ।)"
 },
 {
 audio: "",
-question: "ଭାରତର ଆକାର ଓ କ୍ଷେତ୍ରଫଳ ସମ୍ବନ୍ଧରେ ଲେଖ ।",
-introduction: "ଭାରତର କ୍ଷେତ୍ରଫଳ, ସ୍ଥଳସୀମା, ଉପକୂଳରେଖା ଓ ବିଶ୍ୱରେ ଏହାର ସ୍ଥାନ ଏହାର ଆକାରକୁ ସୂଚାଇଥାଏ । ଏହାର ମୁଖ୍ୟ ତଥ୍ୟଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+question: "Why is word order important in framing a sentence? (ବାକ୍ୟ ଗଠନରେ ଶବ୍ଦକ୍ରମ କାହିଁକି ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ?)",
+introduction: "Words must be arranged in a particular order or pattern to make a meaningful sentence. This is explained through the points given below. (ଏକ ଅର୍ଥପୂର୍ଣ୍ଣ ବାକ୍ୟ ତିଆରି କରିବାକୁ ଶବ୍ଦଗୁଡ଼ିକୁ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ କ୍ରମ କିମ୍ବା ପାଟର୍ନରେ ସଜାଇବାକୁ ପଡ଼େ । ଏହାକୁ ନିମ୍ନରେ ଦିଆଯାଇଥିବା ବିଷୟଗୁଡ଼ିକ ମାଧ୍ୟମରେ ବୁଝାଯାଇଛି ।)",
 points: [
-"ଭାରତର କ୍ଷେତ୍ରଫଳ ୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି. ।",
-"ଏହା ପୃଥିବୀର କ୍ଷେତ୍ରଫଳର ୨.୪ ପ୍ରତିଶତ ଅଟେ ।",
-"ଭାରତର ସ୍ଥଳସୀମା ପ୍ରାୟ ୧୫,୨୦୦ କି.ମି. ।",
-"ଭାରତର ଉପକୂଳରେଖା ୭,୫୦୦ କି.ମି.ରୁ ଅଧିକ ।",
-"ଭାରତ ପୃଥିବୀର ସପ୍ତମ ବୃହତ୍ତମ ଦେଶ ।"
+"'Indrani is a classical singer' is an acceptable sentence pattern. ('Indrani is a classical singer' ଏକ ଗ୍ରହଣୀୟ ବାକ୍ୟ ପାଟର୍ନ ।)",
+"'Classical is Indrani a singer' is not acceptable. ('Classical is Indrani a singer' ଗ୍ରହଣୀୟ ନୁହେଁ ।)",
+"'Singer classical Indrani is a' is also not acceptable. ('Singer classical Indrani is a' ମଧ୍ୟ ଗ୍ରହଣୀୟ ନୁହେଁ ।)",
+"Changing the order of the same words can make the sentence meaningless. (ସମାନ ଶବ୍ଦଗୁଡ଼ିକର କ୍ରମ ପରିବର୍ତ୍ତନ କଲେ ବାକ୍ୟଟି ଅର୍ଥହୀନ ହୋଇପାରେ ।)",
+"Word order can also change a statement into a question, as in 'Is Indrani a classical singer?'. (ଶବ୍ଦକ୍ରମ ଏକ ବିବୃତିକୁ ପ୍ରଶ୍ନରେ ମଧ୍ୟ ପରିଣତ କରିପାରେ, ଯେପରି 'Is Indrani a classical singer?' ।)"
 ],
-conclusion: "ଭାରତ କ୍ଷେତ୍ରଫଳ ଦୃଷ୍ଟିରୁ ପୃଥିବୀର ସପ୍ତମ ବୃହତ୍ତମ ଦେଶ ଅଟେ । ବିଶାଳ କ୍ଷେତ୍ରଫଳ ଓ ଦୀର୍ଘ ଉପକୂଳରେଖା ଭାରତର ଭୌଗୋଳିକ ଗୁରୁତ୍ୱକୁ ବଢ଼ାଇଛି ।"
+conclusion: "Word order is important because only a particular arrangement of words makes a sentence meaningful. Changing that order, as seen in the unacceptable patterns, results in a sentence that does not make sense. (ଶବ୍ଦକ୍ରମ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ କାରଣ କେବଳ ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ଶବ୍ଦ ବ୍ୟବସ୍ଥା ହିଁ ଏକ ବାକ୍ୟକୁ ଅର୍ଥପୂର୍ଣ୍ଣ କରେ । ଅଗ୍ରହଣୀୟ ପାଟର୍ନରେ ଦେଖାଯାଇଥିବା ପରି, ସେହି କ୍ରମ ପରିବର୍ତ୍ତନ କଲେ ବାକ୍ୟଟି ଅର୍ଥହୀନ ହୋଇଯାଏ ।)"
 },
 {
 audio: "",
-question: "ଭାରତ କେଉଁ କେଉଁ ଅଂଶକୁ ନେଇ ଗଠିତ ?",
-introduction: "ଭାରତର ଗଠନରେ ମୂଳଭୂଖଣ୍ଡ ସହିତ ଦୁଇଟି ପ୍ରମୁଖ ଦ୍ୱୀପପୁଞ୍ଜ ଅନ୍ତର୍ଭୁକ୍ତ ଅଛି । ଏହାର ଅଂଶଗୁଡ଼ିକ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+question: "How does word order change a statement into a question? (ଶବ୍ଦକ୍ରମ କିପରି ଏକ ବିବୃତିକୁ ପ୍ରଶ୍ନରେ ପରିଣତ କରେ ?)",
+introduction: "The same set of words can form either a statement or a question depending on their order. This is explained through the points given below. (ଏକ ସମାନ ଶବ୍ଦ ସେଟ୍ ସେମାନଙ୍କ କ୍ରମ ଅନୁଯାୟୀ ଏକ ବିବୃତି କିମ୍ବା ପ୍ରଶ୍ନ ତିଆରି କରିପାରେ । ଏହାକୁ ନିମ୍ନରେ ଦିଆଯାଇଥିବା ବିଷୟଗୁଡ଼ିକ ମାଧ୍ୟମରେ ବୁଝାଯାଇଛି ।)",
 points: [
-"ଭାରତ ମୂଳଭୂଖଣ୍ଡକୁ ନେଇ ଗଠିତ ।",
-"ଏଥିରେ ଦୁଇଟି ଦ୍ୱୀପପୁଞ୍ଜ ଅଛି ।",
-"ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଦ୍ୱୀପପୁଞ୍ଜ ବଙ୍ଗୋପସାଗରରେ ଅବସ୍ଥିତ ।",
-"ଲାକ୍ଷାଦ୍ୱୀପ ଆରବ ସାଗରରେ ଅବସ୍ଥିତ ।",
-"ମୂଳଭୂଖଣ୍ଡ ଓ ଦ୍ୱୀପପୁଞ୍ଜ ମିଶି ଭାରତ ଗଠିତ ହୋଇଛି ।"
+"'Indrani is a classical singer' is a statement. ('Indrani is a classical singer' ଏକ ବିବୃତି ।)",
+"'Is Indrani a classical singer?' is a question. ('Is Indrani a classical singer?' ଏକ ପ୍ରଶ୍ନ ।)",
+"In the statement, the Subject 'Indrani' comes before the verb 'is'. (ବିବୃତିରେ, Subject 'Indrani' verb 'is' ପୂର୍ବରୁ ଆସେ ।)",
+"In the question, the verb 'Is' comes before the Subject 'Indrani'. (ପ୍ରଶ୍ନରେ, verb 'Is' Subject 'Indrani' ପୂର୍ବରୁ ଆସେ ।)",
+"This shows that reordering words changes a statement into a question. (ଏହା ଦର୍ଶାଏ ଯେ ଶବ୍ଦଗୁଡ଼ିକୁ ପୁନଃ ସଜାଇଲେ ଏକ ବିବୃତି ପ୍ରଶ୍ନରେ ପରିଣତ ହୁଏ ।)"
 ],
-conclusion: "ଭାରତ ମୂଳଭୂଖଣ୍ଡ ସହ ଆଣ୍ଡାମାନ-ନିକୋବର ଓ ଲାକ୍ଷାଦ୍ୱୀପକୁ ନେଇ ଗଠିତ । ଏହି ଦ୍ୱୀପପୁଞ୍ଜଗୁଡ଼ିକ ଭାରତର ଭୌଗୋଳିକ ବିସ୍ତାରକୁ ବଢ଼ାଇଛି ।"
+conclusion: "Word order changes a statement into a question by moving the verb before the Subject. This is clearly seen in the example 'Indrani is a classical singer' becoming 'Is Indrani a classical singer?'. (verb କୁ Subject ପୂର୍ବକୁ ଘୁଞ୍ଚାଇ ଶବ୍ଦକ୍ରମ ଏକ ବିବୃତିକୁ ପ୍ରଶ୍ନରେ ପରିଣତ କରେ । ଏହା 'Indrani is a classical singer' 'Is Indrani a classical singer?' ରେ ପରିଣତ ହେବା ଉଦାହରଣରେ ସ୍ପଷ୍ଟ ଭାବେ ଦେଖାଯାଏ ।)"
 },
 {
 audio: "",
-question: "ଭାରତର ଚରମ ସ୍ଥାନଗୁଡ଼ିକର ନାମ ଲେଖ ।",
-introduction: "ଭାରତର ଉତ୍ତର, ଦକ୍ଷିଣ, ପୂର୍ବ ଓ ପଶ୍ଚିମ ଚରମ ସ୍ଥାନଗୁଡ଼ିକ ଦେଶର ଭୌଗୋଳିକ ସୀମାକୁ ସୂଚାଇଥାଏ । ଏହାର ବିବରଣୀ ନିମ୍ନରେ ଦିଆଯାଇଛି ।",
+question: "What information is given about Itishree in the text? (ପାଠ୍ୟରେ ଇତିଶ୍ରୀ ବିଷୟରେ କେଉଁ ସୂଚନା ଦିଆଯାଇଛି ?)",
+introduction: "The text gives some simple sentences describing a girl named Itishree. These details are listed in the points given below. (ପାଠ୍ୟଟି ଇତିଶ୍ରୀ ନାମକ ଏକ ବାଳିକାଙ୍କୁ ବର୍ଣ୍ଣନା କରୁଥିବା କିଛି ସରଳ ବାକ୍ୟ ଦେଇଛି । ଏହି ବିବରଣୀ ନିମ୍ନରେ ଦିଆଯାଇଥିବା ବିଷୟଗୁଡ଼ିକରେ ତାଲିକାଭୁକ୍ତ ହୋଇଛି ।)",
 points: [
-"ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନ ଇନ୍ଦିରା ପଏଣ୍ଟ ।",
-"ମୂଳଭୂଖଣ୍ଡର ଦକ୍ଷିଣତମ ସ୍ଥାନ କନ୍ୟାକୁମାରୀ ।",
-"ଉତ୍ତରତମ ସ୍ଥାନ କାରାକୋରମ ପର୍ବତଶ୍ରେଣୀରେ ଅବସ୍ଥିତ ।",
-"ପୂର୍ବତମ ସ୍ଥାନ ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ଅବସ୍ଥିତ ।",
-"ପଶ୍ଚିମତମ ସ୍ଥାନ କଚ୍ଛରେ ଅବସ୍ଥିତ ।"
+"This is Itishree. (ଏହା ଇତିଶ୍ରୀ ।)",
+"She is in class X. (ସେ ଦଶମ ଶ୍ରେଣୀରେ ପଢ଼ୁଛନ୍ତି ।)",
+"She is fourteen. (ତାଙ୍କ ବୟସ ଚଉଦ ବର୍ଷ ।)",
+"Mr Karunakar is her father. (ଶ୍ରୀ କରୁଣାକର ତାଙ୍କ ପିତା ।)",
+"He is an engineer. (ସେ ଜଣେ ଇଞ୍ଜିନିୟର ।)"
 ],
-conclusion: "ଭାରତର ଚରମ ସ୍ଥାନଗୁଡ଼ିକ ଦେଶର ଭୌଗୋଳିକ ବିସ୍ତାରକୁ ସ୍ପଷ୍ଟ କରିଥାଏ । ଏହି ସ୍ଥାନଗୁଡ଼ିକ ପରୀକ୍ଷା ଦୃଷ୍ଟିରୁ ଅତ୍ୟନ୍ତ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ।"
+conclusion: "The text describes Itishree as a fourteen-year-old girl studying in class X, whose father Mr Karunakar is an engineer. These simple sentences together give complete information about her. (ପାଠ୍ୟଟି ଇତିଶ୍ରୀକୁ ଦଶମ ଶ୍ରେଣୀରେ ପଢ଼ୁଥିବା ଚଉଦ ବର୍ଷ ବୟସ୍କା ବାଳିକା ଭାବେ ବର୍ଣ୍ଣନା କରେ, ଯାହାର ପିତା ଶ୍ରୀ କରୁଣାକର ଜଣେ ଇଞ୍ଜିନିୟର ଅଟନ୍ତି । ଏହି ସରଳ ବାକ୍ୟଗୁଡ଼ିକ ମିଶି ତାଙ୍କ ବିଷୟରେ ସମ୍ପୂର୍ଣ୍ଣ ସୂଚନା ଦିଏ ।)"
 }
 ]
-
 
 
     
