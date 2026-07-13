@@ -3,7 +3,7 @@ const CLASS_MODE = "practice";
 const APP_CONFIG = {
     sreni: "ନବମ",
     subject: "ଓଡ଼ିଆ ବ୍ୟାକରଣ",
-    classCode: "ଓଡ଼ିଆ ବ୍ୟାକରଣ: ପ୍ରଥମ ଅଧ୍ୟାୟ (ପୃଷ୍ଠା 1-2)"
+    classCode: "ଓଡ଼ିଆ ବ୍ୟାକରଣ: ପ୍ରଥମ ଅଧ୍ୟାୟ (ପୃଷ୍ଠା 1)"
 };
 
 
