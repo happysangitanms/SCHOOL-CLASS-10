@@ -282,3 +282,8 @@ mermaid: [
 
     `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଉପନିବେଶବାଦର କାରଣ:<br/>ଶିଳ୍ପ ବିପ୍ଳବ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଶିଳ୍ପ ବିପ୍ଳବ\"]\nA --> I1[\"ଅଷ୍ଟାଦଶ ଶତାବ୍ଦୀରୁ<br/>ନୂତନ ଯନ୍ତ୍ର ଉଦ୍ଭାବନ ହେଲା।\"]\nA --> I2[\"ଏହା ଇଂଲାଣ୍ଡରେ<br/>ଆରମ୍ଭ ହୋଇଥିଲା।\"]\nA --> I3[\"ଅଳ୍ପ ଶ୍ରମରେ ଦ୍ରବ୍ୟ<br/>ଉତ୍ପାଦନ ବଢ଼ିଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପରିଣାମ\"]\nM --> M1[\"ଅଧ‌ିକ ଉତ୍ପାଦିତ ଦ୍ରବ୍ୟ<br/>ପାଇଁ ବଜାର ଆବଶ୍ୟକ ପଡ଼ିଲା।\"]\nM --> M2[\"ଏସିଆ, ଆଫ୍ରିକାରେ ଶିଳ୍ପ<br/>ବିପ୍ଳବ ହୋଇ ନ ଥିଲା।\"]\nM --> M3[\"ବିନା ପ୍ରତିଯୋଗିତାରେ<br/>ବଜାର ସୃଷ୍ଟି ସହଜ ହେଲା।\"]\nM --> M4[\"କୋଇଲା, ଲୁହା, ସୁନା ଭଳି<br/>କଞ୍ଚାମାଲ ସେଠାରେ ମିଳିଲା।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ସାରାଂଶ\"]\nC --> C1[\"ବଜାର ଓ କଞ୍ଚାମାଲ<br/>ଉଭୟ ଆବଶ୍ୟକ ଥିଲା।\"]\nC --> C2[\"ଏହା ଉପନିବେଶ ସ୍ଥାପନକୁ<br/>ପ୍ରୋତ୍ସାହିତ କଲା।\"]\nC --> C3[\"ଏହା ଉପନିବେଶବାଦର<br/>ତୃତୀୟ ମୁଖ୍ୟ କାରଣ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 9 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2,C3 conclusion;`
   ]
+
+
+    }  
+]
+};  
