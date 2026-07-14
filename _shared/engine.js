@@ -3343,6 +3343,10 @@ initCustomAudioPlayer('3');
 // Practice-mode: swap in summary-image + chat buttons, activate Q&A-only CSS
     if (typeof CLASS_MODE !== 'undefined' && CLASS_MODE === 'practice') {
         document.body.classList.add('practice-mode');
+        const noBlackboardCtaSubjects = ['SAHITYA_DHARA', 'SANSKRUTA', 'ENGLISH'];
+        if (noBlackboardCtaSubjects.some(sub => window.location.pathname.includes('/' + sub + '/'))) {
+            document.body.classList.add('hide-blackboard-cta');
+        }
         const mediaRow = document.getElementById('mediaTogglesRow');
         if (mediaRow) {
             mediaRow.innerHTML = `
