@@ -1,158 +1,123 @@
 const APP_CONFIG = {
     sreni: "ନବମ",
-    subject: "ଭୂଗୋଳ"
+    subject: "ଜ୍ୟାମିତି"
 };
 
 
 const CLASS_NAME = "school9";
 
 const MEDIA_CONFIG = {
-    audio1: "https://audio.evidya.de/S9SSG1P1-2.mp3",
+    audio1: "https://audio.evidya.de/S9MTG1P1-2.mp3",
     video:  "https://www.youtube.com/embed/qU8IfegijAo?playsinline=1&rel=0&modestbranding=1&autoplay=1",
-    pdf:    "https://audio.evidya.de/S9SSG1P1-2.pdf"
+    pdf:    "https://audio.evidya.de/S9MTG1P1-2.pdf"
 };
 
 const wordData = {
     currentWord: 0,
     words: [
         {
+            word: "SHAPE",
+            odia: "ଆକୃତି",
+            emoji: "🔷",
+            odiaUse: "ଆକୃତି ଅର୍ଥ ବସ୍ତୁର ରୂପ ବା ଗଠନ । ପତ୍ର, ଫୁଲ ଓ ଫଳର ଭିନ୍ନ ଭିନ୍ନ ଆକୃତି ଥାଏ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "GEOMETRY",
+            odia: "ଜ୍ୟାମିତି",
+            emoji: "📐",
+            odiaUse: "ଜ୍ୟାମିତି ଅର୍ଥ ଆକୃତି, ରେଖା, କୋଣ ଓ ମାପ ସମ୍ବନ୍ଧୀୟ ଗଣିତ ଶାସ୍ତ୍ର ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "EARTH",
+            odia: "ପୃଥିବୀ",
+            emoji: "🌍",
+            odiaUse: "ପୃଥିବୀ ଅର୍ଥ ଆମେ ବାସ କରୁଥିବା ଗ୍ରହ । ଜ୍ୟାମିତି ଶବ୍ଦରେ 'ଜ୍ୟା'ର ଅର୍ଥ ପୃଥିବୀ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "MEASUREMENT",
+            odia: "ମାପ",
+            emoji: "📏",
+            odiaUse: "ମାପ ଅର୍ଥ କୌଣସି ବସ୍ତୁର ଲମ୍ବ, ପ୍ରସ୍ଥ ବା ପରିମାଣ ନିର୍ଣ୍ଣୟ କରିବା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "LAND",
+            odia: "ଜମି",
+            emoji: "🌾",
+            odiaUse: "ଜମି ଅର୍ଥ ଭୂମି । ଜମି ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହୋଇଥିଲା ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
+            word: "PYRAMID",
+            odia: "ପିରାମିଡ୍",
+            emoji: "🔺",
+            odiaUse: "ପିରାମିଡ୍ ଅର୍ଥ ମିଶରର ପ୍ରସିଦ୍ଧ ବିଶାଳ ସ୍ଥାପତ୍ୟ । ଏହା ଉନ୍ନତ ଜ୍ୟାମିତି ଜ୍ଞାନର ନିଦର୍ଶନ ।",
+            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
+        },
+        {
             word: "CIVILIZATION",
             odia: "ସଭ୍ୟତା",
             emoji: "🏛️",
-            odiaUse: "ସଭ୍ୟତା ଅର୍ଥ ଏକ ଦେଶର ପ୍ରାଚୀନ ସଂସ୍କୃତି ଓ ଜୀବନଶୈଳୀ । ଭାରତୀୟ ସଭ୍ୟତା ବହୁତ ପ୍ରାଚୀନ ।",
+            odiaUse: "ସଭ୍ୟତା ଅର୍ଥ ମନୁଷ୍ୟ ସମାଜର ଉନ୍ନତ ଜୀବନଧାରା । ମାନବ ସଭ୍ୟତା ସହିତ ଜ୍ୟାମିତିର ବିକାଶ ଜଡ଼ିତ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DEMOCRATIC",
-            odia: "ଗଣତାନ୍ତ୍ରିକ",
-            emoji: "🗳️",
-            odiaUse: "ଗଣତାନ୍ତ୍ରିକ ଅର୍ଥ ଜନତାଙ୍କ ଦ୍ୱାରା ଚାଲିଥିବା ଶାସନ । ଭାରତ ବିଶ୍ୱର ସର୍ବବୃହତ୍ ଗଣତାନ୍ତ୍ରିକ ଦେଶ ।",
+            word: "FORMULA",
+            odia: "ସୂତ୍ର",
+            emoji: "📘",
+            odiaUse: "ସୂତ୍ର ଅର୍ଥ ନିୟମ ବା ସିଦ୍ଧାନ୍ତ । ପ୍ରାଚୀନ ଋଷିମାନେ ବିଭିନ୍ନ ଜ୍ୟାମିତିକ ସୂତ୍ରର ପ୍ରୟୋଗ କରୁଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DEVELOPING",
-            odia: "ବିକାଶଶୀଳ",
-            emoji: "📈",
-            odiaUse: "ବିକାଶଶୀଳ ଅର୍ଥ ଯେଉଁ ଦେଶ ଦ୍ରୁତ ଉନ୍ନତି କରୁଛି । ଭାରତ ଏକ ବିକାଶଶୀଳ ଦେଶ ।",
+            word: "THEOREM",
+            odia: "ଉପପାଦ୍ୟ",
+            emoji: "📝",
+            odiaUse: "ଉପପାଦ୍ୟ ଅର୍ଥ ପ୍ରମାଣ କରାଯାଇଥିବା ଗଣିତୀୟ ସତ୍ୟ । ଇଉକ୍ଲିଡ୍ ତାଙ୍କ ଗ୍ରନ୍ଥରେ ଅନେକ ଉପପାଦ୍ୟ ଦେଇଛନ୍ତି ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "INDEPENDENCE",
-            odia: "ସ୍ୱାଧୀନତା",
-            emoji: "🇮🇳",
-            odiaUse: "ସ୍ୱାଧୀନତା ଅର୍ଥ ପରାଧୀନତାରୁ ମୁକ୍ତି । ସ୍ୱାଧୀନତା ପରେ ଭାରତ ବହୁତ ଉନ୍ନତି କରିଛି ।",
+            word: "EXPERIMENT",
+            odia: "ପରୀକ୍ଷା",
+            emoji: "🧪",
+            odiaUse: "ପରୀକ୍ଷା ଅର୍ଥ ଯାଞ୍ଚ କରିବାର ପ୍ରକ୍ରିୟା । ପ୍ରଥମେ ଜ୍ୟାମିତିର ସୂତ୍ରଗୁଡ଼ିକ ପରୀକ୍ଷାମୂଳକ ଉପାୟରେ ନିଶ୍ଚିତ ହେଉଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "POPULATION",
-            odia: "ଜନସଂଖ୍ୟା",
-            emoji: "👨‍👩‍👧‍👦",
-            odiaUse: "ଜନସଂଖ୍ୟା ଅର୍ଥ ଏକ ସ୍ଥାନରେ ବସବାସ କରୁଥିବା ଲୋକଙ୍କ ସଂଖ୍ୟା । ଭାରତର ଜନସଂଖ୍ୟା ବହୁତ ଅଧିକ ।",
+            word: "OBSERVATION",
+            odia: "ପର୍ଯ୍ୟବେକ୍ଷଣ",
+            emoji: "👀",
+            odiaUse: "ପର୍ଯ୍ୟବେକ୍ଷଣ ଅର୍ଥ ଭଲଭାବେ ଦେଖି ଅଧ୍ୟୟନ କରିବା । ପର୍ଯ୍ୟବେକ୍ଷଣରୁ ଅନେକ ଜ୍ୟାମିତିକ ସୂତ୍ର ସୃଷ୍ଟି ହୋଇଥିଲା ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DIVERSITY",
-            odia: "ବୈଚିତ୍ର୍ୟ",
-            emoji: "🌈",
-            odiaUse: "ବୈଚିତ୍ର୍ୟ ଅର୍ଥ ବିଭିନ୍ନ ପ୍ରକାରର ଭିନ୍ନତା । ଭାରତ ପ୍ରାକୃତିକ ବୈଚିତ୍ର୍ୟରେ ପରିପୂର୍ଣ୍ଣ ।",
+            word: "LOGIC",
+            odia: "ତର୍କ",
+            emoji: "🧠",
+            odiaUse: "ତର୍କ ଅର୍ଥ ଯୁକ୍ତିପୂର୍ଣ୍ଣ ଚିନ୍ତା । ଗ୍ରୀକ୍ ବିଦ୍ୱାନମାନେ ତର୍କ ଦ୍ୱାରା ଜ୍ୟାମିତିର ସିଦ୍ଧାନ୍ତ ପ୍ରତିପାଦନ କରିଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "PLATEAU",
-            odia: "ମାଳଭୂମି",
-            emoji: "⛰️",
-            odiaUse: "ମାଳଭୂମି ଅର୍ଥ ଉଚ୍ଚ ଓ ସମତଳ ଭୂମି । ଭାରତରେ ଅନେକ ମାଳଭୂମି ଅଛି ।",
+            word: "GEOMETER",
+            odia: "ଗଣିତଜ୍ଞ",
+            emoji: "👨‍🏫",
+            odiaUse: "ଗଣିତଜ୍ଞ ଅର୍ଥ ଗଣିତ ବିଷୟର ପଣ୍ଡିତ । ଇଉକ୍ଲିଡ୍ ଜଣେ ପ୍ରସିଦ୍ଧ ଗଣିତଜ୍ଞ ଥିଲେ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "DESERT",
-            odia: "ମରୁଭୂମି",
-            emoji: "🏜️",
-            odiaUse: "ମରୁଭୂମି ଅର୍ଥ ବାଲୁକାମୟ ଶୁଷ୍କ ଅଞ୍ଚଳ । ଭାରତରେ ଥାର ମରୁଭୂମି ଅଛି ।",
+            word: "SET",
+            odia: "ସେଟ୍",
+            emoji: "🗂️",
+            odiaUse: "ସେଟ୍ ଅର୍ଥ ବସ୍ତୁଗୁଡ଼ିକର ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ସମୂହ । ଆଧୁନିକ ଗଣିତରେ ସେଟ୍‌ର ବ୍ୟବହାର କରାଯାଏ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         },
         {
-            word: "SUBCONTINENT",
-            odia: "ଉପମହାଦେଶ",
-            emoji: "🌏",
-            odiaUse: "ଉପମହାଦେଶ ଅର୍ଥ ବଡ଼ ଓ ସ୍ୱତନ୍ତ୍ର ଭୂଖଣ୍ଡ । ଭାରତକୁ ଏକ ଉପମହାଦେଶ କୁହାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "UNITY",
-            odia: "ଏକତା",
-            emoji: "🤝",
-            odiaUse: "ଏକତା ଅର୍ଥ ସମସ୍ତେ ମିଳିମିଶି ରହିବା । ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା ଭାରତର ବୈଶିଷ୍ଟ୍ୟ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "ISLAND",
-            odia: "ଦ୍ୱୀପ",
-            emoji: "🏝️",
-            odiaUse: "ଦ୍ୱୀପ ଅର୍ଥ ଚାରିପଟେ ପାଣି ଘେରିଥିବା ଭୂମି । ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଏକ ଦ୍ୱୀପପୁଞ୍ଜ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "HEMISPHERE",
-            odia: "ଗୋଲାର୍ଦ୍ଧ",
-            emoji: "🌐",
-            odiaUse: "ଗୋଲାର୍ଦ୍ଧ ଅର୍ଥ ପୃଥିବୀର ଅଧା ଭାଗ । ଭାରତ ଉତ୍ତର ଗୋଲାର୍ଦ୍ଧରେ ଅବସ୍ଥିତ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "LATITUDE",
-            odia: "ଅକ୍ଷାଂଶ",
-            emoji: "📍",
-            odiaUse: "ଅକ୍ଷାଂଶ ଅର୍ଥ ପୂର୍ବ-ପଶ୍ଚିମ ଦିଗରେ ଟଣାଯାଇଥିବା କଳ୍ପନା ରେଖା । ଭାରତର ଅବସ୍ଥିତି ଅକ୍ଷାଂଶରେ ଦର୍ଶାଯାଏ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "LONGITUDE",
-            odia: "ଦ୍ରାଘିମା",
-            emoji: "🧭",
-            odiaUse: "ଦ୍ରାଘିମା ଅର୍ଥ ଉତ୍ତର-ଦକ୍ଷିଣ ଦିଗରେ ଟଣାଯାଇଥିବା କଳ୍ପନା ରେଖା । ଭାରତର ଦ୍ରାଘିମା ନିର୍ଦ୍ଦିଷ୍ଟ ଅଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TROPIC",
-            odia: "କ୍ରାନ୍ତି",
-            emoji: "☀️",
-            odiaUse: "କ୍ରାନ୍ତି ଅର୍ଥ ପୃଥିବୀର ବିଶେଷ କଳ୍ପନା ରେଖା । କର୍କଟକ୍ରାନ୍ତି ଭାରତର ମଧ୍ୟଭାଗ ଦେଇ ଯାଇଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "CANAL",
-            odia: "କେନାଲ",
-            emoji: "🚢",
-            odiaUse: "କେନାଲ ଅର୍ଥ ଜଳପଥ ପାଇଁ ତିଆରି ହୋଇଥିବା କୃତ୍ରିମ ନାଳ । ସୁଏଜ କେନାଲ ଭାରତ ଓ ଇଉରୋପର ଦୂରତା କମାଇଛି ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "AREA",
-            odia: "କ୍ଷେତ୍ରଫଳ",
-            emoji: "📐",
-            odiaUse: "କ୍ଷେତ୍ରଫଳ ଅର୍ଥ କୌଣସି ସ୍ଥାନର ମୋଟ ଆୟତନ । ଭାରତର କ୍ଷେତ୍ରଫଳ ୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି. ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "COASTLINE",
-            odia: "ଉପକୂଳରେଖା",
-            emoji: "🌊",
-            odiaUse: "ଉପକୂଳରେଖା ଅର୍ଥ ସମୁଦ୍ର କୂଳର ସୀମାରେଖା । ଭାରତର ଉପକୂଳରେଖା ୭,୫୦୦ କି.ମି.ରୁ ଅଧିକ ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "TSUNAMI",
-            odia: "ସୁନାମି",
-            emoji: "🌊",
-            odiaUse: "ସୁନାମି ଅର୍ଥ ସମୁଦ୍ରର ବିଶାଳ ତରଙ୍ଗ । ୨୦୦୪ ମସିହାରେ ସୁନାମି ଇନ୍ଦିରା ପଏଣ୍ଟକୁ କ୍ଷତି କରିଥିଲା ।",
-            audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
-        },
-        {
-            word: "MOUNTAIN RANGE",
-            odia: "ପର୍ବତଶ୍ରେଣୀ",
-            emoji: "🏔️",
-            odiaUse: "ପର୍ବତଶ୍ରେଣୀ ଅର୍ଥ ଅନେକ ପର୍ବତର ଧାଡ଼ି । କାରାକୋରମ ଏକ ପ୍ରସିଦ୍ଧ ପର୍ବତଶ୍ରେଣୀ ।",
+            word: "PLANE GEOMETRY",
+            odia: "ସମତଳ ଜ୍ୟାମିତି",
+            emoji: "📏",
+            odiaUse: "ସମତଳ ଜ୍ୟାମିତି ଅର୍ଥ ସମତଳ ଉପରେ ରେଖା ଓ ଆକୃତିର ଅଧ୍ୟୟନ । ବିଦ୍ୟାଳୟରେ ଆମେ ସମତଳ ଜ୍ୟାମିତି ପଢ଼ୁ ।",
             audio: { intro: "audio-url-here", encourage: "audio-url-here", praise: "audio-url-here" }
         }
     ]
@@ -161,161 +126,201 @@ const wordData = {
 const topicsData = [
 
 {
-heading: "NOTE-1: ଭାରତୀୟ ସଭ୍ୟତା ଓ ଏହାର ବିଶେଷତା :-",
+heading: "NOTE-1: ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଭାରତୀୟ ସଭ୍ୟତା ପୃଥିବୀର ଅନେକ ପ୍ରାଚୀନ ସଭ୍ୟତା ମଧ୍ୟରୁ ଅନ୍ୟତମ । ଭାରତ ପୃଥିବୀର ସର୍ବବୃହତ୍ ଗଣତାନ୍ତ୍ରିକ ରାଷ୍ଟ୍ର ଏବଂ ବିକାଶଶୀଳ ରାଷ୍ଟ୍ରମାନଙ୍କ ମଧ୍ୟରେ ଅଗ୍ରଗଣ୍ୟ । ସ୍ଵାଧୀନତା ପାଇବା ପରଠାରୁ ଭାରତ କୃଷି, ଶିଳ୍ପ, ଯୋଗାଯୋଗ, ବିଜ୍ଞାନ ଓ ପ୍ରଯୁକ୍ତି ବିଦ୍ୟା କ୍ଷେତ୍ରରେ ବହୁତ ଅଗ୍ରଗତି କରିଛି ।<br><br>👉 ଉଦାହରଣ: ଭାରତର ଜନସଂଖ୍ୟା ୧୨୧ କୋଟିରୁ ଅଧିକ ଥିବାରୁ ଏହା ଜନସଂଖ୍ୟା ଦୃଷ୍ଟିରୁ ପୃଥିବୀରେ ଦ୍ୱିତୀୟ ସ୍ଥାନରେ ରହିଛି, ଠିକ୍ ଯେମିତି ତୁମ ସ୍କୁଲର ଛାତ୍ର ସଂଖ୍ୟାକୁ ଅନ୍ୟ ସ୍କୁଲ ସହିତ ତୁଳନା କରାଯାଏ ।",
+text:"👉 ଧାରଣା: ଆମ ଚାରିପାଖରେ ଥିବା ପ୍ରାୟ ସମସ୍ତ ପଦାର୍ଥ ଏକ ନା ଏକ ଆକୃତି ଧାରଣ କରିଥାଏ । ଏହି ଆକୃତିଗୁଡ଼ିକର ଅଧ୍ୟୟନକୁ ଜ୍ୟାମିତି କୁହାଯାଏ । 'ଜ୍ୟାମିତି' ଶବ୍ଦର 'ଜ୍ୟା' ଅର୍ଥ ଦୂରତ୍ୱ ଓ 'ମିତି' ଅର୍ଥ ମାପ । ଇଂରାଜୀ ଶବ୍ଦ 'Geometry' ଗ୍ରୀକ୍ ଶବ୍ଦ Geo (ଭୂଖଣ୍ଡ) ଓ Metron (ମାପ) ରୁ ସୃଷ୍ଟି ହୋଇଛି ।<br><br>👉 ଉଦାହରଣ: ପତ୍ର, ଫୁଲ, ଫଳ ଆଦି ପ୍ରତ୍ୟେକ ପଦାର୍ଥ ନିଜର ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ଆକୃତି ଧାରଣ କରିଥାଏ । ଆକୃତି ଚିହ୍ନଟ କରିବାର ସାମର୍ଥ୍ୟ ମଣିଷର ଏକ ବିଶେଷତ୍ୱ, ଯାହା ଜୀବଜନ୍ତୁଙ୍କ ମଧ୍ୟରେ ଅନୁପସ୍ଥିତ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଭାରତକୁ କାହିଁକି ଏକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଗଣତାନ୍ତ୍ରିକ ରାଷ୍ଟ୍ର କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତ ପୃଥିବୀର ସର୍ବବୃହତ୍ ଗଣତାନ୍ତ୍ରିକ ରାଷ୍ଟ୍ର ଏବଂ ବିକାଶଶୀଳ ରାଷ୍ଟ୍ରମାନଙ୍କ ମଧ୍ୟରେ ଅଗ୍ରଗଣ୍ୟ, ତେଣୁ ଏହାକୁ ଏକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଗଣତାନ୍ତ୍ରିକ ରାଷ୍ଟ୍ର କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଜ୍ୟାମିତି କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଆକୃତିଗୁଡ଼ିକର ଅଧ୍ୟୟନକୁ ଜ୍ୟାମିତି କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> ସ୍ଵାଧୀନତା ପରେ ଭାରତ କେଉଁ କେଉଁ କ୍ଷେତ୍ରରେ ଅଗ୍ରଗତି କରିଛି ?<br><br><span style='color:green;'>Answer:</span> ସ୍ଵାଧୀନତା ପରେ ଭାରତ କୃଷି, ଶିଳ୍ପ, ଯୋଗାଯୋଗ, ବିଜ୍ଞାନ ଓ ପ୍ରଯୁକ୍ତି ବିଦ୍ୟା କ୍ଷେତ୍ରରେ ଅଗ୍ରଗତି କରିଛି ।",
+"<span style='color:red;'>Q-2:</span> 'ଜ୍ୟା' ଓ 'ମିତି' ଶବ୍ଦର ଅର୍ଥ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> 'ଜ୍ୟା' ଅର୍ଥ ଦୂରତ୍ୱ ଓ 'ମିତି' ଅର୍ଥ ମାପ ।",
 
-"<span style='color:red;'>Q-3:</span> ଜନସଂଖ୍ୟା ଦୃଷ୍ଟିରୁ ଭାରତର ପୃଥିବୀରେ କେଉଁ ସ୍ଥାନ ରହିଛି ?<br><br><span style='color:green;'>Answer:</span> ଜନସଂଖ୍ୟା ଦୃଷ୍ଟିରୁ ଭାରତର ପୃଥିବୀରେ ଦ୍ୱିତୀୟ ସ୍ଥାନ ରହିଛି ।",
+"<span style='color:red;'>Q-3:</span> 'Geometry' ଶବ୍ଦଟି କେଉଁ ଦୁଇଟି ଗ୍ରୀକ୍ ଶବ୍ଦରୁ ସୃଷ୍ଟି ହୋଇଛି ?<br><br><span style='color:green;'>Answer:</span> Geo (ଭୂଖଣ୍ଡ) ଓ Metron (ମାପ) ରୁ ସୃଷ୍ଟି ହୋଇଛି ।",
 
-"<span style='color:red;'>Q-4:</span> ଭାରତର ଜନସଂଖ୍ୟା କେତେ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତର ଜନସଂଖ୍ୟା ୧୨୧ କୋଟିରୁ ଅଧିକ ।"
+"<span style='color:red;'>Q-4:</span> ଆକୃତି ଚିହ୍ନଟ କରିବାର ସାମର୍ଥ୍ୟ କାହାର ବିଶେଷତ୍ୱ ?<br><br><span style='color:green;'>Answer:</span> ଆକୃତି ଚିହ୍ନଟ କରିବାର ସାମର୍ଥ୍ୟ ମଣିଷର ବିଶେଷତ୍ୱ ।"
 
 ]
 },
 
 {
-heading: "NOTE-2: ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା :-",
+heading: "NOTE-2: ଜ୍ୟାମିତିର ଆବଶ୍ୟକତା ଓ ଆରମ୍ଭ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଭାରତର ଜଳବାୟୁ ଓ ଜନବସତି ବିଭିନ୍ନ ଅଞ୍ଚଳରେ ଭିନ୍ନ ଭିନ୍ନ ଥିବାରୁ ଏହା ପ୍ରାକୃତିକ ବୈଚିତ୍ର୍ୟରେ ପରିପୂର୍ଣ । ଏଠାରେ ସୁଉଚ୍ଚ ପର୍ବତ, ମାଳଭୂମି, ଘନ ଅରଣ୍ୟ, ନଦନଦୀ, ଉର୍ବର ସମତଳ ଭୂମି ଓ ମରୁଭୂମି ଦେଖାଯାଏ । ଏଠାରେ ବିଭିନ୍ନ ଭାଷାଭାଷୀ ଓ ଧର୍ମାବଲମ୍ବୀ ଲୋକ ମିଳିମିଶି ରୁହନ୍ତି, ତେଣୁ ଭାରତକୁ ‘ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା’ ବୋଲି କୁହାଯାଏ ।<br><br>👉 ଉଦାହରଣ: ଯେମିତି ଏକ ଥାଳିରେ ବିଭିନ୍ନ ପ୍ରକାରର ତରକାରୀ ମିଶି ଏକ ସୁସ୍ୱାଦୁ ଖାଦ୍ୟ ପ୍ରସ୍ତୁତ ହୁଏ, ସେହିପରି ଭାରତରେ ବିଭିନ୍ନ ଭାଷା, ଖାଦ୍ୟପେୟ ଓ ପୋଷାକ ଥାଇ ମଧ୍ୟ ସମସ୍ତେ ମିଶି ଏକ ଦେଶ ଭାବେ ରୁହନ୍ତି ।",
+text:"👉 ଧାରଣା: ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ହିଁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହୋଇଥିଲା । ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହିତ ଜ୍ୟାମିତି ମଧ୍ୟ ବିକଶିତ ହେଲା । ଚାଷ ଜମିନ ଆକାର ନିର୍ଣ୍ଣୟ, ରାସ୍ତା ଓ ବାସଗୃହ ନିର୍ମାଣରେ ପ୍ରାଚୀନ ମନୁଷ୍ୟ ଜ୍ୟାମିତି ଜ୍ଞାନର ପ୍ରୟୋଗ କରି ନିଜ ସମସ୍ୟାର ସମାଧାନ କରିଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ବନ୍ୟା ପରେ ନଦୀକୂଳର ଜମି ପୁଣି ମାପିବାକୁ ପଡ଼ୁଥିବାରୁ ପ୍ରାଚୀନ ଈଜିପ୍ଟୀୟମାନେ ଜମି ମାପିବାର ପଦ୍ଧତି ବିକଶିତ କରିଥିଲେ, ଯାହା ଜ୍ୟାମିତିର ଆଦ୍ୟ ପ୍ରୟୋଗ ଥିଲା ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ‘ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା’ କହିଲେ କ'ଣ ବୁଝ ?<br><br><span style='color:green;'>Answer:</span> ଭିନ୍ନ ଭିନ୍ନ ଭାଷା, ଧର୍ମ, ଖାଦ୍ୟପେୟ ଓ ପୋଷାକ ଥାଇ ମଧ୍ୟ ସମସ୍ତ ଲୋକ ମିଶି ଏକ ଦେଶ ଭାବେ ରହିବାକୁ ‘ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା’ କୁହାଯାଏ ।",
+"<span style='color:red;'>Q-1:</span> ଜ୍ୟାମିତିର ସୃଷ୍ଟି କେଉଁ ଆବଶ୍ୟକତାରୁ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହେଲା ।",
 
-"<span style='color:red;'>Q-2:</span> ଭାରତରେ କେଉଁ କେଉଁ ପ୍ରାକୃତିକ ଦୃଶ୍ୟ ଦେଖାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତରେ ସୁଉଚ୍ଚ ପର୍ବତ, ମାଳଭୂମି, ଘନ ଅରଣ୍ୟ, ନଦନଦୀ, ଉର୍ବର ସମତଳ ଭୂମି ଓ ମରୁଭୂମି ଦେଖାଯାଏ ।",
+"<span style='color:red;'>Q-2:</span> ପ୍ରାଚୀନ ମନୁଷ୍ୟ ଜ୍ୟାମିତି ଜ୍ଞାନ କେଉଁଠି ପ୍ରୟୋଗ କରୁଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଚାଷ ଜମିନ ଆକାର ନିର୍ଣ୍ଣୟ, ରାସ୍ତା ଓ ବାସଗୃହ ନିର୍ମାଣରେ ପ୍ରୟୋଗ କରୁଥିଲେ ।",
 
-"<span style='color:red;'>Q-3:</span> ଭାରତର ଜଳବାୟୁ ବିଭିନ୍ନ ଅଞ୍ଚଳରେ କାହିଁକି ଭିନ୍ନ ଭିନ୍ନ ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତ ଏକ ବିଶାଳ ଦେଶ ହୋଇଥିବାରୁ ଏବଂ ପ୍ରାକୃତିକ ବୈଚିତ୍ର୍ୟରେ ପରିପୂର୍ଣ ହୋଇଥିବାରୁ ଏହାର ଜଳବାୟୁ ବିଭିନ୍ନ ଅଞ୍ଚଳରେ ଭିନ୍ନ ଭିନ୍ନ ହୋଇଥାଏ ।",
+"<span style='color:red;'>Q-3:</span> ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହିତ ଜ୍ୟାମିତିର କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି ସହିତ ଜ୍ୟାମିତି ମଧ୍ୟ ବିକଶିତ ହେଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ଭାରତକୁ କାହିଁକି ଏକ ଉପମହାଦେଶ ବୋଲି କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତ ଏକ ସୁସଂଗଠିତ ଭୂଖଣ୍ଡ ହୋଇଥିବାରୁ ଏବଂ ଏହାର ଏକ ଭୌଗୋଳିକ ସ୍ଵାତନ୍ତ୍ର୍ୟ ଥିବାରୁ ଏହାକୁ ଏକ ଉପମହାଦେଶ ବୋଲି କୁହାଯାଏ ।"
+"<span style='color:red;'>Q-4:</span> ଜ୍ୟାମିତି ପ୍ରୟୋଗ କରି ପ୍ରାଚୀନ ମନୁଷ୍ୟ କ'ଣ ସାଧନ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ନିଜ ସମସ୍ୟାର ସମାଧାନ ଓ ଜ୍ଞାନର ଉତ୍କର୍ଷ ସାଧନ କରିଥିଲେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-3: ଭାରତର ଗଠନ - ମୂଳଭୂଖଣ୍ଡ ଓ ଦ୍ୱୀପପୁଞ୍ଜ :-",
+heading: "NOTE-3: ଶୁଳ୍ବ ସୂତ୍ର - ବୈଦିକ ଜ୍ୟାମିତି :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଭାରତ ମୂଳଭୂଖଣ୍ଡ ଓ ଦୁଇଟି ଦ୍ୱୀପପୁଞ୍ଜକୁ ନେଇ ଗଠିତ । ଦକ୍ଷିଣ-ପୂର୍ବ ବଙ୍ଗୋପସାଗରରେ ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଦ୍ୱୀପପୁଞ୍ଜ ଅଛି, ଆଉ ଦକ୍ଷିଣ-ପଶ୍ଚିମରେ ଆରବ ସାଗରରେ ଲାକ୍ଷାଦ୍ୱୀପ ଅବସ୍ଥିତ ।<br><br>👉 ଉଦାହରଣ: ଯେମିତି ଏକ ଘର ମୁଖ୍ୟ ବଡ଼ ଅଂଶ ଏବଂ ତାହା ସହିତ ଥିବା ଛୋଟ ଛୋଟ କୋଠରୀକୁ ମିଶାଇ ସଂପୂର୍ଣ୍ଣ ହୁଏ, ସେହିପରି ଭାରତର ମୂଳଭୂଖଣ୍ଡ ସହିତ ଆଣ୍ଡାମାନ-ନିକୋବର ଓ ଲାକ୍ଷାଦ୍ୱୀପକୁ ମିଶାଇ ସଂପୂର୍ଣ୍ଣ ଭାରତ ଗଠିତ ହୁଏ ।",
+text:"👉 ଧାରଣା: ବୈଦିକ ଯୁଗରେ ଯଜ୍ଞ ବେଦି ନିର୍ମାଣ କାର୍ଯ୍ୟରେ ପ୍ରାଚୀନ ଭାରତରେ ଜ୍ୟାମିତିର ପ୍ରୟୋଗ ହୋଇଥିଲା । ଏହି ଜ୍ୟାମିତି ଶାଖାର ନାମ 'ଶୁଳ୍ବ ସୂତ୍ର' । ଏହା ଆନୁମାନିକ ୮୦୦ ଖ୍ରୀଷ୍ଟପୂର୍ବରୁ ୫୦୦ ଖ୍ରୀଷ୍ଟପୂର୍ବ ମଧ୍ୟରେ ଭାରତରେ ରଚିତ ହୋଇଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଶୁଳ୍ବ ଅର୍ଥାତ୍ ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିର ମାପ ସମ୍ପାଦନ ସୂତ୍ରକୁ ନେଇ ଭାରତରେ ୟଜ୍ଞ ବେଦିର ସଠିକ୍ ଆକାର ଓ ଆକୃତି ନିର୍ଣ୍ଣୟ କରାଯାଉଥିଲା ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଭାରତ କେଉଁ କେଉଁ ଅଂଶକୁ ନେଇ ଗଠିତ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତ ମୂଳଭୂଖଣ୍ଡ ଓ ଦୁଇଟି ଦ୍ୱୀପପୁଞ୍ଜ, ଅର୍ଥାତ୍ ଆଣ୍ଡାମାନ-ନିକୋବର ଦ୍ୱୀପପୁଞ୍ଜ ଓ ଲାକ୍ଷାଦ୍ୱୀପକୁ ନେଇ ଗଠିତ ।",
+"<span style='color:red;'>Q-1:</span> ବୈଦିକ ଯୁଗରେ ଯଜ୍ଞ ବେଦି ନିର୍ମାଣ ପାଇଁ ପ୍ରୟୋଗ ହୋଇଥିବା ଜ୍ୟାମିତି ଶାଖାର ନାମ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଏହାର ନାମ 'ଶୁଳ୍ବ ସୂତ୍ର' ।",
 
-"<span style='color:red;'>Q-2:</span> ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଦ୍ୱୀପପୁଞ୍ଜ କେଉଁଠାରେ ଅବସ୍ଥିତ ?<br><br><span style='color:green;'>Answer:</span> ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଦ୍ୱୀପପୁଞ୍ଜ ଦକ୍ଷିଣ-ପୂର୍ବ ବଙ୍ଗୋପସାଗରରେ ଅବସ୍ଥିତ ।",
+"<span style='color:red;'>Q-2:</span> 'ଶୁଳ୍ବ' ଶବ୍ଦର ଅର୍ଥ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> 'ଶୁଳ୍ବ' ଅର୍ଥ ରଜ୍ଜୁ ଦ୍ୱାରା ଜ୍ୟାମିତିର ମାପ ସମ୍ପାଦନ ।",
 
-"<span style='color:red;'>Q-3:</span> ଲାକ୍ଷାଦ୍ୱୀପ କେଉଁ ସାଗରରେ ଅବସ୍ଥିତ ?<br><br><span style='color:green;'>Answer:</span> ଲାକ୍ଷାଦ୍ୱୀପ ଆରବ ସାଗରର ଦକ୍ଷିଣ-ପଶ୍ଚିମ ଦିଗରେ ଅବସ୍ଥିତ ।",
+"<span style='color:red;'>Q-3:</span> ଶୁଳ୍ବ ସୂତ୍ର ଆନୁମାନିକ କେଉଁ ସମୟ ମଧ୍ୟରେ ରଚିତ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଆନୁମାନିକ ୮୦୦ ରୁ ୫୦୦ ଖ୍ରୀଷ୍ଟପୂର୍ବ ମଧ୍ୟରେ ରଚିତ ହୋଇଥିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ଭାରତର ଦ୍ୱୀପପୁଞ୍ଜ ବିଷୟରେ ଅଧିକ ଜାଣିବାକୁ ଆମେ କେଉଁ ମାଧ୍ୟମ ବ୍ୟବହାର କରିପାରିବା ?<br><br><span style='color:green;'>Answer:</span> ଏହି ଦ୍ୱୀପପୁଞ୍ଜଗୁଡ଼ିକର ବିସ୍ତାର ଜାଣିବା ପାଇଁ ଆମେ ଆଟଲାସ୍ ବ୍ୟବହାର କରିପାରିବା ।"
+"<span style='color:red;'>Q-4:</span> ଶୁଳ୍ବ ସୂତ୍ର ସାହାଯ୍ୟରେ କ'ଣ ନିର୍ଣ୍ଣୟ କରାଯାଉଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଯଜ୍ଞ ବେଦିର ସଠିକ୍ ଆକାର ଓ ଆକୃତି ନିର୍ଣ୍ଣୟ କରାଯାଉଥିଲା ।"
 
 ]
 },
 
 {
-heading: "NOTE-4: ଭାରତର ଭୌଗୋଳିକ ଅବସ୍ଥିତି :-",
+heading: "NOTE-4: ପ୍ରାଚୀନ ସଭ୍ୟତାରେ ଜ୍ୟାମିତିର ପ୍ରୟୋଗ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଭାରତ ଉତ୍ତରଗୋଲାର୍ଦ୍ଧରେ ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣାଂଶରେ ଅବସ୍ଥିତ । କର୍କଟକ୍ରାନ୍ତି ରେଖା ଭାରତର ମଧ୍ୟଭାଗ ଦେଇ ଯାଇଥିବାରୁ ଏହା ଭାରତକୁ ପ୍ରାୟ ଦୁଇ ସମାନ ଭାଗରେ ବିଭକ୍ତ କରେ । ଏହି କାରଣରୁ ଭାରତ ସଂପୂର୍ଣ୍ଣ ରୂପେ ଉତ୍ତରଗୋଲାର୍ଦ୍ଧର ଉପକ୍ରାନ୍ତୀୟ ଓ କ୍ରାନ୍ତୀୟ ମଣ୍ଡଳରେ ରହିଛି ।<br><br>👉 ଉଦାହରଣ: ଯେମିତି ଏକ ଫିତାକୁ ମଝିରୁ କାଟିଲେ ଏହା ଦୁଇ ଭାଗ ହୋଇଯାଏ, ସେହିପରି କର୍କଟକ୍ରାନ୍ତି ରେଖା ଭାରତକୁ ଉତ୍ତର ଓ ଦକ୍ଷିଣ ଭାଗରେ ପ୍ରାୟ ସମାନ ଭାବରେ ବିଭକ୍ତ କରିଥାଏ ।",
+text:"👉 ଧାରଣା: ପ୍ରାଚୀନ ମିଶରୀୟମାନେ ପିରାମିଡ୍ ନିର୍ମାଣରେ ଜ୍ୟାମିତିର ପ୍ରୟୋଗ କରିଥିଲେ । ଭାରତରେ ମହେନ୍‌ଜୋଦାରୋ ଓ ହରପ୍ପାର ସଭ୍ୟତାରେ ମଧ୍ୟ ଭାସଗୃହ, ସ୍ନାନାଗାର ଓ ରାସ୍ତା ନିର୍ମାଣ କାର୍ଯ୍ୟରେ ଜ୍ୟାମିତିକ ଚିହ୍ନ ପ୍ରୟୋଗର ପ୍ରମାଣ ମିଳେ ।<br><br>👉 ଉଦାହରଣ: ପିରାମିଡ୍‌ର ସଠିକ୍ ତ୍ରିଭୁଜାକାର ଗଠନ ଓ ହରପ୍ପାର ସୁସଜ୍ଜିତ ନଗର-ଯୋଜନା ଦର୍ଶାଏ ଯେ ପ୍ରାଚୀନ ଲୋକମାନେ ଜ୍ୟାମିତି ଜ୍ଞାନରେ ପାରଙ୍ଗମ ଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଭାରତ ପୃଥିବୀର କେଉଁ ଗୋଲାର୍ଦ୍ଧ ଓ କେଉଁ ମହାଦେଶରେ ଅବସ୍ଥିତ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତ ଉତ୍ତରଗୋଲାର୍ଦ୍ଧରେ ଏସିଆ ମହାଦେଶର ଦକ୍ଷିଣାଂଶରେ ଅବସ୍ଥିତ ।",
+"<span style='color:red;'>Q-1:</span> ମିଶରୀୟମାନେ କେଉଁ ନିର୍ମାଣରେ ଜ୍ୟାମିତି ପ୍ରୟୋଗ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପିରାମିଡ୍ ନିର୍ମାଣରେ ଜ୍ୟାମିତି ପ୍ରୟୋଗ କରିଥିଲେ ।",
 
-"<span style='color:red;'>Q-2:</span> କର୍କଟକ୍ରାନ୍ତି ରେଖା ଭାରତ ପାଇଁ କେଉଁ ଭୂମିକା ପାଳନ କରେ ?<br><br><span style='color:green;'>Answer:</span> କର୍କଟକ୍ରାନ୍ତି ରେଖା ଭାରତର ମଧ୍ୟଭାଗ ଦେଇ ଯାଇ ଏହାକୁ ପ୍ରାୟ ଦୁଇ ସମାନ ଭାଗରେ ବିଭକ୍ତ କରେ ।",
+"<span style='color:red;'>Q-2:</span> ଭାରତରେ କେଉଁ ପ୍ରାଚୀନ ସ୍ଥାନରେ ଜ୍ୟାମିତିକ ଚିହ୍ନ ମିଳେ ?<br><br><span style='color:green;'>Answer:</span> ମହେନ୍‌ଜୋଦାରୋ ଓ ହରପ୍ପାରେ ଜ୍ୟାମିତିକ ଚିହ୍ନ ମିଳେ ।",
 
-"<span style='color:red;'>Q-3:</span> କର୍କଟକ୍ରାନ୍ତି ରେଖାର ଅକ୍ଷାଂଶ ମୂଲ୍ୟ କେତେ ?<br><br><span style='color:green;'>Answer:</span> କର୍କଟକ୍ରାନ୍ତି ରେଖାର ଅକ୍ଷାଂଶ ମୂଲ୍ୟ ୨୩°୩୦′ ଉତ୍ତର ।",
+"<span style='color:red;'>Q-3:</span> ହରପ୍ପାର ସଭ୍ୟତାରେ ଜ୍ୟାମିତି କେଉଁ କାର୍ଯ୍ୟରେ ପ୍ରୟୋଗ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ବାସଗୃହ, ସ୍ନାନାଗାର ଓ ରାସ୍ତା ନିର୍ମାଣ କାର୍ଯ୍ୟରେ ପ୍ରୟୋଗ ହୋଇଥିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ଭାରତ କେଉଁ ମଣ୍ଡଳରେ ଅବସ୍ଥିତ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତ ସଂପୂର୍ଣ୍ଣ ରୂପେ ଉତ୍ତରଗୋଲାର୍ଦ୍ଧର ଉପକ୍ରାନ୍ତୀୟ ଓ କ୍ରାନ୍ତୀୟ ମଣ୍ଡଳରେ ଅବସ୍ଥିତ ।"
+"<span style='color:red;'>Q-4:</span> ପିରାମିଡ୍ ଓ ହରପ୍ପା ଉଦାହରଣ ଆମକୁ କ'ଣ ଦର୍ଶାଏ ?<br><br><span style='color:green;'>Answer:</span> ପ୍ରାଚୀନ ଲୋକମାନେ ଜ୍ୟାମିତି ଜ୍ଞାନରେ ପାରଙ୍ଗମ ଥିଲେ ବୋଲି ଦର୍ଶାଏ ।"
 
 ]
 },
 
 {
-heading: "NOTE-5: ସୁଏଜ୍ କେନାଲ୍ ଓ ପ୍ରାଚୀନ ରେଶମ ମାର୍ଗ :-",
+heading: "NOTE-5: ପରବର୍ତ୍ତୀ କାଳର ଭାରତୀୟ ଗଣିତଜ୍ଞ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ୧୮୬୯ ମସିହାରେ ସୁଏଜ୍ କେନାଲ୍ ଖୋଲିବା ପରେ ଭାରତ ଓ ଇଉରୋପ ମଧ୍ୟରେ ଦୂରତ୍ୱ ୭୦୦୦ କି.ମି. ହ୍ରାସ ପାଇଥିଲା । ଏହା ବ୍ୟତୀତ ଭାରତ ଉତ୍ତର-ପଶ୍ଚିମ ଦିଗରେ ସ୍ଥଳପଥ ଦ୍ୱାରା ପ୍ରାଚୀନ ‘ରେଶମ ମାର୍ଗ’ ସହ ସଂଯୁକ୍ତ ହୋଇଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଯେମିତି ଏକ ନୂଆ ସିଧା ରାସ୍ତା ତିଆରି ହେଲେ ଦୁଇ ସହର ମଧ୍ୟରେ ଯିବା ସମୟ କମିଯାଏ, ସେହିପରି ସୁଏଜ୍ କେନାଲ୍ ଖୋଲିବା ପରେ ଭାରତରୁ ଇଉରୋପ ଯିବାର ଦୂରତ୍ୱ ବହୁତ କମିଗଲା ।",
+text:"👉 ଧାରଣା: ପରବର୍ତ୍ତୀ କାଳରେ ଭାସ୍କର, ଆର୍ଯ୍ୟଭଟ, ବ୍ରହ୍ମଗୁପ୍ତ ଓ ମହାବୀର ଆଦି ମହାନ ଭାରତୀୟ ଗଣିତଜ୍ଞ ଜ୍ୟାମିତି ଶାଖାର ଉନ୍ନତି ପାଇଁ ମହତ୍ତ୍ୱପୂର୍ଣ୍ଣ ଅବଦାନ ଦେଇଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ଆର୍ଯ୍ୟଭଟ ଓ ବ୍ରହ୍ମଗୁପ୍ତଙ୍କ ପରି ଗଣିତଜ୍ଞମାନେ ନିଜ ଗ୍ରନ୍ଥରେ ବିଭିନ୍ନ ଜ୍ୟାମିତିକ ସୂତ୍ର ଓ ନିୟମ ଉଲ୍ଲେଖ କରି ଭାରତୀୟ ଜ୍ୟାମିତିକୁ ସମୃଦ୍ଧ କରିଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ସୁଏଜ୍ କେନାଲ୍ କେବେ ଖୋଲାଯାଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସୁଏଜ୍ କେନାଲ୍ ୧୮୬୯ ମସିହାରେ ଖୋଲାଯାଇଥିଲା ।",
+"<span style='color:red;'>Q-1:</span> ଜ୍ୟାମିତି ଉନ୍ନତି ପାଇଁ ଅବଦାନ ଦେଇଥିବା ଚାରିଜଣ ଭାରତୀୟ ଗଣିତଜ୍ଞଙ୍କ ନାମ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଭାସ୍କର, ଆର୍ଯ୍ୟଭଟ, ବ୍ରହ୍ମଗୁପ୍ତ ଓ ମହାବୀର ।",
 
-"<span style='color:red;'>Q-2:</span> ସୁଏଜ୍ କେନାଲ୍ ଖୋଲିବା ଫଳରେ କେଉଁ ପରିବର୍ତ୍ତନ ଘଟିଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ସୁଏଜ୍ କେନାଲ୍ ଖୋଲିବା ଫଳରେ ଭାରତ ଓ ଇଉରୋପ ମଧ୍ୟରେ ଦୂରତ୍ୱ ୭୦୦୦ କି.ମି. ହ୍ରାସ ପାଇଥିଲା ।",
+"<span style='color:red;'>Q-2:</span> ଏହି ଗଣିତଜ୍ଞମାନେ ଜ୍ୟାମିତି ପାଇଁ କ'ଣ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଜ୍ୟାମିତି ଶାଖାର ଉନ୍ନତି ପାଇଁ ମହତ୍ତ୍ୱପୂର୍ଣ୍ଣ ଅବଦାନ ଦେଇଥିଲେ ।",
 
-"<span style='color:red;'>Q-3:</span> ଭାରତ କେଉଁ ପ୍ରାଚୀନ ମାର୍ଗ ସହ ସ୍ଥଳପଥ ଦ୍ୱାରା ସଂଯୁକ୍ତ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ଭାରତ ପ୍ରାଚୀନ ‘ରେଶମ ମାର୍ଗ’ ସହ ସ୍ଥଳପଥ ଦ୍ୱାରା ସଂଯୁକ୍ତ ଥିଲା ।",
+"<span style='color:red;'>Q-3:</span> ଏହି ଗଣିତଜ୍ଞମାନେ ନିଜ ଗ୍ରନ୍ଥରେ କ'ଣ ଉଲ୍ଲେଖ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ବିଭିନ୍ନ ଜ୍ୟାମିତିକ ସୂତ୍ର ଓ ନିୟମ ଉଲ୍ଲେଖ କରିଥିଲେ ।",
 
-"<span style='color:red;'>Q-4:</span> ରେଶମ ମାର୍ଗ ଭାରତର କେଉଁ ଦିଗରେ ଅବସ୍ଥିତ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ରେଶମ ମାର୍ଗ ଭାରତର ଉତ୍ତର-ପଶ୍ଚିମ ଦିଗରେ ଅବସ୍ଥିତ ଥିଲା ।"
+"<span style='color:red;'>Q-4:</span> ଏହି ଗଣିତଜ୍ଞମାନଙ୍କ ଅବଦାନ ଫଳରେ କ'ଣ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> ଭାରତୀୟ ଜ୍ୟାମିତି ସମୃଦ୍ଧ ହେଲା ।"
 
 ]
 },
 
 {
-heading: "NOTE-6: ଭାରତର ଆକାର ଓ କ୍ଷେତ୍ରଫଳ :-",
+heading: "NOTE-6: ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନଙ୍କ ଭୂମିକା :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଭାରତର କ୍ଷେତ୍ରଫଳ ୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି., ଯାହା ପୃଥିବୀର ସମୁଦାୟ ଭୌଗୋଳିକ କ୍ଷେତ୍ରଫଳର ମାତ୍ର ୨.୪ ପ୍ରତିଶତ । ଏହାର ସ୍ଥଳଭାଗର ସୀମାରେଖା ପ୍ରାୟ ୧୫,୨୦୦ କି.ମି. ଏବଂ ମୂଳଭୂଖଣ୍ଡ ସହିତ ଦ୍ୱୀପପୁଞ୍ଜକୁ ମିଶାଇ ଉପକୂଳରେଖାର ଦୈର୍ଘ୍ୟ ୭,୫୦୦ କି.ମି.ରୁ ଅଧିକ ।<br><br>👉 ଉଦାହରଣ: ଯେମିତି ଏକ ବଡ଼ ମାଠିଆର ଚାରିପାଖରେ ମାପ ନେଲେ ତାହାର ପରିଧି ମିଳେ, ସେହିପରି ଭାରତର ଚାରିପାଖ ମାପିଲେ ଏହାର ସ୍ଥଳ ସୀମାରେଖା ଓ ଉପକୂଳରେଖାର ଦୈର୍ଘ୍ୟ ମିଳେ ।",
+text:"👉 ଧାରଣା: ଥେଲ୍ସ, ପିଥାଗୋରସ୍, ସକ୍ରେଟିସ୍, ପ୍ଲାଟୋ ଓ ଆରିଷ୍ଟଟଲ ଆଦି ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ଯୁକ୍ତି ଓ ଦର୍ଶନ ପ୍ରୟୋଗ କରି ଜ୍ୟାମିତିକୁ ନୂତନ ଉଦ୍ଭାବନ କରିବାର ପ୍ରୟାସ ଆରମ୍ଭ କରିଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ପୂର୍ବେ ଜ୍ୟାମିତି କେବଳ ପରୀକ୍ଷାମୂଳକ ଭାବରେ ବ୍ୟବହୃତ ହେଉଥିଲା, କିନ୍ତୁ ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ଏହାକୁ ଯୁକ୍ତିଯୁକ୍ତ ପ୍ରମାଣ ଉପରେ ଆଧାରିତ କରିବାର ପ୍ରୟାସ କଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଭାରତର କ୍ଷେତ୍ରଫଳ କେତେ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତର କ୍ଷେତ୍ରଫଳ ୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି. ।",
+"<span style='color:red;'>Q-1:</span> କେଉଁ ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ଜ୍ୟାମିତିକୁ ନୂତନ ଉଦ୍ଭାବନ କରିବାର ପ୍ରୟାସ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଥେଲ୍ସ, ପିଥାଗୋରସ୍, ସକ୍ରେଟିସ୍, ପ୍ଲାଟୋ ଓ ଆରିଷ୍ଟଟଲ ।",
 
-"<span style='color:red;'>Q-2:</span> ପୃଥିବୀର ମୋଟ କ୍ଷେତ୍ରଫଳର କେତେ ପ୍ରତିଶତ ଭାରତର ଅଂଶ ?<br><br><span style='color:green;'>Answer:</span> ପୃଥିବୀର ମୋଟ କ୍ଷେତ୍ରଫଳର ମାତ୍ର ୨.୪ ପ୍ରତିଶତ ଭାରତର ଅଂଶ ।",
+"<span style='color:red;'>Q-2:</span> ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ଜ୍ୟାମିତିରେ କ'ଣ ପ୍ରୟୋଗ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଯୁକ୍ତି ଓ ଦର୍ଶନ ପ୍ରୟୋଗ କରିଥିଲେ ।",
 
-"<span style='color:red;'>Q-3:</span> ଭାରତର ସ୍ଥଳଭାଗ ସୀମାରେଖାର ଦୈର୍ଘ୍ୟ କେତେ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତର ସ୍ଥଳଭାଗ ସୀମାରେଖାର ଦୈର୍ଘ୍ୟ ପ୍ରାୟ ୧୫,୨୦୦ କି.ମି. ।",
+"<span style='color:red;'>Q-3:</span> ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନଙ୍କ ପୂର୍ବରୁ ଜ୍ୟାମିତି କେମିତି ବ୍ୟବହୃତ ହେଉଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ପୂର୍ବେ ଜ୍ୟାମିତି କେବଳ ପରୀକ୍ଷାମୂଳକ ଭାବରେ ବ୍ୟବହୃତ ହେଉଥିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ଭାରତର ମୋଟ ଉପକୂଳରେଖାର ଦୈର୍ଘ୍ୟ କେତେ ?<br><br><span style='color:green;'>Answer:</span> ମୂଳଭୂଖଣ୍ଡ ସହିତ ଦ୍ୱୀପପୁଞ୍ଜକୁ ମିଶାଇ ଭାରତର ଉପକୂଳରେଖାର ଦୈର୍ଘ୍ୟ ୭,୫୦୦ କି.ମି.ରୁ ଅଧିକ ।"
+"<span style='color:red;'>Q-4:</span> ଗ୍ରୀକ୍ ଦାର୍ଶନିକମାନେ ଜ୍ୟାମିତିକୁ କେଉଁ ଆଧାରରେ ପ୍ରତିଷ୍ଠିତ କରିବାକୁ ଚେଷ୍ଟା କଲେ ?<br><br><span style='color:green;'>Answer:</span> ଯୁକ୍ତିଯୁକ୍ତ ପ୍ରମାଣ ଉପରେ ଆଧାରିତ କରିବାକୁ ଚେଷ୍ଟା କଲେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-7: ପୃଥିବୀର ସାତଟି ବୃହତ୍ତମ ଦେଶ ମଧ୍ୟରେ ଭାରତର ସ୍ଥାନ :-",
+heading: "NOTE-7: ଇଉକ୍ଲିଡ୍ - ଜ୍ୟାମିତିର ଜନକ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: କ୍ଷେତ୍ରଫଳ ଅନୁସାରେ ପୃଥିବୀର ସାତଟି ବୃହତ୍ତମ ଦେଶ ହେଲା- ରୁଷିଆ, କାନାଡ଼ା, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା, ଚୀନ୍, ବ୍ରାଜିଲ, ଅଷ୍ଟ୍ରେଲିଆ ଓ ଭାରତ । ଏଥିରୁ ସ୍ପଷ୍ଟ ଯେ ଭାରତ କ୍ଷେତ୍ରଫଳ ଦୃଷ୍ଟିରୁ ପୃଥିବୀର ସପ୍ତମ ବୃହତ୍ତମ ଦେଶ ।<br><br>👉 ଉଦାହରଣ: ଯେମିତି ଏକ ଦୌଡ଼ ପ୍ରତିଯୋଗିତାରେ ସାତ ଜଣ ପ୍ରତିଯୋଗୀଙ୍କ ମଧ୍ୟରୁ ସପ୍ତମ ସ୍ଥାନ ପାଇଥିବା ପ୍ରତିଯୋଗୀ ମଧ୍ୟ ଅଗ୍ରଗଣ୍ୟ ଗଣାଯାଏ, ସେହିପରି ଭାରତ ବିଶ୍ୱର ସାତଟି ବୃହତ୍ତମ ଦେଶ ମଧ୍ୟରେ ସପ୍ତମ ସ୍ଥାନରେ ରହିଛି ।",
+text:"👉 ଧାରଣା: ଇଉକ୍ଲିଡ୍‌ଙ୍କୁ 'ଜ୍ୟାମିତିର ଜନକ' କୁହାଯାଏ । ତାଙ୍କ ନାମାନୁସାରେ ଜ୍ୟାମିତିର ନାମ 'ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି' (Euclidean Geometry) ପ୍ରଚଳିତ ହୋଇଛି । ଇଉକ୍ଲିଡ୍‌ଙ୍କ ପ୍ରସିଦ୍ଧ ଗ୍ରନ୍ଥ 'Elements' ତେର ଅଧ୍ୟାୟରେ ବିଭକ୍ତ ଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଇଉକ୍ଲିଡ୍‌ 'Elements' ଗ୍ରନ୍ଥରେ କେତେକ ପରାଖା (Postulate) ଉପାୟରେ ଅନ୍ୟ ସମସ୍ତ ସିଦ୍ଧାନ୍ତକୁ ଯୁକ୍ତି ଦ୍ୱାରା ପ୍ରତିପାଦନ କରିବାର ପ୍ରଥମ ପ୍ରୟାସ କରିଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> କ୍ଷେତ୍ରଫଳ ଅନୁସାରେ ପୃଥିବୀରେ ସବୁଠାରୁ ବଡ଼ ଦେଶ କେଉଁଟି ?<br><br><span style='color:green;'>Answer:</span> କ୍ଷେତ୍ରଫଳ ଅନୁସାରେ ପୃଥିବୀରେ ସବୁଠାରୁ ବଡ଼ ଦେଶ ରୁଷିଆ ।",
+"<span style='color:red;'>Q-1:</span> 'ଜ୍ୟାମିତିର ଜନକ' କାହାକୁ କୁହାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଇଉକ୍ଲିଡ୍‌ଙ୍କୁ 'ଜ୍ୟାମିତିର ଜନକ' କୁହାଯାଏ ।",
 
-"<span style='color:red;'>Q-2:</span> କ୍ଷେତ୍ରଫଳ ଦୃଷ୍ଟିରୁ ଭାରତର ପୃଥିବୀରେ କେଉଁ ସ୍ଥାନ ରହିଛି ?<br><br><span style='color:green;'>Answer:</span> କ୍ଷେତ୍ରଫଳ ଦୃଷ୍ଟିରୁ ଭାରତର ପୃଥିବୀରେ ସପ୍ତମ ସ୍ଥାନ ରହିଛି ।",
+"<span style='color:red;'>Q-2:</span> ଇଉକ୍ଲିଡ୍‌ଙ୍କ ନାମାନୁସାରେ ଜ୍ୟାମିତିର କେଉଁ ନାମ ପ୍ରଚଳିତ ହେଲା ?<br><br><span style='color:green;'>Answer:</span> 'ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି' ନାମ ପ୍ରଚଳିତ ହେଲା ।",
 
-"<span style='color:red;'>Q-3:</span> ପୃଥିବୀର ସାତଟି ବୃହତ୍ତମ ଦେଶର ନାମ ଲେଖ ।<br><br><span style='color:green;'>Answer:</span> ରୁଷିଆ, କାନାଡ଼ା, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା, ଚୀନ୍, ବ୍ରାଜିଲ, ଅଷ୍ଟ୍ରେଲିଆ ଓ ଭାରତ ପୃଥିବୀର ସାତଟି ବୃହତ୍ତମ ଦେଶ ।",
+"<span style='color:red;'>Q-3:</span> ଇଉକ୍ଲିଡ୍‌ଙ୍କ ପ୍ରସିଦ୍ଧ ଗ୍ରନ୍ଥର ନାମ ଓ ଅଧ୍ୟାୟ ସଂଖ୍ୟା କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ଗ୍ରନ୍ଥର ନାମ 'Elements' ଓ ଏହା ତେର ଅଧ୍ୟାୟରେ ବିଭକ୍ତ ଥିଲା ।",
 
-"<span style='color:red;'>Q-4:</span> ଭାରତ ଓ ଚୀନ୍ ମଧ୍ୟରୁ କ୍ଷେତ୍ରଫଳରେ କେଉଁଟି ବଡ଼ ?<br><br><span style='color:green;'>Answer:</span> ଚୀନ୍‌ର କ୍ଷେତ୍ରଫଳ ୯.୫୯ ନିୟୁତ ବର୍ଗ କି.ମି. ଥିବାରୁ ଏହା ଭାରତର ୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି. ଠାରୁ ବଡ଼ ।"
+"<span style='color:red;'>Q-4:</span> ଇଉକ୍ଲିଡ୍‌ 'Elements' ଗ୍ରନ୍ଥରେ କେଉଁ ପ୍ରୟାସ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ପରାଖା ଉପାୟରେ ସିଦ୍ଧାନ୍ତକୁ ଯୁକ୍ତି ଦ୍ୱାରା ପ୍ରତିପାଦନ କରିବାର ପ୍ରଥମ ପ୍ରୟାସ କରିଥିଲେ ।"
 
 ]
 },
 
 {
-heading: "NOTE-8: ଭାରତର ଚରମ ବିନ୍ଦୁଗୁଡ଼ିକ :-",
+heading: "NOTE-8: ବର୍ଟ୍ରାଣ୍ଡ ରସେଲ୍‌ଙ୍କ ମତ :-",
 
 audioPoints: [{
-text:"👉 ଧାରଣା: ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନର ନାମ ଇନ୍ଦିରା ପଏଣ୍ଟ, ଯାହା ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଦ୍ୱୀପପୁଞ୍ଜରେ ଅବସ୍ଥିତ । ମୂଳଭୂଖଣ୍ଡର ଦକ୍ଷିଣତମ ସ୍ଥାନ କନ୍ୟାକୁମାରୀ, ତାମିଲନାଡୁ ରାଜ୍ୟରେ ଅବସ୍ଥିତ । ଉତ୍ତରତମ ସ୍ଥାନ କାରାକୋରମ ପର୍ବତଶ୍ରେଣୀରେ, ପୂର୍ବତମ ସ୍ଥାନ ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ଏବଂ ପଶ୍ଚିମତମ ସ୍ଥାନ କଚ୍ଛରେ ଅବସ୍ଥିତ ।<br><br>👉 ଉଦାହରଣ: ଯେମିତି ଏକ ମାନଚିତ୍ରର ଚାରି କୋଣକୁ ଚିହ୍ନଟ କରାଯାଏ, ସେହିପରି ଭାରତର ଉତ୍ତର, ଦକ୍ଷିଣ, ପୂର୍ବ ଓ ପଶ୍ଚିମ ଦିଗର ଶେଷ ସ୍ଥାନଗୁଡ଼ିକୁ ଚରମ ବିନ୍ଦୁ କୁହାଯାଏ ।",
+text:"👉 ଧାରଣା: ବିଖ୍ୟାତ ଦାର୍ଶନିକ ଓ ଗଣିତଜ୍ଞ ବର୍ଟ୍ରାଣ୍ଡ ରସେଲ୍ ତାଙ୍କର 'Mathematics and Metaphysics' ପୁସ୍ତକରେ ଇଉକ୍ଲିଡ୍‌ଙ୍କ ଜ୍ୟାମିତି ସମ୍ପର୍କରେ କେତେକ ଯୁକ୍ତି ଓ ଅସଙ୍ଗତି ବିଷୟରେ ମତ ପ୍ରକାଶ କରିଥିଲେ ।<br><br>👉 ଉଦାହରଣ: ରସେଲ୍‌ଙ୍କ ମତ ପରେ ଅନ୍ୟ ଗଣିତଜ୍ଞମାନେ ମଧ୍ୟ ଇଉକ୍ଲିଡ୍‌ଙ୍କ ଜ୍ୟାମିତିକୁ ତ୍ରୁଟିମୁକ୍ତ କରି ଏକ ଦୃଢ଼ ଭିତ୍ତିରେ ପ୍ରତିଷ୍ଠିତ କରିବାର ଚେଷ୍ଟା ଆରମ୍ଭ କରିଥିଲେ ।",
 audio:"audio-url-here"}],
 
 questions:[
 
-"<span style='color:red;'>Q-1:</span> ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନର ନାମ କ'ଣ ଏବଂ ଏହା କେଉଁଠାରେ ଅବସ୍ଥିତ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତର ଦକ୍ଷିଣତମ ସ୍ଥାନର ନାମ ଇନ୍ଦିରା ପଏଣ୍ଟ, ଯାହା ଆଣ୍ଡାମାନ ଓ ନିକୋବର ଦ୍ୱୀପପୁଞ୍ଜରେ ଅବସ୍ଥିତ ।",
+"<span style='color:red;'>Q-1:</span> କେଉଁ ବିଖ୍ୟାତ ଦାର୍ଶନିକ ଇଉକ୍ଲିଡ୍‌ଙ୍କ ଜ୍ୟାମିତି ସମ୍ପର୍କରେ ମତ ପ୍ରକାଶ କରିଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ବର୍ଟ୍ରାଣ୍ଡ ରସେଲ୍ ମତ ପ୍ରକାଶ କରିଥିଲେ ।",
 
-"<span style='color:red;'>Q-2:</span> ମୂଳଭୂଖଣ୍ଡର ଦକ୍ଷିଣତମ ସ୍ଥାନ କେଉଁଠାରେ ଅବସ୍ଥିତ ?<br><br><span style='color:green;'>Answer:</span> ମୂଳଭୂଖଣ୍ଡର ଦକ୍ଷିଣତମ ସ୍ଥାନ କନ୍ୟାକୁମାରୀ ତାମିଲନାଡୁ ରାଜ୍ୟରେ ଅବସ୍ଥିତ ।",
+"<span style='color:red;'>Q-2:</span> ରସେଲ୍‌ଙ୍କ ପୁସ୍ତକର ନାମ କ'ଣ ?<br><br><span style='color:green;'>Answer:</span> ପୁସ୍ତକର ନାମ 'Mathematics and Metaphysics' ।",
 
-"<span style='color:red;'>Q-3:</span> ଭାରତର ଉତ୍ତରତମ ଓ ପୂର୍ବତମ ସ୍ଥାନ କେଉଁଠାରେ ଅବସ୍ଥିତ ?<br><br><span style='color:green;'>Answer:</span> ଭାରତର ଉତ୍ତରତମ ସ୍ଥାନ କାରାକୋରମ ପର୍ବତଶ୍ରେଣୀରେ ଏବଂ ପୂର୍ବତମ ସ୍ଥାନ ଅରୁଣାଚଳ ପ୍ରଦେଶରେ ଅବସ୍ଥିତ ।",
+"<span style='color:red;'>Q-3:</span> ରସେଲ୍ ଇଉକ୍ଲିଡ୍‌ଙ୍କ ଜ୍ୟାମିତି ସମ୍ପର୍କରେ କ'ଣ ମତ ଦେଇଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଏଥିରେ କେତେକ ଯୁକ୍ତି ଓ ଅସଙ୍ଗତି ଥିବା ମତ ଦେଇଥିଲେ ।",
 
-"<span style='color:red;'>Q-4:</span> ଇନ୍ଦିରା ପଏଣ୍ଟ ୨୦୦୪ ମସିହାରେ କାହିଁକି ଆଲୋଚିତ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ୨୦୦୪ ମସିହାରେ ଆସିଥିବା ସୁନାମି ଦ୍ୱାରା ଇନ୍ଦିରା ପଏଣ୍ଟ ସଂପୂର୍ଣ୍ଣ ଭାବରେ ସମୁଦ୍ର ଗର୍ଭରେ ଲୀନ ହୋଇଯାଇଥିଲା ।"
+"<span style='color:red;'>Q-4:</span> ରସେଲ୍‌ଙ୍କ ମତ ପରେ ଗଣିତଜ୍ଞମାନେ କ'ଣ ଚେଷ୍ଟା କଲେ ?<br><br><span style='color:green;'>Answer:</span> ଜ୍ୟାମିତିକୁ ତ୍ରୁଟିମୁକ୍ତ କରି ଏକ ଦୃଢ଼ ଭିତ୍ତିରେ ପ୍ରତିଷ୍ଠିତ କରିବାର ଚେଷ୍ଟା କଲେ ।"
+
+]
+},
+
+{
+heading: "NOTE-9: ବିରକ୍‌ହଫ୍ ଓ ହିଲବର୍ଟଙ୍କ ଅବଦାନ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଆଧୁନିକ ଗଣିତଜ୍ଞ ଜର୍ଜ ଡେଭିଡ୍ ବିରକ୍‌ହଫ୍ ଓ ଡେଭିଡ୍ ହିଲବର୍ଟ ଜ୍ୟାମିତିକୁ ତ୍ରୁଟିମୁକ୍ତ କରି ବିଦ୍ୟାଳୟ ସ୍ତର ପାଠ୍ୟକ୍ରମ ପାଇଁ ଉପଯୁକ୍ତ କରିବାରେ ପ୍ରୟାସ କରିଥିଲେ । ବିରକ୍‌ହଫ୍‌ଙ୍କ ଦ୍ୱାରା ପ୍ରସ୍ତାବିତ 'A set of postulates for plane geometry based on scale and protractor' ୧୯୩୨ ମସିହାରେ ପ୍ରକାଶିତ ହୋଇଥିଲା ।<br><br>👉 ଉଦାହରଣ: ଏହି ପ୍ରୟାସ ଫଳରେ ଜ୍ୟାମିତି ଅଧ୍ୟୟନ ପାଇଁ ଅଧିକ ସରଳ ଓ ବ୍ୟବହାରିକ ପଦ୍ଧତି ମିଳିଲା, ଯାହା ଆଜି ମଧ୍ୟ ବିଦ୍ୟାଳୟରେ ପଢ଼ାଯାଏ ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଆଧୁନିକ ଜ୍ୟାମିତିକୁ ତ୍ରୁଟିମୁକ୍ତ କରିବାରେ କେଉଁ ଦୁଇଜଣ ଗଣିତଜ୍ଞ ଅବଦାନ ଦେଇଥିଲେ ?<br><br><span style='color:green;'>Answer:</span> ଜର୍ଜ ଡେଭିଡ୍ ବିରକ୍‌ହଫ୍ ଓ ଡେଭିଡ୍ ହିଲବର୍ଟ ଅବଦାନ ଦେଇଥିଲେ ।",
+
+"<span style='color:red;'>Q-2:</span> ବିରକ୍‌ହଫ୍‌ଙ୍କ ପ୍ରସ୍ତାବିତ ପୁସ୍ତକ କେଉଁ ମସିହାରେ ପ୍ରକାଶିତ ହୋଇଥିଲା ?<br><br><span style='color:green;'>Answer:</span> ୧୯୩୨ ମସିହାରେ ପ୍ରକାଶିତ ହୋଇଥିଲା ।",
+
+"<span style='color:red;'>Q-3:</span> ବିରକ୍‌ହଫ୍‌ଙ୍କ ପରାଖା ପଦ୍ଧତି କେଉଁ ଦୁଇଟି ଉପକରଣ ଉପରେ ଆଧାରିତ ଥିଲା ?<br><br><span style='color:green;'>Answer:</span> Scale ଓ Protractor ଉପରେ ଆଧାରିତ ଥିଲା ।",
+
+"<span style='color:red;'>Q-4:</span> ବିରକ୍‌ହଫ୍ ଓ ହିଲବର୍ଟଙ୍କ ପ୍ରୟାସ ଫଳରେ କ'ଣ ମିଳିଲା ?<br><br><span style='color:green;'>Answer:</span> ଜ୍ୟାମିତି ଅଧ୍ୟୟନ ପାଇଁ ଅଧିକ ସରଳ ଓ ବ୍ୟବହାରିକ ପଦ୍ଧତି ମିଳିଲା ।"
+
+]
+},
+
+{
+heading: "NOTE-10: ଆଧୁନିକ ଜ୍ୟାମିତିର ପ୍ରୟୋଗ :-",
+
+audioPoints: [{
+text:"👉 ଧାରଣା: ଆଧୁନିକ ଜ୍ୟାମିତିର ଉଭୟ ତାତ୍ତ୍ୱିକ ଓ ପ୍ରୟୋଗାତ୍ମକ ଦୃଷ୍ଟିରୁ ବହୁତ ମହତ୍ତ୍ୱ ଅଛି । ଏହା ବିଜ୍ଞାନ, ପ୍ରଯୁକ୍ତିବିଦ୍ୟା ଓ ଆଧୁନିକ ଶାସ୍ତ୍ର ନିର୍ମାଣ ଆଦିରେ ବ୍ୟବହୃତ ହୋଇଥାଏ । ମାଧ୍ୟମିକ ବିଦ୍ୟାଳୟ ସ୍ତରରେ ମୁଖ୍ୟତଃ ଇଉକ୍ଲିଡ଼ୀୟ ବା ସମତଳ ଜ୍ୟାମିତି ପଢ଼ାଯାଇଥାଏ ।<br><br>👉 ଉଦାହରଣ: ଆଜିକାଲି ଜ୍ୟାମିତିକୁ 'ବେଦ' (Set) ମାଧ୍ୟମରେ ପ୍ରକାଶ କରାଯାଏ, ଯାହା ଏହାର ପାଠ୍ୟକ୍ରମକୁ ଅଧିକ ସ୍ପଷ୍ଟ ଓ ବିଜ୍ଞାନସମ୍ମତ କରିଥାଏ ।",
+audio:"audio-url-here"}],
+
+questions:[
+
+"<span style='color:red;'>Q-1:</span> ଆଧୁନିକ ଜ୍ୟାମିତି କେଉଁ କେଉଁ କ୍ଷେତ୍ରରେ ବ୍ୟବହୃତ ହୋଇଥାଏ ?<br><br><span style='color:green;'>Answer:</span> ବିଜ୍ଞାନ, ପ୍ରଯୁକ୍ତିବିଦ୍ୟା ଓ ଆଧୁନିକ ଶାସ୍ତ୍ର ନିର୍ମାଣରେ ବ୍ୟବହୃତ ହୋଇଥାଏ ।",
+
+"<span style='color:red;'>Q-2:</span> ମାଧ୍ୟମିକ ବିଦ୍ୟାଳୟ ସ୍ତରରେ ମୁଖ୍ୟତଃ କେଉଁ ଜ୍ୟାମିତି ପଢ଼ାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ଇଉକ୍ଲିଡ଼ୀୟ ବା ସମତଳ ଜ୍ୟାମିତି ପଢ଼ାଯାଏ ।",
+
+"<span style='color:red;'>Q-3:</span> ଆଜିକାଲି ଜ୍ୟାମିତିକୁ କେଉଁ ଗାଣିତିକ ମାଧ୍ୟମରେ ପ୍ରକାଶ କରାଯାଏ ?<br><br><span style='color:green;'>Answer:</span> ବେଦ (Set) ମାଧ୍ୟମରେ ପ୍ରକାଶ କରାଯାଏ ।",
+
+"<span style='color:red;'>Q-4:</span> 'ବେଦ' ମାଧ୍ୟମରେ ପ୍ରକାଶ କରିବା ଫଳରେ ଜ୍ୟାମିତିର କ'ଣ ହୁଏ ?<br><br><span style='color:green;'>Answer:</span> ଜ୍ୟାମିତି ପାଠ୍ୟକ୍ରମ ଅଧିକ ସ୍ପଷ୍ଟ ଓ ବିଜ୍ଞାନସମ୍ମତ ହୁଏ ।"
 
 ]
 }
@@ -390,15 +395,14 @@ const courseData = {
   `, 
     audio: "",
 mermaid: [
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE["📖 GRAPH-1:<br/>ଭାରତର ପରିଚୟ<br/>ଓ ପ୍ରାକୃତିକ ବିବିଧତା"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA["🟡 ପରିଚୟ"]\nA --> I1["ଭାରତ ଏକ ପ୍ରାଚୀନ<br/>ସଭ୍ୟତା ଅଟେ।"]\nA --> I2["ଏହା ବିଶ୍ୱର<br/>ସର୍ବବୃହତ୍ ଗଣତନ୍ତ୍ର।"]\nA --> I3["ଜନସଂଖ୍ୟାରେ ବିଶ୍ୱରେ<br/>ଦ୍ୱିତୀୟ ସ୍ଥାନ।"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM["🟢 ପ୍ରାକୃତିକ ବିବିଧତା"]\nM --> M1["ପର୍ବତ, ମାଳଭୂମି<br/>ଓ ଘନଅରଣ୍ୟ ଥାଏ।"]\nM --> M2["ଅସଂଖ୍ୟ ନଦନଦୀ ଓ<br/>ଉର୍ବର ସମତଳ ଭୂମି।"]\nM --> M3["ମରୁଭୂମି ଓ ବିବିଧ<br/>ପ୍ରକାର ଜୀବଜନ୍ତୁ।"]\nM --> M4["ଭିନ୍ନ ଭାଷାଭାଷୀ ଓ<br/>ଧର୍ମାବଲମ୍ବୀ ଲୋକ।"]\nM --> M5["ଖାଦ୍ୟପେୟ, ବେଶପୋଷାକରେ<br/>ବିଭିନ୍ନତା ଥାଏ।"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC["🔵 ମନେରଖ"]\nC --> C1["ଭାରତ ଏକ ସୁସଂଗଠିତ<br/>ଭୂଖଣ୍ଡ ଅଟେ।"]\nC --> C2["ଏହାକୁ ଏକ ଉପମହାଦେଶ<br/>ଆଖ୍ୟା ଦିଆଯାଏ।"]\nC --> C3["ବିଭିନ୍ନତା ମଧ୍ୟରେ ଏକତା<br/>ଭାରତର ମୁଖ୍ୟ ବୈଶିଷ୍ଟ୍ୟ।"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-1:<br/>ଜ୍ୟାମିତି ଶବ୍ଦର ଅର୍ଥ<br/>ଓ ଆକୃତି-ସଚେତନତା\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଆକୃତି\"]\nA --> I1[\"ପତ୍ର, ଫୁଲ, ଫଳ<br/>ବିଭିନ୍ନ ପ୍ରକାର ଆକୃତିରେ ଥାଏ।\"]\nA --> I2[\"ଆକୃତି-ସଚେତନତା<br/>ମଣିଷର ବିଶେଷତ୍ୱ।\"]\nA --> I3[\"ଏହା ଜୀବଜନ୍ତୁଙ୍କ ମଧ୍ୟ<br/>ପ୍ରବୃତ୍ତିଗତ ଅଟେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଜ୍ୟାମିତି ଶବ୍ଦ\"]\nM --> M1[\"ଆକୃତିତତ୍ତ୍ୱ ଜ୍ଞାନର<br/>ପ୍ରଥମ ଶାଖା ଜ୍ୟାମିତି।\"]\nM --> M2[\"'ଜ୍ୟା' ଅର୍ଥ ଦୂରତ୍ୱ<br/>ଓ 'ମିତି' ଅର୍ଥ ମାପ।\"]\nM --> M3[\"Geometry ଶବ୍ଦ Geo (ଭୂଖଣ୍ଡ)<br/>ଓ Metron (ମାପ)ରୁ ସୃଷ୍ଟି।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଆବଶ୍ୟକତା\"]\nC --> C1[\"ମାପ କରିବାର ଆବଶ୍ୟକତାରୁ<br/>ଜ୍ୟାମିତିର ସୃଷ୍ଟି ହେଲା।\"]\nC --> C2[\"ମାନବ ସଭ୍ୟତାର ଅଗ୍ରଗତି<br/>ସହିତ ଜ୍ୟାମିତି ବିକଶିତ ହେଲା।\"]\nC --> C3[\"ପ୍ରାଚୀନ ସଭ୍ୟତାର ଗୃହନିର୍ମାଣ,<br/>ରାସ୍ତା ଓ ବାସଗୃହରେ ପ୍ରୟୋଗ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2,C3 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE["📖 GRAPH-2:<br/>ଭାରତର ଗଠନ<br/>ଓ ଅବସ୍ଥିତି"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA["🟡 ଗଠନ"]\nA --> I1["ମୂଳଭୂଖଣ୍ଡ ଓ ଦୁଇଟି<br/>ଦ୍ୱୀପପୁଞ୍ଜକୁ ନେଇ ଗଠିତ।"]\nA --> I2["ଆଣ୍ଡାମାନ ନିକୋବର<br/>ବଙ୍ଗୋପସାଗରରେ।"]\nA --> I3["ଲାକ୍ଷାଦ୍ୱୀପ ଆରବ<br/>ସାଗରରେ ଅବସ୍ଥିତ।"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM["🟢 ଅବସ୍ଥିତି"]\nM --> M1["ଏସିଆ ମହାଦେଶର<br/>ଦକ୍ଷିଣାଂଶରେ ଅବସ୍ଥିତ।"]\nM --> M2["ଭାରତ ସମ୍ପୂର୍ଣ୍ଣ<br/>ଉତ୍ତରଗୋଲାର୍ଦ୍ଧରେ ରହିଛି।"]\nM --> M3["୮°୪′ ରୁ ୩୭°୬′ ଉ.<br/>ସମାକ୍ଷରେଖା ମଧ୍ୟରେ।"]\nM --> M4["କର୍କଟକ୍ରାନ୍ତି ଏହାର<br/>ମଧ୍ୟଭାଗ ଦେଇ ଯାଏ।"]\nM --> M5["ଉପକ୍ରାନ୍ତୀୟ ଓ କ୍ରାନ୍ତୀୟ<br/>ମଣ୍ଡଳରେ ରହିଛି।"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC["🔵 ତୁମେ ଜାଣିଛ କି?"]\nC --> C1["୧୮୬୯ରେ ସୁଏଜ କେନାଲ<br/>ଖୋଲିଥିଲା।"]\nC --> C2["ଏହା ଭାରତ-ଇଉରୋପ<br/>ଦୂରତା 7000 km କମାଇଲା।"]\nC --> C3["ପ୍ରାଚୀନ ରେଶମ ମାର୍ଗ<br/>ସହ ସ୍ଥଳପଥ ସଂଯୋଗ।"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-2:<br/>ପ୍ରାଚୀନ ସଭ୍ୟତାରେ<br/>ଜ୍ୟାମିତିର ପ୍ରୟୋଗ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ପ୍ରାଥମିକ ଅବସ୍ଥା\"]\nA --> I1[\"ପ୍ରାଥମିକ ଅବସ୍ଥାରେ ଜ୍ୟାମିତି<br/>ପରୀକ୍ଷାମୂଳକ ଉପାୟରେ ବିକଶିତ।\"]\nA --> I2[\"ପରାଖା ଓ ପର୍ଯ୍ୟବେକ୍ଷଣ<br/>ଆଧାରରେ ପଦ୍ଧତି ପ୍ରୟୋଗ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ପ୍ରାଚୀନ ଉଦାହରଣ\"]\nM --> M1[\"ବୈଦିକ ଯୁଗରେ ଯଜ୍ଞ ବେଦି<br/>ନିର୍ମାଣରେ 'ଶୁଳ୍ବ ସୂତ୍ର' ପ୍ରୟୋଗ।\"]\nM --> M2[\"ଶୁଳ୍ବ ସୂତ୍ର ୮୦୦ ରୁ ୫୦୦<br/>ଖ୍ରୀଷ୍ଟପୂର୍ବ ମଧ୍ୟରେ ରଚିତ।\"]\nM --> M3[\"ମିଶରୀୟମାନେ ପିରାମିଡ୍<br/>ନିର୍ମାଣରେ ଜ୍ୟାମିତି ପ୍ରୟୋଗ କଲେ।\"]\nM --> M4[\"ମହେନ୍‌ଜୋଦାରୋ ଓ ହରପ୍ପାରେ<br/>ମଧ୍ୟ ଜ୍ୟାମିତିର ପ୍ରୟୋଗ ମିଳେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ପରବର୍ତ୍ତୀ ପ୍ରୟୋଗ\"]\nC --> C1[\"ଭାୟର, ଆର୍ଯ୍ୟଭଟ, ବ୍ରହ୍ମଗୁପ୍ତ<br/>ମହାବୀର ଭାରତୀୟ ଅବଦାନକାରୀ।\"]\nC --> C2[\"ମନ୍ଦିର ନିର୍ମାଣ ଓ ନଗର<br/>ଯୋଜନାରେ ପ୍ରୟୋଗ ଚାଲିଲା।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 3 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE["📖 GRAPH-3:<br/>ଭାରତର ଆକାର<br/>ଓ ତୁଳନାତ୍ମକ ସ୍ଥାନ"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA["🟡 କ୍ଷେତ୍ରଫଳ"]\nA --> I1["ଭାରତର କ୍ଷେତ୍ରଫଳ<br/>୩.୨୮ ନିୟୁତ ବର୍ଗ କି.ମି.।"]\nA --> I2["ପୃଥିବୀର ମୋଟ କ୍ଷେତ୍ରର<br/>୨.୪ ପ୍ରତିଶତ ଅଟେ।"]\nA --> I3["ସ୍ଥଳ ସୀମାରେଖା ପ୍ରାୟ<br/>୧୫,୨୦୦ କି.ମି.।"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM["🟢 ତୁଳନାତ୍ମକ ଆକାର"]\nM --> M1["ଉପକୂଳରେଖା ୭,୫୦୦<br/>କି.ମି.ରୁ ଅଧିକ।"]\nM --> M2["ରୁଷିଆ ପୃଥିବୀର<br/>ସର୍ବବୃହତ୍ ଦେଶ।"]\nM --> M3["କାନାଡ଼ା ଓ ଆମେରିକା<br/>ପରବର୍ତ୍ତୀ ସ୍ଥାନରେ।"]\nM --> M4["ଚୀନ୍ ଓ ବ୍ରାଜିଲ<br/>ମଧ୍ୟ ବଡ଼ ଦେଶ।"]\nM --> M5["ଅଷ୍ଟ୍ରେଲିଆ ପରେ<br/>ଭାରତର ସ୍ଥାନ।"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC["🔵 ମନେରଖ"]\nC --> C1["ଭାରତ ପୃଥିବୀର<br/>ସପ୍ତମ ବୃହତ୍ତମ ଦେଶ।"]\nC --> C2["କ୍ଷେତ୍ରଫଳ ୩.୨୮<br/>ନିୟୁତ ବର୍ଗ କି.ମି.।"]\nC --> C3["ବିଶ୍ୱର ସାତ ବୃହତ୍<br/>ଦେଶ ମଧ୍ୟରେ ସ୍ଥାନ।"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`,
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-3:<br/>ଗ୍ରୀକ୍ ଦାର୍ଶନିକ ଓ<br/>ଇଉକ୍ଲିଡ୍‌ଙ୍କ ଅବଦାନ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ଗ୍ରୀକ୍ ଦାର୍ଶନିକ\"]\nA --> I1[\"ଥେଲ୍ସ, ପିଥାଗୋରସ୍,<br/>ସକ୍ରେଟିସ୍, ପ୍ଲାଟୋ, ଆରିଷ୍ଟଟଲ।\"]\nA --> I2[\"ଏମାନେ ଯୁକ୍ତି ଓ ଦର୍ଶନ<br/>ପ୍ରୟୋଗ କରି ଉଦ୍ଭାବନ କଲେ।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଇଉକ୍ଲିଡ୍\"]\nM --> M1[\"ଖ୍ରୀଷ୍ଟପୂର୍ବ ଚତୁର୍ଥ ଶତାବ୍ଦୀରେ<br/>ଜନ୍ମ ଏଲେକ୍ଜାଣ୍ଡ୍ରିଆରେ।\"]\nM --> M2[\"ତାଙ୍କର ଗ୍ରନ୍ଥ 'Elements'<br/>ତେର ଅଧ୍ୟାୟରେ ବିଭକ୍ତ।\"]\nM --> M3[\"ପରାଖାମାନଙ୍କ ମଧ୍ୟରୁ<br/>ଆହରଣ ମାର୍ଗ ପ୍ରଶସ୍ତ କଲେ।\"]\nM --> M4[\"ତାଙ୍କୁ 'ଜ୍ୟାମିତିର ଜନକ'<br/>ବୋଲି କୁହାଯାଏ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି\"]\nC --> C1[\"ତାଙ୍କ ନାମାନୁସାରେ<br/>'ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି' ପ୍ରଚଳିତ।\"]\nC --> C2[\"ବର୍ଟ୍ରାଣ୍ଡ ରସେଲ୍ ଏହାର<br/>ଅସଙ୍ଗତି ବିଷୟରେ ଉଲ୍ଲେଖ କଲେ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 3 stroke-width:0px;\nlinkStyle 8 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2 intro;\nclass M,M1,M2,M3,M4 body;\nclass C,C1,C2 conclusion;`,
 
-    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE["📖 GRAPH-4:<br/>ଭାରତର ଚାରି<br/>ଅନ୍ତିମ ସୀମା ବିନ୍ଦୁ"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA["🟡 ଦକ୍ଷିଣତମ ସ୍ଥାନ"]\nA --> I1["ଇନ୍ଦିରା ପଏଣ୍ଟ ନାମରେ<br/>ପରିଚିତ ଅଟେ।"]\nA --> I2["ଆଣ୍ଡାମାନ ନିକୋବର<br/>ଦ୍ୱୀପପୁଞ୍ଜରେ ଅବସ୍ଥିତ।"]\nA --> I3["୨୦୦୪ ସୁନାମିରେ<br/>ସମୁଦ୍ର ଗର୍ଭରେ ଲୀନ ହେଲା।"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM["🟢 ଚାରି ସୀମା ବିନ୍ଦୁ"]\nM --> M1["କନ୍ୟାକୁମାରୀ ମୂଳଭୂଖଣ୍ଡର<br/>ଦକ୍ଷିଣତମ ସ୍ଥାନ।"]\nM --> M2["ଏହା ତାମିଲନାଡୁ<br/>ରାଜ୍ୟରେ ଅବସ୍ଥିତ।"]\nM --> M3["କାରାକୋରମ ପର୍ବତଶ୍ରେଣୀ<br/>ଉତ୍ତରତମ ସ୍ଥାନ।"]\nM --> M4["ଅରୁଣାଚଳ ପ୍ରଦେଶ<br/>ପୂର୍ବତମ ସ୍ଥାନ।"]\nM --> M5["କଚ୍ଛ ସବୁଠାରୁ<br/>ପଶ୍ଚିମରେ ଅବସ୍ଥିତ।"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC["🔵 ମନେରଖ"]\nC --> C1["ଚାରି ଦିଗର ସୀମା<br/>ଭିନ୍ନ ରାଜ୍ୟରେ ଅଛି।"]\nC --> C2["ଏହି ବିନ୍ଦୁଗୁଡ଼ିକ ଭାରତର<br/>ବିସ୍ତାର ଦର୍ଶାଏ।"]\nC --> C3["ଏହା ଭାରତର ଭୌଗୋଳିକ<br/>ବିବିଧତା ପ୍ରକାଶ କରେ।"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 4 stroke-width:0px;\nlinkStyle 10 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2,I3 intro;\nclass M,M1,M2,M3,M4,M5 body;\nclass C,C1,C2,C3 conclusion;`
+    `%%{init: {'theme':'base','themeVariables':{'fontSize':'18px'}}}%%\nflowchart TD\n\nTITLE[\"📖 GRAPH-4:<br/>ଆଧୁନିକ ଜ୍ୟାମିତିର<br/>ବିକାଶ ଓ ପ୍ରୟୋଗ\"]\n\nTITLE --> INTRO\n\nsubgraph INTRO[ ]\ndirection LR\nA[\"🟡 ତ୍ରୁଟି ସୁଧାର\"]\nA --> I1[\"ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତିରେ<br/>କେତେକ ତ୍ରୁଟି ମିଳିଥିଲା।\"]\nA --> I2[\"ଏହାକୁ ଚୂଡ଼ାନ୍ତ ରୂପ<br/>ଦେବାର ପ୍ରୟାସ ଆରମ୍ଭ ହେଲା।\"]\nend\n\nINTRO --> MAIN\n\nsubgraph MAIN[ ]\ndirection LR\nM[\"🟢 ଆଧୁନିକ ଗଣିତଜ୍ଞ\"]\nM --> M1[\"ଜର୍ଜ ଡେଭିଡ୍ ବିରକ୍‌ହଫ୍<br/>ଓ ଡେଭିଡ୍ ହିଲବର୍ଟ ଅବଦାନ ଦେଲେ।\"]\nM --> M2[\"ବିରକ୍‌ହଫ୍‌ଙ୍କ ପ୍ରସ୍ତାବ<br/>1932 ମସିହାରେ ପ୍ରକାଶିତ।\"]\nM --> M3[\"'Scale ଓ Protractor'<br/>ଆଧାରିତ ପରାଖା ପ୍ରସ୍ତୁତ କଲେ।\"]\nend\n\nMAIN --> CONCLUSION\n\nsubgraph CONCLUSION[ ]\ndirection LR\nC[\"🔵 ପ୍ରୟୋଗ\"]\nC --> C1[\"ବିଜ୍ଞାନ, ପ୍ରଯୁକ୍ତି ଓ<br/>ଆଧୁନିକ ଶାସ୍ତ୍ର ନିର୍ମାଣରେ ବ୍ୟବହୃତ।\"]\nC --> C2[\"ବେଦ (Set) ମାଧ୍ୟମରେ<br/>ପ୍ରକାଶ କରାଯାଏ।\"]\nC --> C3[\"ମାଧ୍ୟମିକ ବିଦ୍ୟାଳୟ ସ୍ତରରେ<br/>ମୁଖ୍ୟତଃ ଇଉକ୍ଲିଡ଼ୀୟ ଜ୍ୟାମିତି ପଢ଼ାଯାଏ।\"]\nend\n\nlinkStyle 0 stroke-width:0px;\nlinkStyle 3 stroke-width:0px;\nlinkStyle 7 stroke-width:0px;\n\nclassDef title fill:#FFE082,stroke:#FF6F00,stroke-width:3px,color:#000,font-weight:bold;\nclassDef intro fill:#BBDEFB,stroke:#1E88E5,stroke-width:2px,font-weight:bold;\nclassDef body fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,font-weight:bold;\nclassDef conclusion fill:#F8BBD0,stroke:#C2185B,stroke-width:2px,font-weight:bold;\n\nclass TITLE title;\nclass A,I1,I2 intro;\nclass M,M1,M2,M3 body;\nclass C,C1,C2,C3 conclusion;`
   ]
-  
       
 }  
 ]
