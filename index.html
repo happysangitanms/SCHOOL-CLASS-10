@@ -709,6 +709,23 @@
     margin-top: 10px;
     min-height: 18px;
 }
+
+        .gate-consent-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    text-align: left;
+    font-size: 12px;
+    color: #555;
+    margin: 14px 0;
+}
+.gate-consent-box input[type="checkbox"] {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+.gate-consent-box a {
+    color: #667eea;
+}
         
     </style>
 </head>
@@ -747,17 +764,44 @@
 <!-- ── Roll Number Gate (determines which classes are unlocked) ── -->
 <div class="rollgate-screen" id="rollgateScreen" style="display:none;">
     <div class="rollgate-box">
-        <h2>🔑 ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ</h2>
-        <p>ଆପଣଙ୍କ ପାଇଁ କେଉଁ କେଉଁ କ୍ଲାସ୍ ଅନଲକ୍ ହୋଇଛି ଦେଖିବା ପାଇଁ ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ ।</p>
-        <input type="tel" id="rollgateInput" class="rollgate-input" placeholder="ରୋଲ୍ ନମ୍ବର" inputmode="numeric">
-      <button class="rollgate-btn" id="rollgateBtn" onclick="checkRollGate()">ଆଗକୁ ଯାଅନ୍ତୁ</button>
+        <h2 style="text-align:center;">ଇ-ବିଦ୍ୟା ଏକାଡେମି ଦ୍ଵାରା ପ୍ରସ୍ତୁତ</h2>
+        <p style="text-align:center;"><b>🌹ଏହି ସ୍ଵତନ୍ତ୍ର ମଞ୍ଚରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ🌹</b></p>
+
+        <input type="tel" id="rollgateInput" class="rollgate-input" placeholder="ଦୟାକରି ଏଠାରେ ଆପଣଙ୍କ ରୋଲ୍ ନମ୍ବର ଲେଖନ୍ତୁ..." inputmode="numeric" pattern="[0-9]*">
+
+        <div class="gate-consent-box">
+            <input type="checkbox" id="rollgateConsent">
+            <label for="rollgateConsent">I agree to device tracking, usage monitoring, audio playback, internet access, data storage, and all <a href="https://e-vidya-legal-policies.pages.dev/" target="_blank">terms &amp; conditions</a> of E-Vidya Academy.</label>
+        </div>
+
+        <button class="rollgate-btn" id="rollgateBtn" onclick="checkRollGate()">ଆଗକୁ ଯାଅନ୍ତୁ</button>
         <div class="rollgate-error" id="rollgateError"></div>
 
-        <div style="margin-top:16px; padding-top:14px; border-top:1px solid #eee;">
-            <p style="font-size:12px; color:#888; margin-bottom:8px;">ଆପଣ ପ୍ରଥମ ଥର ଆସୁଛନ୍ତି କି?</p>
-            <button onclick="window.open('https://evidya-admin.pages.dev/school9/', '_blank')" style="width:100%; padding:11px; background:#f1f5f9; color:#475569; border:none; border-radius:8px; font-size:13px; font-weight:700; cursor:pointer;">
-                📝 ନୂଆ ଛାତ୍ର ପଞ୍ଜିକରଣ / ରୋଲ୍ ନମ୍ବର ଜାଣନ୍ତୁ
-            </button>
+        <button onclick="window.open('https://evidya-admin.pages.dev/school9/', '_blank')" style="width:100%; margin-top:10px; padding:12px; background:#FF6B6B; border:none; border-radius:8px; color:white; font-size:14px; font-weight:bold; cursor:pointer;">
+            📋 ଆପଣଙ୍କ ରୋଲ୍ ନମ୍ବର ଜାଣିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ ।
+        </button>
+
+        <div style="text-align:center; margin-top:12px;">
+            <a href="https://evidya-admin.pages.dev/payment/" target="_blank" rel="noopener noreferrer"
+               style="display:inline-block; padding:12px 28px; background:linear-gradient(135deg,#c8962a,#e4b84a); color:#0a1628; font-size:0.9rem; font-weight:700; text-decoration:none; border-radius:50px; box-shadow:0 6px 20px rgba(200,150,42,0.35);">
+                🌹 ପେମେଣ୍ଟ କରିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । →
+            </a>
+        </div>
+
+        <div style="margin-top:20px; text-align:center;">
+            <div style="display:inline-block; padding:10px; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); border-radius:50%; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+                <img src="https://raw.githubusercontent.com/happysangitanms/assets/main/bot%20image-2.gif" alt="AI Assistant" style="display:block; width:100px; height:100px; border-radius:50%; object-fit:contain; background:white;">
+            </div>
+            <p style="margin-top:15px; font-size:14px; color:#000000; font-weight:bold;">
+                📚 ଶିକ୍ଷାରେ ଡିଜିଟାଲ ଯୁଗର ଆରମ୍ଭ – ଆପଣଙ୍କ ସହିତ ।
+            </p>
+        </div>
+
+        <div style="text-align:center; margin-top:12px;">
+            <a href="https://evidya-admin.pages.dev/contact/" target="_blank" rel="noopener noreferrer"
+               style="display:inline-block; padding:12px 28px; background:linear-gradient(135deg,#1e3a8a,#2563eb); color:#ffffff; font-size:0.9rem; font-weight:700; text-decoration:none; border-radius:50px; box-shadow:0 6px 20px rgba(37,99,235,0.35);">
+                🌹 ଆମ୍ଭ ସହିତ ଯୋଗାଯୋଗ ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ । →
+            </a>
         </div>
     </div>
 </div>
@@ -899,6 +943,12 @@
             return;
         }
 
+        if (!document.getElementById('rollgateConsent').checked) {
+            errorDiv.textContent = 'ଦୟାକରି ସର୍ତ୍ତାବଳୀରେ ସହମତି ଜଣାଇବା ପାଇଁ ଛୋଟ ଚେକ୍-ବାକ୍ସ ରେ କ୍ଲିକ୍ କରନ୍ତୁ ।';
+            return;
+        }
+
+        
         btn.disabled = true;
         btn.textContent = '⏳ ଅପେକ୍ଷା କରନ୍ତୁ...';
 
@@ -936,8 +986,7 @@
                 localStorage.setItem('userRollNumber', rollNumber);
             } catch(e) {}
 
-            document.getElementById('rollgateScreen').style.display = 'none';
-            showSubjects();
+            showGateWelcome(data.name || rollNumber);
         } catch (err) {
             console.error(err);
             errorDiv.textContent = 'ସଂଯୋଗ ସମସ୍ୟା । ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ ।';
@@ -946,6 +995,22 @@
         }
     }
 
+
+function showGateWelcome(studentName) {
+    const overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;z-index:999999;flex-direction:column;text-align:center;padding:20px;';
+    overlay.innerHTML = '<div style="color:white;font-size:28px;margin-bottom:15px;">🌹</div>'
+        + '<div style="color:white;font-size:22px;font-weight:bold;">ଆପଣଙ୍କୁ ସ୍ୱାଗତ, ' + studentName + '!</div>'
+        + '<div style="color:rgba(255,255,255,0.85);font-size:16px;margin-top:12px;">ଆପଣ ନବମ କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିଛନ୍ତି ।</div>';
+    document.body.appendChild(overlay);
+
+    setTimeout(() => {
+        overlay.remove();
+        document.getElementById('rollgateScreen').style.display = 'none';
+        showSubjects();
+    }, 2000);
+}
+    
     /* ════════════════════════════════════════════
        DATA
     ════════════════════════════════════════════ */
