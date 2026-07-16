@@ -1,3 +1,10 @@
+(function() {
+    if (!sessionStorage.getItem('gateRollNumber')) {
+        const eo = document.getElementById('entryLoadingOverlay');
+        if (eo) eo.remove();
+    }
+})();
+
 const PDF_URL = MEDIA_CONFIG.pdf;
 // Global variable to store animation frame ID
 window.alphabetAnimationFrame = null;
@@ -144,13 +151,16 @@ document.getElementById('loginBtn').addEventListener('click', async function() {
       sessionData.studentName = studentName;
       sessionData.registeredAt = data.registeredAt || new Date().toISOString();
 localStorage.removeItem('savedScores'); // clear any stale scores from previous sessions
-        const welcomeOverlay = document.createElement('div');
+       const welcomeOverlay = document.createElement('div');
         welcomeOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column;text-align:center;padding:20px;';
         welcomeOverlay.innerHTML = '<div style="color:white;font-size:28px;margin-bottom:15px;">🌹</div>'
             + '<div style="color:white;font-size:22px;font-weight:bold;">ଆପଣଙ୍କୁ ସ୍ୱାଗତ, ' + studentName + '!</div>'
         + '<div style="color:rgba(255,255,255,0.85);font-size:16px;margin-top:12px;">ଆପଣ ' + APP_CONFIG.sreni + ' କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିଛନ୍ତି ।</div>'
             + '<div style="color:rgba(255,255,255,0.7);font-size:13px;margin-top:8px;">(ଏବେ ଆପଣଙ୍କ ପାଠ ସାମଗ୍ରୀ ଲୋଡ୍ ହେଉଛି)</div>';
         document.body.appendChild(welcomeOverlay);
+
+        const entryOverlay = document.getElementById('entryLoadingOverlay');
+        if (entryOverlay) entryOverlay.remove();
 
         const updateData = {
             lastActivity: new Date().toISOString(),
