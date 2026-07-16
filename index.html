@@ -736,7 +736,7 @@
 </head>
 <body>
 <!-- ── Welcome Splash Screen ── -->
-<div class="splash-screen" id="splashScreen">
+<div class="splash-screen" id="splashScreen" style="display:none;">
     <div class="splash-content">
         <div style="display: inline-block; padding: 4px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
             <img id="welcomeRoundImg"
@@ -745,13 +745,14 @@
                  style="display: block; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; object-position: center top;"
                  onerror="this.parentElement.style.display='none'">
         </div>
-<p style="margin-top: 14px; font-size: 15px; color: white; font-weight: 800;">
+<p id="splashWelcomeName" style="margin-top: 14px; font-size: 16px; color: white; font-weight: 900;"></p>
+<p style="margin-top: 6px; font-size: 15px; color: white; font-weight: 800;">
             🌹 ଇ-ବିଦ୍ୟା ଏକାଡେମି ରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ ।🌹
         </p>
 
         <div id="dailyUpdateMsg" style="
             margin-top: 12px;
-            padding: 10px 16px;
+            padding: 12px 16px;
             background: rgba(255,255,255,0.18);
             border: 1px solid rgba(255,255,255,0.4);
             border-radius: 12px;
@@ -759,15 +760,17 @@
             font-size: 13px;
             font-weight: 700;
             max-width: 320px;
+            max-height: 260px;
+            overflow-y: auto;
             line-height: 1.5;
+            text-align: left;
         "></div>
 
       <button class="proceed-button" onclick="closeSplash()">ଆଗକୁ ଯାଅନ୍ତୁ ...</button>
     </div>
 </div>
-
 <!-- ── Roll Number Gate (determines which classes are unlocked) ── -->
-<div class="rollgate-screen" id="rollgateScreen" style="display:none;">
+<div class="rollgate-screen" id="rollgateScreen">
     <div class="rollgate-box">
         <h2 style="text-align:center;">ଇ-ବିଦ୍ୟା ଏକାଡେମି ଦ୍ଵାରା ପ୍ରସ୍ତୁତ</h2>
         <p style="text-align:center;"><b>🌹ଏହି ସ୍ଵତନ୍ତ୍ର ମଞ୍ଚରେ ଆପଣଙ୍କୁ ସ୍ଵାଗତ🌹</b></p>
@@ -986,11 +989,12 @@
           studentRegisteredAt = data.registeredAt || new Date().toISOString();
             unlockedClassCount = computeUnlockedCount(studentRegisteredAt);
 
-            try {
+           try {
                 sessionStorage.setItem('gateRollNumber', rollNumber);
                 localStorage.setItem('userRollNumber', rollNumber);
+                localStorage.setItem('gateConsentGiven', '1');
             } catch(e) {}
-
+            
             showGateWelcome(data.name || rollNumber);
         } catch (err) {
             console.error(err);
@@ -1002,20 +1006,19 @@
 
 
 function showGateWelcome(studentName) {
-    const overlay = document.createElement('div');
-    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;z-index:999999;flex-direction:column;text-align:center;padding:20px;';
-    overlay.innerHTML = '<div style="color:white;font-size:28px;margin-bottom:15px;">🌹</div>'
-        + '<div style="color:white;font-size:22px;font-weight:bold;">ଆପଣଙ୍କୁ ସ୍ୱାଗତ, ' + studentName + '!</div>'
-        + '<div style="color:rgba(255,255,255,0.85);font-size:16px;margin-top:12px;">ଆପଣ ନବମ କ୍ଲାସ୍-ରୁମ୍ ରେ ପ୍ରବେଶ କରିଛନ୍ତି ।</div>';
-    document.body.appendChild(overlay);
+    document.getElementById('rollgateScreen').style.display = 'none';
 
-    setTimeout(() => {
-        overlay.remove();
-        document.getElementById('rollgateScreen').style.display = 'none';
-        showSubjects();
-    }, 2000);
+    const nameEl = document.getElementById('splashWelcomeName');
+    if (nameEl) nameEl.textContent = '🌹 ଆପଣଙ୍କୁ ସ୍ୱାଗତ, ' + studentName + '! 🌹';
+
+    setDailyUpdateMessage();
+
+    const splash = document.getElementById('splashScreen');
+    if (splash) {
+        splash.classList.remove('hide');
+        splash.style.display = 'flex';
+    }
 }
-    
     /* ════════════════════════════════════════════
        DATA
     ════════════════════════════════════════════ */
@@ -1559,7 +1562,16 @@ function closeSplash() {
         splash.classList.add('hide');
         setTimeout(() => splash.remove(), 600);
     }
-    document.getElementById('rollgateScreen').style.display = 'flex';
+    showSubjects();
+}
+
+function getLatestClassForSubject(subjectKey) {
+    const nums = Object.keys(classNames)
+        .filter(k => k.startsWith(subjectKey + '-'))
+        .map(k => parseInt(k.split('-').pop()));
+    if (nums.length === 0) return null;
+    const maxNum = Math.max(...nums);
+    return { num: maxNum, title: classNames[subjectKey + '-' + maxNum] };
 }
 
 function setDailyUpdateMessage() {
@@ -1568,12 +1580,34 @@ function setDailyUpdateMessage() {
 
     const isSunday = new Date().getDay() === 0;
 
-    msgBox.textContent = isSunday
-        ? '🌹 ଆଜି ରବିବାର, ତେଣୁ ନୂତନ କ୍ଲାସ୍ ନାହିଁ । ଅବସର ନିଅନ୍ତୁ, ଆସନ୍ତାକାଲି ପୁଣି ମିଳିବା ।'
-        : '🌹 ଆଜି ପ୍ରତ୍ୟେକ ବିଷୟରେ ନୂତନ କ୍ଲାସ୍ ଅପଲୋଡ୍ ହୋଇଛି । ଆସନ୍ତୁ ପଢିବା ।';
+    if (isSunday) {
+        msgBox.innerHTML = '🌹 ଆଜି ରବିବାର, ତେଣୁ ନୂତନ କ୍ଲାସ୍ ନାହିଁ । ଅବସର ନିଅନ୍ତୁ, ଆସନ୍ତାକାଲି ପୁଣି ମିଳିବା ।';
+        return;
+    }
+
+    let html = '🌹 ପ୍ରତ୍ୟେକ ବିଷୟରେ ବର୍ତ୍ତମାନ ଉପଲବ୍ଧ ନୂତନତମ କ୍ଲାସ୍ :<br><br>';
+    for (const subjectKey in subjects) {
+        const latest = getLatestClassForSubject(subjectKey);
+        if (latest) {
+            html += '📘 <b>' + subjects[subjectKey].name + '</b> — Class ' + latest.num + ': ' + latest.title.replace(/<br>/g, ' ') + '<br><br>';
+        }
+    }
+    msgBox.innerHTML = html;
 }
 
 setDailyUpdateMessage();
+    (function() {
+    try {
+        const savedRoll = localStorage.getItem('userRollNumber');
+        const savedConsent = localStorage.getItem('gateConsentGiven');
+        if (savedRoll) {
+            document.getElementById('rollgateInput').value = savedRoll;
+        }
+        if (savedConsent === '1') {
+            document.getElementById('rollgateConsent').checked = true;
+        }
+    } catch(e) {}
+})();
 </script>
 
 </body>
