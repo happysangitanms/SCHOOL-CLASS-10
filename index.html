@@ -1301,16 +1301,18 @@ function closeAccountModal() {
     document.getElementById('accountModal').classList.remove('active');
 }
 
-   function getBillPeriods(registeredAtISO) {
+  function getBillPeriods(registeredAtISO) {
+    function dateOnly(d) {
+        return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    }
     const start = new Date(registeredAtISO);
-    const today = new Date();
+    const todayOnly = dateOnly(new Date());
     const periods = [];
     let periodNum = 1;
     let monthOffset = 0;
     let due = addMonthsSafe(start, monthOffset);
-    while (true) {
+    while (dateOnly(due) <= todayOnly) {
         periods.push({ index: periodNum, dueDate: due });
-        if (due > today) break;
         periodNum++;
         monthOffset++;
         due = addMonthsSafe(start, monthOffset);
