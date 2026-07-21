@@ -1,4 +1,4 @@
-const matching: {
+const matchingData = {
     pairs: [
         { left: "That boy", right: "🧠 is intelligent." },
         { left: "The Chinese", right: "💪 are very industrious." },
