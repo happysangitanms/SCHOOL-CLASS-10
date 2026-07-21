@@ -1,4 +1,4 @@
-const matching: {
+const matchingData = {
 pairs: [
 { left: "ଚଅ, ଶଠ, ରହଡ଼", right: "❌ ଅର୍ଥହୀନ ବର୍ଣ୍ଣମିଳନ ।" },
 { left: "ଅ", right: "🙏 ବିଷ୍ଣୁ ଅର୍ଥ ଦିଏ ।" },
