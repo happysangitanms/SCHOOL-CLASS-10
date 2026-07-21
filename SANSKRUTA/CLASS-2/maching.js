@@ -1,4 +1,4 @@
-constmatching: {
+const matchingData = {
     pairs: [
         { left: "ଭାସୁରକ", right: "🦁 ବନର ସିଂହ ।" },
         { left: "ବନ୍ୟପ୍ରାଣୀ", right: "🤝 ପ୍ରତିଦିନ ଗୋଟିଏ ପ୍ରାଣୀ ପଠାଇବାକୁ ସ୍ଥିର କଲେ ।" },
