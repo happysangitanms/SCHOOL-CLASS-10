@@ -1,4 +1,4 @@
-conststq: {
+const stqData = {
     questions: [
 
         // =========================
