@@ -1,4 +1,4 @@
-const questions: [
+const summaryQuestions = [
 {
 audio: "",
 question: "ଜ୍ୟାମିତିର ଉତ୍ପତ୍ତି କିପରି ହେଲା ?",
