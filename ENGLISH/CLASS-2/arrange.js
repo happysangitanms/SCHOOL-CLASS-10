@@ -66,4 +66,4 @@ const arrangeData = {
             correct: "Do you know the girl?"
         }
     ]
-},
+};
