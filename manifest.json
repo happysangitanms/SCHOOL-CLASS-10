@@ -1,7 +1,7 @@
 {
-  "name": "Class-IX",
-  "short_name": "Class-IX",
-  "description": "Supplementary Digital Classes for Class-9 Students",
+  "name": "Class-X",
+  "short_name": "Class-X",
+  "description": "Supplementary Digital Classes for Class-10 Students",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
