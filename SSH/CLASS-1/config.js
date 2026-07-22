@@ -8,3 +8,4 @@ const MEDIA_CONFIG = {
     video:  "https://www.youtube.com/embed/SAVJxFk0Ccg?playsinline=1&rel=0&modestbranding=1&autoplay=1",
     pdf:    "https://audio.evidya.de/1SSH1.pdf"
 };
+
