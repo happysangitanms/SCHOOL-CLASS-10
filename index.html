@@ -10,7 +10,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Class-IX">
+    <meta name="apple-mobile-web-app-title" content="Class-X">
     <meta name="theme-color" content="#667eea">
    <link rel="apple-touch-icon" href="./icon-192.png">
 
@@ -1092,7 +1092,7 @@
         <button class="rollgate-btn" id="rollgateBtn" onclick="checkRollGate()">ଆଗକୁ ଯାଆନ୍ତୁ ...</button>
         <div class="rollgate-error" id="rollgateError"></div>
 
-        <button onclick="window.open('https://evidya-admin.pages.dev/school9/', '_blank')" style="width:100%; margin-top:10px; padding:12px; background:#FF6B6B; border:none; border-radius:8px; color:white; font-size:14px; font-weight:bold; cursor:pointer;">
+        <button onclick="window.open('https://evidya-admin.pages.dev/school10/', '_blank')" style="width:100%; margin-top:10px; padding:12px; background:#FF6B6B; border:none; border-radius:8px; color:white; font-size:14px; font-weight:bold; cursor:pointer;">
             📋 ଆପଣଙ୍କ ଶିକ୍ଷାର୍ଥୀ କୋଡ୍ ଜାଣିବା ପାଇଁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ ।
         </button>
 
@@ -1284,7 +1284,7 @@
     </div>
 
     <h1>📚 Supplementary Material 📚<br>
-        Digital Classes for Class-9 Students<br>
+        Digital Classes for Class-10 Students<br>
         🌹 E-Vidya Academy 🌹<br>
     </h1>
 
@@ -1327,7 +1327,7 @@
     };
     firebase.initializeApp(firebaseConfig);
     const gateDb = firebase.firestore();
-    const GATE_CLASS_NAME = "school9";
+    const GATE_CLASS_NAME = "school10";
 
  let studentRegisteredAt = null;
 let unlockedClassCount = 0;
@@ -1741,18 +1741,18 @@ renderFeeReminder();
        DATA
     ════════════════════════════════════════════ */
 const subjects = {
-    'SAHITYA_DHARA':        { name: 'ସାହିତ୍ୟ ଧାରା',              fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'ODIA_BYAKARANA':        { name: 'ସାହିତ୍ୟ ବ୍ଯାକରଣ',              fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'ENGLISH':              { name: 'ଇଂରାଜୀ',                     fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'ENGLISH_BYAKARANA':    { name: 'ଇଂରାଜୀ ବ୍ୟାକରଣ',            fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'SANSKRUTA':              { name: 'ସଂସ୍କୃତ',                     fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'SANSKRUTA_BYAKARAN':    { name: 'ସଂସ୍କୃତ ବ୍ୟାକରଣ',            fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'BIJAGANITA':           { name: 'ବୀଜଗଣିତ',                    fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'JYAMITI':              { name: 'ଜ୍ୟାମିତି',                   fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'JIBA_BIGYANA':         { name: 'ଜୀବ ବିଜ୍ଞାନ',                fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'BHAUTIKA_BIGYANA':     { name: 'ଭୌତିକ ବିଜ୍ଞାନ',              fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'ITIHASA':              { name: 'ଇତିହାସ',                     fullName: 'ନବମ ଶ୍ରେଣୀ' },
-    'BHUGOLA':              { name: 'ଭୂଗୋଳ',                      fullName: 'ନବମ ଶ୍ରେଣୀ' }
+    'SAHITYA_DHARA':        { name: 'ସାହିତ୍ୟ ଧାରା',              fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'ODIA_BYAKARANA':        { name: 'ସାହିତ୍ୟ ବ୍ଯାକରଣ',              fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'ENGLISH':              { name: 'ଇଂରାଜୀ',                     fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'ENGLISH_BYAKARANA':    { name: 'ଇଂରାଜୀ ବ୍ୟାକରଣ',            fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'SANSKRUTA':              { name: 'ସଂସ୍କୃତ',                     fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'SANSKRUTA_BYAKARAN':    { name: 'ସଂସ୍କୃତ ବ୍ୟାକରଣ',            fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'BIJAGANITA':           { name: 'ବୀଜଗଣିତ',                    fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'JYAMITI':              { name: 'ଜ୍ୟାମିତି',                   fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'JIBA_BIGYANA':         { name: 'ଜୀବ ବିଜ୍ଞାନ',                fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'BHAUTIKA_BIGYANA':     { name: 'ଭୌତିକ ବିଜ୍ଞାନ',              fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'ITIHASA':              { name: 'ଇତିହାସ',                     fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'BHUGOLA':              { name: 'ଭୂଗୋଳ',                      fullName: 'ଦଶମ ଶ୍ରେଣୀ' }
 };
 
 
