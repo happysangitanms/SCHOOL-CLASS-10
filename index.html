@@ -1741,18 +1741,18 @@ renderFeeReminder();
        DATA
     ════════════════════════════════════════════ */
 const subjects = {
-    'SAHITYA_DHARA':        { name: 'ସାହିତ୍ୟ ଧାରା',              fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'ODIA_BYAKARANA':        { name: 'ସାହିତ୍ୟ ବ୍ଯାକରଣ',              fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'ENGLISH':              { name: 'ଇଂରାଜୀ',                     fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'ENGLISH_BYAKARANA':    { name: 'ଇଂରାଜୀ ବ୍ୟାକରଣ',            fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'SANSKRUTA':              { name: 'ସଂସ୍କୃତ',                     fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'SANSKRUTA_BYAKARAN':    { name: 'ସଂସ୍କୃତ ବ୍ୟାକରଣ',            fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'BIJAGANITA':           { name: 'ବୀଜଗଣିତ',                    fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'JYAMITI':              { name: 'ଜ୍ୟାମିତି',                   fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'JIBA_BIGYANA':         { name: 'ଜୀବ ବିଜ୍ଞାନ',                fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'BHAUTIKA_BIGYANA':     { name: 'ଭୌତିକ ବିଜ୍ଞାନ',              fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'ITIHASA':              { name: 'ଇତିହାସ',                     fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
-    'BHUGOLA':              { name: 'ଭୂଗୋଳ',                      fullName: 'ଦଶମ ଶ୍ରେଣୀ' }
+    'FLO':   { name: 'ସାହିତ୍ୟ',            fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'FLOG':  { name: 'ଓଡିଆ ବ୍ଯାକରଣ',        fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'SLE':   { name: 'ଇଂରାଜୀ',             fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'SLEG':  { name: 'ଇଂରାଜୀ ବ୍ୟାକରଣ',      fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'TLS':   { name: 'ସଂସ୍କୃତ',             fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'TLSG':  { name: 'ସଂସ୍କୃତ ବ୍ୟାକରଣ',      fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'MTA':   { name: 'ବୀଜଗଣିତ',            fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'MTG':   { name: 'ଜ୍ୟାମିତି',            fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'SCL':   { name: 'ଜୀବ ବିଜ୍ଞାନ',         fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'SCP':   { name: 'ଭୌତିକ ବିଜ୍ଞାନ',       fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'SSH':   { name: 'ଇତିହାସ',             fullName: 'ଦଶମ ଶ୍ରେଣୀ' },
+    'SSG':   { name: 'ଭୂଗୋଳ',              fullName: 'ଦଶମ ଶ୍ରେଣୀ' }
 };
 
 
@@ -1761,18 +1761,18 @@ const MAINTENANCE = {
     global: false,
     subjects: {
 
-    'SAHITYA_DHARA':  false,
-    'ODIA_BYAKARANA': false,
-    'ENGLISH': false,
-    'ENGLISH_BYAKARANA':  false,
-    'SANSKRUTA':   false,
-    'SANSKRUTA_BYAKARAN': false,
-    'BIJAGANITA':   false,
-    'JYAMITI':  false,
-    'JIBA_BIGYANA':  false,
-    'BHAUTIKA_BIGYANA': false,
-    'ITIHASA': false,
-    'BHUGOLA': false,
+    'FLO':  true,
+    'FLOG': true,
+    'SLE': true,
+    'SLEG':  true,
+    'TLS':   true,
+    'TLSG': true,
+    'MTA':   true,
+    'MTG':  true,
+    'SCL':  true,
+    'SCP': true,
+    'SSH': false,
+    'SSG': true,
  
     },
     
@@ -1785,123 +1785,33 @@ const MAINTENANCE = {
     
 
 const classNames = {
-    'SAHITYA_DHARA-1':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା ୧-୩)ର ପଠନ ଓ ମନନ',
-    'SAHITYA_DHARA-2':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା ୧-୩)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
-
-   
-
-    'ODIA_BYAKARANA-1':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା ୧)ର ପଠନ ଓ ମନନ',
-    'ODIA_BYAKARANA-2':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା ୧)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
-    'ODIA_BYAKARANA-3':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା ୨)ର ପଠନ ଓ ମନନ',
-    
-    'ENGLISH-1':             'Chapter-1:<br>(ବହି ପୃଷ୍ଠା 1)ର ପଠନ ଓ ମନନ',
-    'ENGLISH-2':             'Chapter-1:<br>(ବହି ପୃଷ୍ଠା 1)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
-
-   
-    
-    'ENGLISH_BYAKARANA-1':   'Chapter-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପଠନ ଓ ମନନ',
-    'ENGLISH_BYAKARANA-2':   'Chapter-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
- 'ENGLISH_BYAKARANA-1':   'Chapter-1:<br>(ବହି ପୃଷ୍ଠା 3-5)ର ପଠନ ଓ ମନନ',  
-
-   
-
-    'SANSKRUTA-1':           'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା ୨-୩)ର ପଠନ ଓ ମନନ',
-    'SANSKRUTA-2':           'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା ୨-୩)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
-
-
-    'SANSKRUTA_BYAKARAN-1':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପଠନ ଓ ମନନ',
-    'SANSKRUTA_BYAKARAN-2':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ', 
-    'SANSKRUTA_BYAKARAN-3':       'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 2-3)ର ପଠନ ଓ ମନନ',
-
-
-    
-    'BIJAGANITA-1':          'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-3)ର ପଠନ ଓ ମନନ',
-    'BIJAGANITA-2':          'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-3)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
-    'BIJAGANITA-3':          'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 2-8)ର ପଠନ ଓ ମନନ',
-    
-
-   
-    
-    'JYAMITI-1':             'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପଠନ ଓ ମନନ',
-    'JYAMITI-2':             'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
- 
-   
-    
-    'JIBA_BIGYANA-1':        'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପଠନ ଓ ମନନ',
-    'JIBA_BIGYANA-2':        'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
-    'JIBA_BIGYANA-3':        'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 3-5)ର ପଠନ ଓ ମନନ',
-
-   
-    
-    'BHAUTIKA_BIGYANA-1':    'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପଠନ ଓ ମନନ',
-    'BHAUTIKA_BIGYANA-2':    'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
-    'BHAUTIKA_BIGYANA-3':    'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 3-4)ର ପଠନ ଓ ମନନ',
-    'BHAUTIKA_BIGYANA-4':    'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 3-4)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
-
-    
-    'ITIHASA-1':             'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପଠନ ଓ ମନନ',
-    'ITIHASA-2':             'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
-    'ITIHASA-3':             'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 3-4)ର ପଠନ ଓ ମନନ',
-    
-    'BHUGOLA-1':             'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପଠନ ଓ ମନନ',
-    'BHUGOLA-2':             'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 1-2)ର ପ୍ରଶ୍ନୋତ୍ତର ଅଭ୍ଯାସ',
-    'BHUGOLA-3':             'ଅଧ୍ୟାୟ-1:<br>(ବହି ପୃଷ୍ଠା 3-4)ର ପଠନ ଓ ମନନ',
-
-    
+    'FLO-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'FLOG-1': 'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'SLE-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'SLEG-1': 'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'TLS-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'TLSG-1': 'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'MTA-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'MTG-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'SCL-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'SCP-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'SSH-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ',
+    'SSG-1':  'ଅଧ୍ୟାୟ-1:<br>ପାଠ-1<br> ଗାନ୍ଧୀଙ୍କ ଦକ୍ଷିଣ ଆଫ୍ରିକା ଗସ୍ତ'
 };
 
 const classSchedule = {
-    'SAHITYA_DHARA-1':       { available: true },
-    'SAHITYA_DHARA-2':       { available: true },
-
-    
-    'ODIA_BYAKARANA-1':      { available: true },
-    'ODIA_BYAKARANA-2':      { available: true },
-    'ODIA_BYAKARANA-3':      { available: true },
-    
-    'ENGLISH-1':             { available: true },
-    'ENGLISH-2':             { available: true },
-
-    
-    'ENGLISH_BYAKARANA-1':   { available: true },
-    'ENGLISH_BYAKARANA-2':   { available: true },
- 'ENGLISH_BYAKARANA-3':   { available: true },
-    
-    'SANSKRUTA-1':           { available: true },
-    'SANSKRUTA-2':           { available: true },
-    
-    'SANSKRUTA_BYAKARAN-1':  { available: true },
-    'SANSKRUTA_BYAKARAN-2':  { available: true },
-    'SANSKRUTA_BYAKARAN-3':  { available: true },
-    
-    'BIJAGANITA-1':          { available: true },
-    'BIJAGANITA-2':          { available: true },
-    'BIJAGANITA-3':          { available: true },
-   
-    
-    'JYAMITI-1':             { available: true },
-    'JYAMITI-2':             { available: true },
-    'JYAMITI-3':             { available: true },
- 
-    
-    'JIBA_BIGYANA-1':        { available: true },
-    'JIBA_BIGYANA-2':        { available: true },
-    'JIBA_BIGYANA-3':        { available: true },
-    
-    'BHAUTIKA_BIGYANA-1':    { available: true },
-    'BHAUTIKA_BIGYANA-2':    { available: true },
-    'BHAUTIKA_BIGYANA-3':    { available: true },
-    'BHAUTIKA_BIGYANA-4':    { available: true },
-
-    
-    'ITIHASA-1':             { available: true },
-    'ITIHASA-2':             { available: true },
-    'ITIHASA-3':             { available: true },
-    
-    'BHUGOLA-1':             { available: true },
-    'BHUGOLA-2':             { available: true },
-    'BHUGOLA-3':             { available: true },
-
+    'FLO-1':  { available: true },
+    'FLOG-1': { available: true },
+    'SLE-1':  { available: true },
+    'SLEG-1': { available: true },
+    'TLS-1':  { available: true },
+    'TLSG-1': { available: true },
+    'MTA-1':  { available: true },
+    'MTG-1':  { available: true },
+    'SCL-1':  { available: true },
+    'SCP-1':  { available: true },
+    'SSH-1':  { available: true },
+    'SSG-1':  { available: true }
 };
     /* ════════════════════════════════════════════
        STATE
